@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Obsidian — kişisel/çalışma alanı ayarları (paylaşılan config paylaşmak istersen bu satırı kaldır)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
