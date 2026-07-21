@@ -9,6 +9,7 @@ updated: 2026-07-21
 > Çözülmemiş sorular. **Kanıt veya ekip kararı olmadan yanıtlanmaz.** Yanıt netleşince ilgili bilgi/karar notuna taşınır ve buradan kaldırılır (veya "çözüldü" işaretlenip linklenir).
 >
 > ⭐ = [[2026-07-21 PM Panel Tartışması]]'nın kuruculara yönelttiği öncelikli sorular.
+> Kurucu yanıtları (2026-07-21): ilk ürün kapsamı ve LiDAR/hedef-an soruları **bilinçli olarak açık bırakıldı** (test verisi görülmeden karar yok); satıcı tarafında **aday var, henüz görüşülmedi**.
 
 ## Ürün (Product)
 - ⭐ İlk ürün ne olmalı? İki PM'in ortak önerisi "tam pazaryeri değil; tarama→görselleştirme + ince lead katmanı" — **ekip kararı bekliyor**.

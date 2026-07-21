@@ -19,7 +19,7 @@ related: []
 - Satıcıların 4 açı fotoğrafı çekme zahmetine katlanacağı — **Needs Validation** (hiç gerçek satıcıyla test edilmedi).
 
 ## Bilinmeyenler
-- Satıcıların kim olacağı (mağazalar, bireysel, üreticiler) — **Unknown**.
+- Satıcıların kim olacağı (mağazalar, bireysel, üreticiler) — **Unknown**. Kurucu beyanı (2026-07-21): **satıcı adayı var, henüz görüşülmedi** (kaynak: [[2026-07-21 PM Panel Tartışması]]).
 - Satıcı onboarding'i (davet mi, self-serve mi) — **To Be Decided**.
 - Katalog import/entegrasyon ihtiyacı — **Unknown**.
 

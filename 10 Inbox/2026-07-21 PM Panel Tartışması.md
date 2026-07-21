@@ -193,3 +193,13 @@ Pozisyonum: **ilk ürün "pazaryeri" değil, "odanı tara, ölçüyle doğru şe
 6. Yakın çekim adımlarını funnel ölçümünde **varsayılan-kapalı** varyantla A/B'lemek sıfır maliyetli ilk deney.
 
 > Sorular [[Open Questions]]'a işlendi. Bu panel çıktısı üzerinden verilen her gerçek ekip kararı ayrı karar notu olmalı.
+
+---
+
+## Kurucu Yanıtları (2026-07-21, Selim)
+
+Panelin dört öncelikli sorusuna kurucu yanıtları:
+1. **İlk ürün kapsamı (görselleştirme + lead MVP önerisi):** "Henüz karar yok" — bilinçli erteleme; test verisi görülmeden karar verilmeyecek. Soru [[Open Questions]]'ta açık kalır.
+2. **Hedef kullanıcı anı (taşınma/tadilat/tek parça):** "Henüz net değil" — açık.
+3. **İlk satıcı:** "**Aday var, görüşülmedi**" — akılda satıcı adayı/adayları var, henüz temas kurulmadı. (Yeni bilgi; [[Seller Experience]]'a işlendi.)
+4. **LiDAR zorunluluğu:** "Henüz düşünülmedi" — açık.
