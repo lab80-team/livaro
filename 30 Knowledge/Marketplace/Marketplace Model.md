@@ -7,7 +7,7 @@ related: []
 
 # Marketplace Model
 
-> Ticari model **açık bırakıldı**. Doğrudan checkout varsayılmaz.
+> Ticari model kısmen netleşti: **ilk sürüm lead-gen** (checkout yok); sepet+checkout **ileride gelecek** (kurucu kararı, 2026-07-21 → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]). Gelir modeli detayı hâlâ açık.
 
 ## Şu An Bilinenler
 - Ürün bir pazaryeri; en az alıcı ve satıcı taraflarını içerebilir — **Needs Validation**.

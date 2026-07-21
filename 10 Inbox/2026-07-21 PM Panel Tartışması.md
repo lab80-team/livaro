@@ -203,3 +203,6 @@ Panelin dört öncelikli sorusuna kurucu yanıtları:
 2. **Hedef kullanıcı anı (taşınma/tadilat/tek parça):** "Henüz net değil" — açık.
 3. **İlk satıcı:** "**Aday var, görüşülmedi**" — akılda satıcı adayı/adayları var, henüz temas kurulmadı. (Yeni bilgi; [[Seller Experience]]'a işlendi.)
 4. **LiDAR zorunluluğu:** "Henüz düşünülmedi" — açık.
+
+### Güncelleme (aynı gün, sonra)
+Kurucu 1. sorudaki pozisyonunu güncelledi: **"Şimdilik bu öneriyi benimse — ama ileride sepet ve checkout da gelecek."** → Karar notu açıldı: [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]].

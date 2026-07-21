@@ -26,3 +26,4 @@ updated: 2026-07-20
 | 2026-07-16 | [[2026-07-16 Render Modal üzerinde headless Blender\|Fotogerçekçi çıktı: Modal'da headless Blender (Faz 3)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
 | 2026-07-18 | [[2026-07-18 Texture fotoğraftan birebir kırpılır\|Texture fotoğraftan birebir kırpılır (generic üretim fallback)]] | [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]] |
 | 2026-07-19 | [[2026-07-19 Tarama akışına zemin-duvar yakın çekim adımları\|Tarama akışına zemin/duvar yakın çekim adımları (isteğe bağlı)]] | [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]] |
+| 2026-07-21 | [[2026-07-21 İlk ürün kapsamı görselleştirme + lead\|İlk ürün: görselleştirme + lead katmanı (checkout ileride)]] | [[2026-07-21 PM Panel Tartışması]] |

@@ -26,7 +26,7 @@ aliases: ["Product Flows (Planning)"]
 | Product detail | Prototype | ProductDetailView + "360°/AR'da Gör" |
 | Seller onboarding | Not explored | Bkz. [[Seller Experience]] |
 | Seller product upload | Prototype | brand-panel'de çalışıyor (form + 4 açı foto → Tripo3D); güncel bakım durumu Needs Validation |
-| Checkout or lead generation | Not explored | Ticari model açık; bkz. [[Marketplace Model]] |
+| Checkout or lead generation | Defined (v1: lead) | Kurucu kararı 2026-07-21: ilk sürüm lead; sepet+checkout ileride → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]. Lead aksiyonunun UX tanımı yapılmadı |
 | Returning user flow | Not explored | |
 
 ## İlgili Notlar

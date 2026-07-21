@@ -18,9 +18,9 @@ related: []
 - "Kendi odam" hissi (fotoğraftan birebir texture) satın alma güvenini artırır — **Needs Validation**.
 
 ## Bilinmeyenler
-- İlk ürünün kapsamı (MVP) — **To Be Decided**.
+- ~~İlk ürünün kapsamı~~ — **KARARLAŞTI (2026-07-21)**: görselleştirme + lead; checkout ileride → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]. MVP'nin tam özellik listesi ve lead aksiyonunun tanımı hâlâ **To Be Decided**.
 - İlk kullanıcılar ve çözülen ana problem — **To Be Decided** (bkz. [[Target Users]], [[User Problems]]).
-- Ticari model — **açık bırakıldı** (bkz. [[Marketplace Model]]).
+- Gelir modeli detayı (komisyon/lead ücreti/abonelik) — **To Be Decided** (bkz. [[Marketplace Model]]).
 - LiDAR'lı iPhone zorunluluğunun pazar daraltması nasıl ele alınacak — **Open Question**.
 
 ## Önemli Sorular
