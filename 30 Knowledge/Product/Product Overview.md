@@ -19,7 +19,8 @@ related: []
 
 ## Bilinmeyenler
 - ~~İlk ürünün kapsamı~~ — **KARARLAŞTI (2026-07-21)**: görselleştirme + lead; checkout ileride → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]. MVP'nin tam özellik listesi ve lead aksiyonunun tanımı hâlâ **To Be Decided**.
-- İlk kullanıcılar ve çözülen ana problem — **To Be Decided** (bkz. [[Target Users]], [[User Problems]]).
+- ~~Hedef kullanıcı anı~~ — **KARARLAŞTI (2026-07-21)**: taşınma + tadilat/yenileme; tek parça alım ileriki sürüme ertelendi → [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]].
+- İlk kullanıcıların tam profili ve çözülen ana problem — **To Be Decided** (bkz. [[Target Users]], [[User Problems]]).
 - Gelir modeli detayı (komisyon/lead ücreti/abonelik) — **To Be Decided** (bkz. [[Marketplace Model]]).
 - LiDAR'lı iPhone zorunluluğunun pazar daraltması nasıl ele alınacak — **Open Question**.
 

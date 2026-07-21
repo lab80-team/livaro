@@ -206,3 +206,6 @@ Panelin dört öncelikli sorusuna kurucu yanıtları:
 
 ### Güncelleme (aynı gün, sonra)
 Kurucu 1. sorudaki pozisyonunu güncelledi: **"Şimdilik bu öneriyi benimse — ama ileride sepet ve checkout da gelecek."** → Karar notu açıldı: [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]].
+
+### Güncelleme (aynı gün, hedef kullanıcı anı sorusu)
+Kurucu PM-A'nın 1 numaralı sorusunu (hedef kullanıcı hangi anda devreye giriyor) yanıtladı: **"İlk sürümümüzde taşınma anı ve tadilat/yenileme üzerine kuralım. İleriki sürümümüzde tek parça alımla ilgili kullanıcılara da yöneleceğiz."** → Karar notu açıldı: [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]].

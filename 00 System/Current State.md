@@ -13,7 +13,8 @@ updated: 2026-07-20
 ## Güncel Ürün Durumu
 - Çalışan **iOS prototipi** var (LiDAR'lı iPhone): oda tarama (RoomPlan) → 4-8 köşe fotoğrafı → materyal analizi → texture'lı 3D oda → AI Designer wizard (tarz/bütçe) → .usdz mobilyalı tasarım sahnesi → Blender render galerisi (4 açı) + USDZ.
 - **İlk ürün kapsamı kararlaştı (2026-07-21)**: tarama→görselleştirme deneyimi + ince lead katmanı; **checkout ilk sürümde yok, ileride gelecek** → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]].
-- Hâlâ açık: hedef kullanıcı/an, edinme kanalı, gelir modeli detayı, LiDAR stratejisi — bkz. [[Open Questions]].
+- **Hedef kullanıcı anı kararlaştı (2026-07-21)**: taşınma + tadilat/yenileme; tek parça alım ileriki sürüme ertelendi → [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]].
+- Hâlâ açık: edinme kanalı, gelir modeli detayı, LiDAR stratejisi — bkz. [[Open Questions]].
 - Katalog: yalnızca 3 usdz'li test ürünü (gerçek katalog doldurulmadı — öncelikli iş; satıcı adayı var, görüşülmedi).
 
 ## Güncel Teknik Durum
@@ -44,6 +45,7 @@ updated: 2026-07-20
 - Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
 
 ## Son Kararlar
+- [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]]
 - [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]
 - [[2026-07-19 Tarama akışına zemin-duvar yakın çekim adımları]]
 - [[2026-07-18 Texture fotoğraftan birebir kırpılır]]

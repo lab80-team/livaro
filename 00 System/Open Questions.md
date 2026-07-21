@@ -9,12 +9,12 @@ updated: 2026-07-21
 > Çözülmemiş sorular. **Kanıt veya ekip kararı olmadan yanıtlanmaz.** Yanıt netleşince ilgili bilgi/karar notuna taşınır ve buradan kaldırılır (veya "çözüldü" işaretlenip linklenir).
 >
 > ⭐ = [[2026-07-21 PM Panel Tartışması]]'nın kuruculara yönelttiği öncelikli sorular.
-> Kurucu yanıtları (2026-07-21): **İlk ürün kapsamı KARARLAŞTI** → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]] (checkout ileride). LiDAR ve hedef-an soruları açık; satıcı tarafında **aday var, henüz görüşülmedi**.
+> Kurucu yanıtları (2026-07-21): **İlk ürün kapsamı** ve **hedef kullanıcı anı** KARARLAŞTI → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]], [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]]. LiDAR sorusu açık; satıcı tarafında **aday var, henüz görüşülmedi**.
 
 ## Ürün (Product)
 - ~~İlk ürün ne olmalı?~~ **ÇÖZÜLDÜ (2026-07-21)**: görselleştirme + lead katmanı; checkout ileride → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]. Türev sorular açık: MVP'nin tam özellik listesi ve lead aksiyonunun tanımı (buton? form? satıcıya yönlendirme?) — **To Be Decided**.
-- ⭐ Hedef kullanıcı kim ve hangi anda devreye giriyoruz (taşınma / tadilat / tek parça alım)? Akış toleransı, kanal ve katalog kapsamı bu cevaba bağlı.
-- ⭐ İlk 30 kullanıcı hangi kanaldan gelecek? (Kanal hipotezi olmayan MVP test edilemez.)
+- ~~Hedef kullanıcı hangi anda devreye giriyor?~~ **ÇÖZÜLDÜ (2026-07-21)**: ilk sürüm taşınma + tadilat/yenileme anı üzerine kurulur; tek parça alım ileriki sürüme ertelendi → [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]].
+- ⭐ İlk 30 kullanıcı hangi kanaldan gelecek? (Artık hedef an netleşti — taşınma/tadilat ile ilgili kanallar somutlaştırılabilir; ama kanal seçimi hâlâ yapılmadı.)
 - Hangi akışlar basit kalmalı, hangileri gelişmiş işlevsellik gerektiriyor? (6 adımlık tarama akışının terk oranı ölçülmedi.)
 - Bkz. [[Product Overview]], [[60 Planning/Product Flows|Product Flows]]
 
