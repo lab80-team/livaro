@@ -1,7 +1,7 @@
 ---
 type: planning
 status: living
-updated:
+updated: 2026-07-20
 aliases: ["Product Flows (Planning)"]
 ---
 
@@ -11,20 +11,21 @@ aliases: ["Product Flows (Planning)"]
 >
 > Not: Ticari modelin doğrudan checkout olduğu **varsayılmaz** — "Checkout or lead generation" akışı bilinçli olarak açık bırakılmıştır (bkz. [[Marketplace Model]]).
 >
-> Akışlar hakkında bilinenler için bkz. [[30 Knowledge/Product/Product Flows|Product Flows (Knowledge)]].
+> "Prototype" = prototipte çalışıyor; hiçbir akış dış kullanıcıyla **Validated** değil.
 
 | Akış | Durum | Not |
 |---|---|---|
-| User registration | Not explored | Bkz. [[User Onboarding]] |
+| User registration | Prototype | JWT auth mevcut (prototipte giriş yapılıyor); tasarımı/onboarding'i düşünülmedi. Bkz. [[User Onboarding]] |
 | User onboarding | Not explored | Bkz. [[User Onboarding]] |
-| Room creation | Not explored | |
-| Room scanning | Exploring | Deneyler yapıldı (kaynak: [[2026-07-19 Proje Kurulum Brief]]); bkz. [[Room Scanning Overview]] |
-| Manual room setup | Not explored | Otomatik taramaya fallback |
-| Furniture discovery | Not explored | |
-| Furniture placement | Not explored | Görselleştirme; bkz. [[Room Scanning Overview]] |
-| Product detail | Not explored | |
+| Room creation | Prototype | "Projelerim" + oda detay ekranları mevcut |
+| Room scanning | Prototype | RoomPlan + 4-8 köşe foto (+ planda yakın çekimler); bkz. [[Room Scanning Overview]] |
+| Manual room setup | Not explored | Otomatik taramaya fallback; LiDAR'sız cihaz sorusuyla bağlantılı |
+| Furniture discovery | Prototype | AI Designer wizard (pgvector arama + tarz/bütçe); katalog gezinme akışı ayrıca düşünülmedi |
+| Furniture placement | Prototype | GPT-4o yerleşim + 3D sahnede .usdz gösterim + AR görünüm |
+| Design render | Prototype | Blender 4 açı + USDZ; bkz. [[3D Render Pipeline]] |
+| Product detail | Prototype | ProductDetailView + "360°/AR'da Gör" |
 | Seller onboarding | Not explored | Bkz. [[Seller Experience]] |
-| Seller product upload | Not explored | Bkz. [[Seller Experience]] |
+| Seller product upload | Prototype | brand-panel'de çalışıyor (form + 4 açı foto → Tripo3D); güncel bakım durumu Needs Validation |
 | Checkout or lead generation | Not explored | Ticari model açık; bkz. [[Marketplace Model]] |
 | Returning user flow | Not explored | |
 

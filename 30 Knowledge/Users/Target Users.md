@@ -9,6 +9,7 @@ related: []
 
 ## Şu An Bilinenler
 - İlk hedef kullanıcıların kim olduğu henüz **To Be Decided**.
+- Fiilî sinyaller (prototipten, resmî karar değil): hedef pazar **Türkiye** (uygulama ve hata mesajları Türkçe; ödeme için Iyzico planlandı); alıcı tarafı **iOS/LiDAR'lı iPhone** sahipleri; satıcı tarafı web brand-panel kullanıyor. Kaynak: [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]].
 
 ## Varsayımlar
 - Pazaryerinin iki tarafı olabilir: alıcılar (müşteriler) ve satıcılar — **Needs Validation** (bkz. [[Marketplace Model]]).

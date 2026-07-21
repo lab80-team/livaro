@@ -1,39 +1,36 @@
 ---
 type: knowledge
-status: draft
-updated:
+status: living
+updated: 2026-07-20
 related: []
 ---
 
 # Room Scanning Overview
 
-> Bu, oda tarama çalışmasının merkezi bilgi notudur. Deney detayları [[Experiment Index]] altında tutulur; bu not özet ve mevcut anlayışı içerir.
+> Oda tarama çalışmasının merkezi bilgi notu. Deney detayları [[Experiment Index]]'te; bu not mevcut anlayışın özetidir.
 
 ## Şu An Bilinenler
-- [[Selim]] ve [[Yusuf]] birkaç oda tarama algoritması denedi.
-- Bazı yaklaşımlar **kısmen çalıştı**, bazıları **başarısız oldu**.
-- Hangi yaklaşımın ne kadar çalıştığına dair kesin sonuçlar henüz eklenmedi — **Needs Validation**.
+- Tarama **Apple RoomPlan** ile yapılıyor (LiDAR'lı iPhone). RoomPlan güvenilir şekilde veriyor: duvarlar/kapılar/pencereler/mobilyalar (her biri 4x4 transform + dimensions), oda ölçüleri.
+- Akış (20 Tem itibarıyla): **Oda tara (RoomPlan) → 4-8 köşe fotoğrafı (manuel, AVCapturePhoto) → [planlandı: zemin + duvar yakın çekim, isteğe bağlı] → kayıt → GPT-4o materyal analizi → texture üretimi → 3D oda**.
+- Görselleştirme iki yolla: cihazda canlı RealityKit sahnesi ("Roomplan" sekmesi) + Modal'da Blender render/USDZ ("Render" sekmesi). Bkz. [[3D Render Pipeline]].
+- İşlem dağılımı: tarama ve canlı sahne **cihazda**; texture üretimi ve render **sunucuda** (backend + Modal). Ağır iş tarama sırasında değil, sonrasında yapılır (ısınma dersi).
+- Fotogerçekçi "gezilebilir" model (3DGS/mesh) denemeleri rafta; bugünkü hedef ölçülere sadık, texture'lı temiz model. Yaklaşım geçmişi: [[Room Scanning Approaches]].
 
 ## Varsayımlar
-- Oda tarama, ürün deneyiminin önemli (belki farklılaştırıcı) bir parçası — **Needs Validation**.
-- Otomatik tarama her zaman çalışmayabileceği için bir **manual fallback** gerekebilir — **Needs Validation**.
+- Oda tarama + gerçek ölçülü görselleştirme, ürünün farklılaştırıcısı — **Needs Validation** (kullanıcı testi yapılmadı).
+- Kullanıcılar 4 köşe + yakın çekim fotoğraflarını çekmeye istekli olur — **Needs Validation**.
 
 ## Bilinmeyenler
-- Hangi yaklaşım (CV, depth estimation, room dimension estimation, 3D reconstruction, manuel) yeterince iyi — **To Be Decided**.
-- İşlemin cihaz üstünde mi sunucuda mı yapılacağı — **Unknown**.
-- Gerekli doğruluk (accuracy) seviyesi — **Unknown**.
+- LiDAR'sız cihazlar (çoğu Android, eski iPhone'lar) için ne yapılacağı — **To Be Decided**. Manuel fallback tartışılmadı.
+- Kabul edilebilir minimum doğruluk/kalite çıtası — **Unknown** (dış kullanıcı testi yok).
+- RoomPlan yanlış algılarını (TV=pencere) kullanıcının düzeltebileceği bir araç gerekip gerekmediği — **Open Question**.
 
 ## Önemli Sorular
-- Kullanıcı odayı en kolay nasıl tarar/modeller?
-- Kabul edilebilir minimum doğruluk nedir?
-- Otomatik yöntem başarısız olduğunda ne olur?
+- Tarama UX'i ilk kullanıcı için ne kadar akıcı (adım sayısı arttı: tarama + 4 foto + 2 yakın çekim)?
+- Otomatik yöntem başarısız olduğunda kullanıcı deneyimi ne olur?
 
 ## İlgili Notlar
-- [[Room Scanning Approaches]]
-- [[Experiment Index]]
-- [[System Architecture]]
-- [[60 Planning/Product Flows|Product Flows]] (Room scanning, Manual room setup akışları)
+[[Room Scanning Approaches]], [[3D Render Pipeline]], [[System Architecture]], [[60 Planning/Product Flows|Product Flows]]
 
 ## Kaynaklar
-- Başlangıç bilgisi: [[2026-07-19 Proje Kurulum Brief]].
-- Sonuçlar toplantı ve deney notlarıyla eklenecek. [[Meeting Index]]
+[[2026-07-16 Oturum Import — 3D Pipeline Evrimi]], [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]], [[2026-07-19 Proje Kurulum Brief]]

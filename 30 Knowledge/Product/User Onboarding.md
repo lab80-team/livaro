@@ -1,30 +1,31 @@
 ---
 type: knowledge
-status: draft
-updated:
+status: living
+updated: 2026-07-20
 related: []
 ---
 
 # User Onboarding
 
-## Şu An Bilinenler
-- Kullanıcıların nasıl kayıt olacağı (registration) henüz **To Be Decided**.
+## Şu An Bilinenler (prototipteki fiilî durum — tasarlanmış onboarding değil)
+- iOS'ta **misafir gezinme serbest** (22 Haz kararı): açılışta login zorunlu değil; ürün listesi doğrudan görünür; kişisel aksiyonlar auth ister.
+- Kayıt: e-posta+şifre (JWT); iOS'ta kayıt olan herkes **CUSTOMER** (rol seçimi yok). Satıcılar web brand-panel'den girer. Bkz. [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]].
+- Uygulama Türkçe-odaklı (CFBundleDevelopmentRegion: tr; kullanıcıya dönük hata mesajları Türkçe).
+- Bunlar mühendislik varsayılanları — **bilinçli tasarlanmış bir onboarding deneyimi henüz yok** (**To Be Decided**).
 
 ## Varsayımlar
-- Onboarding sırasında bir noktada oda tarama/kurulum adımı olabilir — **Needs Validation** (bkz. [[Room Scanning Overview]]).
+- Onboarding'in bir noktasında oda tarama/kurulum adımı olabilir — **Needs Validation** (bkz. [[Room Scanning Overview]]).
 
 ## Bilinmeyenler
-- Kayıt yöntemi (e-posta, telefon, sosyal, misafir) — **Unknown**.
-- Onboarding'in oda kurulumu içerip içermeyeceği — **To Be Decided**.
-- İlk kullanıcı deneyiminin ne kadar basit olacağı — **To Be Decided**.
+- Sosyal login / telefon doğrulama gerekip gerekmeyeceği — **Unknown**.
+- İlk açılış deneyimi (değer gösterimi, tarama daveti) — **To Be Decided**.
 
 ## Önemli Sorular
-- Kullanıcı ilk açılışta ne görmeli / ilk hangi değeri almalı?
-- Kayıt zorunlu mu, yoksa keşif kayıt olmadan mümkün mü?
+- Kullanıcı ilk açılışta ne görmeli / ilk hangi değeri almalı? (Tarama mı, katalog mu, hazır demo oda mı?)
+- LiDAR'sız cihaz sahibi ilk açılışta ne yaşar?
 
 ## İlgili Notlar
-- [[60 Planning/Product Flows|Product Flows]] (User registration, User onboarding, Room creation akışları)
-- [[Target Users]]
+- [[60 Planning/Product Flows|Product Flows]], [[Target Users]]
 
 ## Kaynaklar
-- [[Meeting Index]]
+- [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]

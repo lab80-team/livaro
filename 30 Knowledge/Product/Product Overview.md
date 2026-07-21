@@ -1,27 +1,30 @@
 ---
 type: knowledge
-status: draft
-updated:
+status: living
+updated: 2026-07-20
 related: []
 ---
 
 # Product Overview
 
 ## Şu An Bilinenler
-- Ürün, bir **online mobilya pazaryeri**.
-- Bir **prototype** mevcut.
-- Ekip, kullanıcıların odalarını tarayıp/modelleyip mobilyayı görselleştirebileceği bir yönü araştırıyor.
+- Ürün, bir **online mobilya pazaryeri** girişimi. Çalışan vizyon cümlesi (kod reposu `PROJECT_STATUS.md`, 16 Tem): **"LiDAR oda tarama (RoomPlan) → AI iç mimarlık tasarımı (GPT-4o) → gerçek ölçülü 3D görselleştirme → ürün satışı"**.
+- **Prototype mevcut ve kapsamı belli**: iOS uygulaması (LiDAR'lı iPhone) + NestJS backend. Çalışan uçtan uca akış: oda tarama → köşe fotoğrafları → materyal analizi → texture'lı 3D oda → AI Designer wizard'ı (tarz/bütçe; pgvector ürün arama + GPT-4o yerleşim) → tasarım sonucu (gerçek .usdz mobilyalarla 3D sahne) → Blender render galerisi + USDZ.
+- Ayrıştırıcı iddia: tasarım **gerçek oda ölçülerine sadık** (generatif "güzel ama alakasız görsel" yaklaşımı bilinçli terk edildi — bkz. [[2026-07-16 Render Modal üzerinde headless Blender]]).
+- Ürün kataloğu şu an yalnızca 3 test ürünü (18 ürün bilinçli silindi; Tripo3D pipeline'ı hazır ama gerçek katalog doldurulmadı).
 
 ## Varsayımlar
-- Oda tarama / görselleştirme, ürünün farklılaştırıcı yönü olabilir — **Needs Validation**.
+- Oda tarama + gerçek ölçülü görselleştirme, ürünün farklılaştırıcısı — **Needs Validation** (hiç dış kullanıcıya test edilmedi).
+- "Kendi odam" hissi (fotoğraftan birebir texture) satın alma güvenini artırır — **Needs Validation**.
 
 ## Bilinmeyenler
-- İlk ürünün tam kapsamı — **To Be Decided**.
-- Hangi akışların basit, hangilerinin gelişmiş olacağı — **To Be Decided**.
+- İlk ürünün kapsamı (MVP) — **To Be Decided**.
+- İlk kullanıcılar ve çözülen ana problem — **To Be Decided** (bkz. [[Target Users]], [[User Problems]]).
 - Ticari model — **açık bırakıldı** (bkz. [[Marketplace Model]]).
+- LiDAR'lı iPhone zorunluluğunun pazar daraltması nasıl ele alınacak — **Open Question**.
 
 ## Önemli Sorular
-- En küçük değerli ilk ürün (MVP) nedir?
+- En küçük değerli ilk ürün (MVP) nedir? Teknoloji demosu değil, kimin hangi işini görüyor?
 - Bkz. [[Open Questions]]
 
 ## İlgili Notlar
@@ -29,7 +32,8 @@ related: []
 - [[60 Planning/Product Flows|Product Flows]]
 - [[Marketplace Model]]
 - [[Room Scanning Overview]]
+- [[System Architecture]]
 
 ## Kaynaklar
-- Başlangıç bilgisi: [[2026-07-19 Proje Kurulum Brief]].
-- Henüz işlenmiş toplantı yok. [[Meeting Index]]
+- [[2026-07-19 Proje Kurulum Brief]]; `~/Desktop/livaro/PROJECT_STATUS.md`
+- [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]], [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]

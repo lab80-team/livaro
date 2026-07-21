@@ -1,51 +1,52 @@
 ---
 type: system
 status: living
-updated:
+updated: 2026-07-21
 ---
 
 # Open Questions
 
-> Çözülmemiş sorular. **Kanıt veya ekip kararı olmadan yanıtlanmaz.** Yanıt netleştiğinde ilgili bilgi/karar notuna taşınır ve buradan kaldırılır (veya "çözüldü" olarak işaretlenip linklenir).
+> Çözülmemiş sorular. **Kanıt veya ekip kararı olmadan yanıtlanmaz.** Yanıt netleşince ilgili bilgi/karar notuna taşınır ve buradan kaldırılır (veya "çözüldü" işaretlenip linklenir).
+>
+> ⭐ = [[2026-07-21 PM Panel Tartışması]]'nın kuruculara yönelttiği öncelikli sorular.
 
 ## Ürün (Product)
-- İlk ürün ne olmalı? (En küçük değerli sürüm nedir?)
-- Hangi akışlar basit kalmalı, hangileri gelişmiş işlevsellik gerektiriyor?
+- ⭐ İlk ürün ne olmalı? İki PM'in ortak önerisi "tam pazaryeri değil; tarama→görselleştirme + ince lead katmanı" — **ekip kararı bekliyor**.
+- ⭐ Hedef kullanıcı kim ve hangi anda devreye giriyoruz (taşınma / tadilat / tek parça alım)? Akış toleransı, kanal ve katalog kapsamı bu cevaba bağlı.
+- ⭐ İlk 30 kullanıcı hangi kanaldan gelecek? (Kanal hipotezi olmayan MVP test edilemez.)
+- Hangi akışlar basit kalmalı, hangileri gelişmiş işlevsellik gerektiriyor? (6 adımlık tarama akışının terk oranı ölçülmedi.)
 - Bkz. [[Product Overview]], [[60 Planning/Product Flows|Product Flows]]
 
-## Kullanıcılar (Users)
-- İlk kullanıcılar kim?
-- Hangi problemi onlar için çözüyoruz?
-- Bkz. [[Target Users]], [[User Problems]]
+## Pazaryeri / İş Modeli
+- ⭐ Checkout mu lead generation mı — kurucuların içgüdüsü ne, hangi kanıt ikna eder? (Gelir modeli + birim ekonomisi + MVP kapsamı bu karara zincirli.)
+- ⭐ Render + Tripo3D + OpenAI kullanım başına maliyet ne; kullanıcı/satıcı başına kaç render/model öngörülüyor? (Birim ekonomisi hiç hesaplanmadı.)
+- ⭐ İlk gerçek satıcı kim olacak; bugüne kadar bir mobilya satıcısıyla konuşuldu mu? Katalog neden yeniden doldurulmadı?
+- Bkz. [[Marketplace Model]], [[Seller Experience]]
 
-## Pazaryeri (Marketplace)
-- Pazaryerinin katılımcıları kimler (alıcı, satıcı, diğer)?
-- Ticari model ne olacak? (Doğrudan checkout mu, lead generation mı, başka bir şey mi? — **açık bırakıldı**)
-- Bkz. [[Marketplace Model]]
+## Oda Tarama / 3D
+- ⭐ LiDAR'lı iPhone zorunluluğu bilinçli bir "premium segment" seçimi mi, geçici teknik kısıt mı? (LiDAR'sız fallback yatırım kararını belirler.)
+- ARKit mesh (ısınma nedeniyle kapalı) tarama-sonrası işlemeyle geri açılabilir mi? (PM'lerin ortak sırası: önce funnel ölçümü, sonra ucuz deneyler, ARKit en son.)
+- RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme aracı gerekir mi?
+- Kabul edilebilir minimum kalite çıtası ne? ("Odamı tanıdım / bu görselle satın alırdım" — dış kullanıcı verisi sıfır.)
+- Bkz. [[Room Scanning Overview]], [[3D Render Pipeline]]
 
-## Oda Tarama (Room Scanning)
-- Kullanıcılar odalarını nasıl tarayacak / modelleyecek?
-- Hangi yaklaşım (CV, depth estimation, 3D reconstruction, manuel fallback) yeterince iyi çalışıyor?
-- Bkz. [[Room Scanning Overview]], [[Room Scanning Approaches]]
+## Veri / Gizlilik (yeni — PM panelinin ortak tespiti)
+- ⭐ KVKK: ev içi tarama + fotoğraflar yurt dışı işleyicilere (OpenAI, Modal, Replicate) gidiyor — açık rıza, aydınlatma metni, saklama süresi planı var mı? Dış teste çıkmadan asgari rıza + saklama politikası şart.
 
-## Mühendislik (Engineering)
-- Mimari nasıl olacak? Bkz. [[System Architecture]]
-- Mobilya yerleştirme / görselleştirme teknik olarak nasıl yapılacak?
-
-## Deployment
-- Ürün nasıl deploy edilecek? Bkz. [[Deployment Strategy]]
+## Mühendislik
+- ⭐ TestFlight ve production deployment'ın önündeki somut engel ne, ne kadarlık iş? (Dış kullanıcıya ulaşmanın tek yolu; bkz. [[Deployment Strategy]].)
+- Texture regresyonlarına karşı otomatik doğrulama (golden-image, R2 çıktı kontrolü) kurulacak mı?
+- 2-3 dk'lık async render başarısız olduğunda kullanıcı ne görüyor? (Hata UX'i tanımsız.)
+- Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı.
+- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu?
+- Bkz. [[System Architecture]], [[Known Pitfalls]]
 
 ## Test (Testing)
-- E2E test yaklaşımı ne olacak? Bkz. [[E2E Testing Strategy]]
+- İlk otomasyon nereye: texture üretim zinciri mi, tarama→kayıt API'si mi? Bkz. [[E2E Testing Strategy]]
 
-## İş Modeli (Business Model)
-- Gelir nasıl elde edilecek? — **To Be Decided**
+## Müşteri Deneyimi
+- Bilinçli tasarlanmış onboarding yok — ilk açılışta kullanıcı ne görmeli, ilk değeri nasıl almalı? Bkz. [[User Onboarding]]
+- LiDAR'sız cihaz sahibi ilk açılışta ne yaşar?
 
-## Satıcı Deneyimi (Seller Experience)
-- Satıcılar ürünlerini nasıl ekleyip yönetecek?
-- Satıcı onboarding nasıl olacak?
-- Bkz. [[Seller Experience]]
-
-## Müşteri Deneyimi (Customer Experience)
-- Kullanıcı nasıl kayıt olacak? Bkz. [[User Onboarding]]
-- Mobilya nasıl keşfedilecek ve yerleştirilecek?
+## Kayıt
+- Çözülenler buradan karar/bilgi notlarına taşınır; geçmiş için Git. Kaynak: [[2026-07-21 PM Panel Tartışması]], [[2026-07-19 Proje Kurulum Brief]].

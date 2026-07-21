@@ -1,7 +1,7 @@
 ---
 type: decision-index
 status: living
-updated:
+updated: 2026-07-20
 ---
 
 # Decision Index
@@ -11,8 +11,18 @@ updated:
 > Yalnızca ekibin açıkça verdiği kararlar buraya girer. Fikir ve öneriler karar değildir → onlar ürün/planlama notlarına veya [[Open Questions]]'a gider.
 
 ## Kararlar
-_(henüz kayıtlı karar yok)_
 
-| Tarih | Karar | Kaynak Toplantı |
+| Tarih | Karar | Kaynak |
 |---|---|---|
-| — | — | — |
+| 2026-06-20 | [[2026-06-20 Bütçe yumuşak tercih\|AI aramada bütçe yumuşak tercih, oda ölçüsü sert filtre]] | [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]] |
+| 2026-06-22 | [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı\|iOS yalnızca CUSTOMER; satıcılar brand-panel'de; misafir gezinme serbest]] | [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]] |
+| 2026-06-24 | [[2026-06-24 iOS tasarım sistemi LivaroTheme\|iOS tasarım sistemi LivaroTheme (lüks/sıcak kimlik, 5 sekme)]] | [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]] |
+| 2026-07-09 | [[2026-07-09 3D render saf Transform matrix kullanır\|3D render saf Transform(matrix:) — manuel rotasyon yasak]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-11 | [[2026-07-11 GPU sağlayıcısı Modal\|GPU sağlayıcısı Modal (RunPod değil)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-11 | [[2026-07-11 Splat için 3. parti API yasak\|Splat için 3. parti API yasak (KIRI/Luma/Polycam)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-14 | [[2026-07-14 Gaussian Splatting rafa kaldırıldı\|Gaussian Splatting rafa kaldırıldı]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-15 | [[2026-07-15 RoomPlan geometri + AI texture varsayılan 3D yaklaşımı\|Varsayılan 3D: RoomPlan geometri + AI texture (ARKit mesh offline)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-15 | [[2026-07-15 Manuel köşe fotoğrafı akışı\|Fotoğraflar manuel çekilir (otomatik kare yakalama kaldırıldı)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-16 | [[2026-07-16 Render Modal üzerinde headless Blender\|Fotogerçekçi çıktı: Modal'da headless Blender (Faz 3)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
+| 2026-07-18 | [[2026-07-18 Texture fotoğraftan birebir kırpılır\|Texture fotoğraftan birebir kırpılır (generic üretim fallback)]] | [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]] |
+| 2026-07-19 | [[2026-07-19 Tarama akışına zemin-duvar yakın çekim adımları\|Tarama akışına zemin/duvar yakın çekim adımları (isteğe bağlı)]] | [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]] |

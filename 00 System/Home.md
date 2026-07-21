@@ -30,6 +30,8 @@ Online mobilya pazaryeri projesinin ortak hafızası. Bu vault ekibin çalışma
 
 ## Mühendislik
 - [[System Architecture]]
+- [[3D Render Pipeline]]
+- [[Known Pitfalls]]
 - [[Deployment Strategy]]
 - [[E2E Testing Strategy]]
 
@@ -50,6 +52,8 @@ Online mobilya pazaryeri projesinin ortak hafızası. Bu vault ekibin çalışma
 
 ## Son Aktivite
 > En güncel toplantılar, kararlar ve deneyler işlendikçe buraya elle eklenir.
-- Son toplantılar: [[Meeting Index]]
+- **2026-07-21**: [[2026-07-21 PM Panel Tartışması]] — iki AI PM personası + moderatör; sorular [[Open Questions]]'a (⭐) işlendi. Öneri ≠ karar.
+- **2026-07-20/21**: 16 Haz – 20 Tem Claude Code oturumları vault'a işlendi — 3 import notu (Inbox), 12 karar, 5 deney, mühendislik bilgi notları. Bkz. [[Current State]].
+- Son import'lar: [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]], [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 - Son kararlar: [[Decision Index]]
 - Aktif deneyler: [[Experiment Index]]
