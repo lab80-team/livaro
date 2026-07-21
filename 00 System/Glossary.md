@@ -11,8 +11,8 @@ updated: 2026-07-20
 ## Ürün / pazar
 - **brand-panel** — Satıcılar (SELLER/ADMIN) için web ürün yükleme paneli (Vite+React); 4 açı fotoğrafıyla ürün → otomatik 3D model.
 - **LivaroTheme** — iOS tasarım sistemi (koyu kahve + altın, serif başlıklar, 5 sekme); tek doğruluk kaynağı `LivaroTheme.swift`.
-- **Faz yapısı** — Proje fazlarla ilerliyor: Faz 1-2 (temel backend + Tripo3D pipeline, kayıt öncesi), Faz 3 (brand-panel ürün yükleme), Faz 4 (AI tasarımcı motoru), Faz 5a-5e (iOS; 5d sepet+Iyzico, 5e TestFlight — henüz yapılmadı).
-- **Iyzico** — Türkiye odaklı ödeme sağlayıcısı; Faz 5d için planlandı (entegre edilmedi).
+- **Faz yapısı** — Proje fazlarla ilerliyor: Faz 1-2 (temel backend + Tripo3D pipeline, kayıt öncesi), Faz 3 (brand-panel ürün yükleme), Faz 4 (AI tasarımcı motoru), Faz 5a-5e (iOS; 5d sepet+ödeme, 5e TestFlight — henüz yapılmadı).
+- **Iyzico** — Türkiye odaklı bir ödeme sağlayıcısı; Haziran'da Faz 5d için bir olasılık olarak düşünülmüştü ama kurucu bunun **henüz belirsiz** olduğunu belirtti (2026-07-21) — ödeme sağlayıcısı kararı açık.
 - **Marketplace** — Alıcı ve satıcıları buluşturan pazaryeri.
 - **Seller** — Mobilya ekleyip satan taraf.
 - **Onboarding** — Kullanıcının/satıcının ürüne ilk giriş ve kurulum süreci.

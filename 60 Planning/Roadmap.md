@@ -18,7 +18,7 @@ updated: 2026-07-20
 - **To Be Decided** — açık ürün/pazar sorularına bağlı (hedef kullanıcı, edinme kanalı, satıcı pilotu; bkz. [[Open Questions]])
 
 ## Later
-- **Sepet + checkout** (kurucu niyeti net — 2026-07-21 kararı; zamanlama TBD; Iyzico/Faz 5d planı rafta)
+- **Sepet + checkout** (kurucu niyeti net — 2026-07-21 kararı; zamanlama TBD; ödeme sağlayıcısı henüz belirsiz — Iyzico bir olasılık, karar değil)
 - Production deployment + TestFlight ([[Deployment Strategy]] — şu an tamamen açık)
 - Opsiyonel: ARKit mesh'i geri açma; gsplat'a dönüş (rafta); render fotogerçekçileştirme katmanı
 

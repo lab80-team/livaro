@@ -14,7 +14,7 @@ PM panelinin iki personası bağımsız olarak aynı öneriye vardı: ilk ürün
 ## Karar
 Kurucu (Selim, 2026-07-21): **"Şimdilik bu öneriyi benimse — ama ileride sepet ve checkout da gelecek."**
 - İlk ürün kapsamı: oda tarama → gerçek ölçülü 3D görselleştirme + AI tasarım → ürün için **lead** aksiyonu.
-- **Checkout/sepet ilk sürümde YOK**; ileride eklenecek (niyet net, zamanlama **To Be Decided** — Faz 5d/Iyzico planı rafta duruyor).
+- **Checkout/sepet ilk sürümde YOK**; ileride eklenecek (niyet net, zamanlama **To Be Decided**). Ödeme sağlayıcısının Iyzico olup olmayacağı da **belirsiz** — kurucu açıkça bunun henüz netleşmediğini belirtti (2026-07-21); Haziran'daki Faz 5d planı bir olasılık, taahhüt değil.
 
 ## Gerekçe
 Teknoloji riski büyük ölçüde alınmışken ürün riski hiç alınmadı (0 dış kullanıcı, 0 satıcı, 3 test ürünü); doğrulanmamış talebe ödeme/iade/satıcı operasyonu altyapısı kurulmaz. Dar kapsam, kırılgan pipeline'ı sertleştirmeye ve ilk pazar temasına alan açar.
@@ -26,7 +26,7 @@ Teknoloji riski büyük ölçüde alınmışken ürün riski hiç alınmadı (0 
 ## Sonuçlar (Consequences)
 - MVP tanımı bu kapsama göre yapılır; PM panelinin ilgili önerileri (lead birincil ticari metrik, tek satıcıdan 30-50 ürünlük katalog pilotu, moderated test) masada — bunlar hâlâ öneri, ayrıca kararlaştırılmalı.
 - "Checkout or lead generation" akışı ilk sürüm için netleşti: **lead**. Gelir modeli detayı (komisyon / lead ücreti / abonelik) hâlâ **To Be Decided** — bkz. [[Marketplace Model]].
-- Sepet/checkout geldiğinde Iyzico planı (Faz 5d) yeniden değerlendirilir.
+- Sepet/checkout geldiğinde ödeme sağlayıcısı (Iyzico dahil) o zaman kararlaştırılır — şimdilik açık.
 
 ## İlgili Bilgi
 [[Product Overview]], [[Marketplace Model]], [[Open Questions]]

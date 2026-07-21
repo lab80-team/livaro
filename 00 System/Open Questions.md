@@ -20,6 +20,7 @@ updated: 2026-07-21
 
 ## Pazaryeri / İş Modeli
 - ~~Checkout mu lead mi?~~ **İlk sürüm için ÇÖZÜLDÜ (2026-07-21)**: lead; sepet+checkout ileride gelecek (zamanlama TBD) → [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]]. Açık kalan: gelir modeli detayı (komisyon / lead ücreti / abonelik) ve checkout'un ne zaman geleceği.
+- Checkout geldiğinde ödeme sağlayıcısı ne olacak (Iyzico mı, başka mı)? Kurucu bunun **henüz belirsiz** olduğunu açıkça belirtti (2026-07-21) — Haziran'daki Iyzico planı bir olasılık, karar değil.
 - ⭐ Render + Tripo3D + OpenAI kullanım başına maliyet ne; kullanıcı/satıcı başına kaç render/model öngörülüyor? (Birim ekonomisi hiç hesaplanmadı.)
 - ⭐ İlk gerçek satıcı kim olacak; bugüne kadar bir mobilya satıcısıyla konuşuldu mu? Katalog neden yeniden doldurulmadı?
 - Bkz. [[Marketplace Model]], [[Seller Experience]]

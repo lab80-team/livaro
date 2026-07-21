@@ -23,7 +23,7 @@ Kurucu (22 Haz, AskUserQuestion yanıtı: "Evet, sadece CUSTOMER"):
 
 ## Sonuçlar (Consequences)
 - Satıcı deneyimi = [[Seller Experience]] (web); müşteri deneyimi = iOS.
-- Sepet/ödeme (Iyzico) Faz 5d'ye planlandı; TestFlight Faz 5e — henüz yapılmadı.
+- O tarihte sepet/ödeme (Iyzico) Faz 5d'ye planlanmıştı; TestFlight Faz 5e — henüz yapılmadı. **Güncelleme (2026-07-21):** ödeme sağlayıcısının Iyzico olup olmayacağı kurucu tarafından açıkça belirsiz ilan edildi — bkz. [[2026-07-21 İlk ürün kapsamı görselleştirme + lead]], [[Marketplace Model]].
 
 ## İlgili Bilgi
 [[Marketplace Model]], [[User Onboarding]]
