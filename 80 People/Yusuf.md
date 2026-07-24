@@ -6,8 +6,9 @@ related: []
 # Yusuf
 
 ## Projedeki Rol
-- Ekip üyesi. Oda tarama (room scanning) algoritmaları üzerinde [[Selim]] ile çalıştı.
-- Unvan/rol detayı — **Unknown** (tahmin edilmez).
+- **Kurucu** (kurucu beyanı, 2026-07-24: "iki kişiyiz bu şirketin yöneticileri olarak"). Oda tarama (room scanning) algoritmaları üzerinde [[Selim]] ile çalıştı.
+- Öğrenci; **okulu 6 ay sonra bitiyor** (2026-07-24 → [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]]).
+- Unvan/iş bölümü detayı — **Unknown** (tahmin edilmez).
 
 ## Sorumluluklar
 - **Unknown**

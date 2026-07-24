@@ -8,6 +8,8 @@ related: []
 
 # İlk ürün kapsamı: tarama→görselleştirme + ince lead katmanı (checkout sonra)
 
+> **Güncelleme (2026-07-24)**: [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]] bu kararı güncelledi — sepete ekleme MVP'ye alındı; checkout ödeme teknolojisi seçilince entegre edilecek. "İnce lead katmanı"nın akıbeti (checkout öncesi sepetin davranışı) **To Be Decided** → [[Open Questions]].
+
 ## Bağlam
 PM panelinin iki personası bağımsız olarak aynı öneriye vardı: ilk ürün tam pazaryeri olmamalı; "odanı tara → ölçüyle doğru döşenmiş halini gör" deneyimi + ince bir lead katmanı olmalı (checkout yok). Kurucu aynı gün önce kararı erteledi ("henüz karar yok"), ardından kararı verdi.
 

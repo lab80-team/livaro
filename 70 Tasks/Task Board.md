@@ -1,7 +1,7 @@
 ---
 type: tasks
 status: living
-updated: 2026-07-20
+updated: 2026-07-24
 ---
 
 # Task Board
@@ -15,6 +15,11 @@ updated: 2026-07-20
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+- [ ] GPT-4o yerleşimini kapsamlı test et; sonuca göre teknoloji kararı (kural tabanlı sisteme geçiş dahil) — area:: engineering/product · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 14)
+- [ ] İade/iptal kurallarının hukuki tanımını araştır (14 gün cayma hakkı + özel üretim istisnası + emanet/lisans sorusu) — area:: business/legal · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 25)
+- [ ] Toplu ürün yükleme Excel şablonunu tasarla (fotoğraf bağlantısı çözümü dahil) — area:: product/engineering · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 16)
+- [ ] Wizard tarz kartlarına fotoğraf ekle — area:: product/engineering · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 4)
+- [ ] Pazarlık/hizmet bedeli stratejisi üzerine düşün (rafa mı, ne zaman, hangi kurallarla) — area:: business · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 21)
 - [ ] Yakın çekim texture akışını cihazda uçtan uca doğrula (Nest log "yakın çekimden kırpıldı [floor]" + USDZ'de birebir doku + atla senaryosu) — area:: engineering · source:: [[2026-07-19 Tarama akışına zemin-duvar yakın çekim adımları]]
 - [ ] Faz 3 gerçek-veri testi: girintili odada `floorPolygon` zincirleme — area:: engineering · source:: `PROJECT_STATUS.md`
 - [ ] Faz 3 gerçek-veri testi: Tripo GLB ölçek/rotasyon işareti doğrulaması — area:: engineering · source:: `PROJECT_STATUS.md`

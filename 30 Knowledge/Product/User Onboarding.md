@@ -8,7 +8,8 @@ related: []
 # User Onboarding
 
 ## Şu An Bilinenler (prototipteki fiilî durum — tasarlanmış onboarding değil)
-- iOS'ta **misafir gezinme serbest** (22 Haz kararı): açılışta login zorunlu değil; ürün listesi doğrudan görünür; kişisel aksiyonlar auth ister.
+- iOS'ta **misafir gezinme serbest** (22 Haz kararı; **kurucu teyidi 2026-07-24**): açılışta login zorunlu değil; ürün listesi doğrudan görünür; kişisel aksiyonlar (tarama, kaydetme) auth ister.
+- Welcome page vizyonu (2026-07-24, tasarlanmadı): güzel ev/mobilya tasarımı arka planı + "Odayı tara" ve "Projelerim" seçenekleri → [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]].
 - Kayıt: e-posta+şifre (JWT); iOS'ta kayıt olan herkes **CUSTOMER** (rol seçimi yok). Satıcılar web brand-panel'den girer. Bkz. [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]].
 - Uygulama Türkçe-odaklı (CFBundleDevelopmentRegion: tr; kullanıcıya dönük hata mesajları Türkçe).
 - Bunlar mühendislik varsayılanları — **bilinçli tasarlanmış bir onboarding deneyimi henüz yok** (**To Be Decided**).

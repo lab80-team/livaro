@@ -1,7 +1,7 @@
 ---
 type: decision-index
 status: living
-updated: 2026-07-20
+updated: 2026-07-24
 ---
 
 # Decision Index
@@ -26,5 +26,10 @@ updated: 2026-07-20
 | 2026-07-16 | [[2026-07-16 Render Modal üzerinde headless Blender\|Fotogerçekçi çıktı: Modal'da headless Blender (Faz 3)]] | [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]] |
 | 2026-07-18 | [[2026-07-18 Texture fotoğraftan birebir kırpılır\|Texture fotoğraftan birebir kırpılır (generic üretim fallback)]] | [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]] |
 | 2026-07-19 | [[2026-07-19 Tarama akışına zemin-duvar yakın çekim adımları\|Tarama akışına zemin/duvar yakın çekim adımları (isteğe bağlı)]] | [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]] |
-| 2026-07-21 | [[2026-07-21 İlk ürün kapsamı görselleştirme + lead\|İlk ürün: görselleştirme + lead katmanı (checkout ileride)]] | [[2026-07-21 PM Panel Tartışması]] |
+| 2026-07-21 | [[2026-07-21 İlk ürün kapsamı görselleştirme + lead\|İlk ürün: görselleştirme + lead katmanı (checkout ileride) — 24 Tem'de güncellendi]] | [[2026-07-21 PM Panel Tartışması]] |
 | 2026-07-21 | [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat\|Hedef kullanıcı anı: taşınma + tadilat/yenileme (tek parça alım ileride)]] | [[2026-07-21 PM Panel Tartışması]] |
+| 2026-07-24 | [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince\|Sepet MVP'de; checkout ödeme teknolojisi seçilince (21 Tem kararını günceller)]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 MVP yalnızca LiDAR'lı iPhone\|MVP yalnızca LiDAR'lı iPhone; LiDAR'sız çözüm ileride]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım\|MVP tasarım kapsamı: oda boşaltılır, sıfırdan tasarım; ürün çıkarma; AR tüm oda; yeniden tasarla 2 hak]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 Bütçe aşım tavanı yüzde 10\|Bütçe yumuşak tercih kalır; aşım tavanı ~%10 (çok düşük bütçede esner)]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 Pilot marka kriterleri\|Pilot: her kategoriden 2 internette satan firma; mağazalara MVP bitince gidilecek]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |

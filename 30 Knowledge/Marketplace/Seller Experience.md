@@ -1,13 +1,20 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-20
+updated: 2026-07-24
 related: []
 ---
 
 # Seller Experience
 
 ## Şu An Bilinenler
+- **Thinking session güncellemeleri (2026-07-24)**:
+  - **Tripo3D hattı devam** (kurucu teyidi; anlatımdaki "tripodla çekim" Tripo3D/tripod karışıklığıydı, tripod fikri yok).
+  - **Pilot marka kriterleri kararlaştı**: internette satan, vizyoner, çeşitliliği yüksek firmalardan her kategoriden 2 tane; mağazalara MVP bitince gidilecek → [[2026-07-24 Pilot marka kriterleri]].
+  - **Toplu ürün yükleme planı**: pilot firmaların web sitesi fotoğrafları kullanılacak; taslak **Excel şablonu** (mağaza tüm özellikleri girer; fotoğraf bağlantısı çözülecek) veya **API** ile toplu yükleme. (PM uyarısı: site fotoğrafları Tripo3D'nin 4 açı formatı değil; önce 20 ürünlük kalite+maliyet denemesi → [[2026-07-24 PM Gözden Geçirme — Thinking Session]].)
+  - **Stok**: mağazalar stoklu ürünlerde stok girecek; özel üretimde stok takibi yok.
+  - **İstenen admin paneli metrikleri (vizyon)**: ürün görüntüleme, tıklanma sayısı, kaç kişinin ürünle tasarım yaptığı, sepete eklenme sayısı.
+  - Kaynak: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 5, 16, 30, 32).
 - **Satıcı web paneli (brand-panel) prototipte mevcut** (Haziran, Faz 3): Vite + React Router; yalnızca SELLER/ADMIN rolleri girebilir (CUSTOMER engellenir). Kaynak: [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]].
 - **Ürün yükleme akışı çalışıyor**: form (ad, açıklama, fiyat, **en/boy/yükseklik cm — üçü zorunlu** çünkü 3D model gerçek ölçülere göre scale ediliyor; kumaş opsiyonel) + **4 açı fotoğrafı (ön/arka/sol/sağ)** — Tripo3D multi-view 3D model üretiminin girdisi. Kaydetme resumable state machine: ürün oluştur → fotoğrafları yükle → 3D pipeline tetikle; hatada "Tekrar dene" kaldığı adımdan sürer.
 - slug/sku gibi teknik alanlar satıcıdan gizlenip otomatik üretiliyor. Markası olmayan satıcı ürün ekleyemez (bilinçli engelleme mesajı).
