@@ -33,10 +33,10 @@ status: processed
 - Render bildirimi yok (5 sn polling) → [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]]
 - "GLB min-oran fit" ifadesi kodla uyuşmuyor (kod eksen-bazlı tam ölçek uyguluyor) — Needs Validation
 
-## Dışarıda kalan işler (deploy/cihaz)
+## Dışarıda kalan işler (deploy/cihaz) — güncelleme: aynı gün kapatıldı
 
-- Edge function deploy'u: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) → TestFlight doğrulaması.
-- Cihaz doğrulama turu: tarama + too-close, Yeniden Tasarla → yeni sahne, ProductDetail 360°/AR, Render sekmesi, AR relocalization.
+- ~~Edge function deploy'u~~ — **YAPILDI (aynı gün)**: 5 R2 secret'ı yüklendi, function deploy edildi; canlı doğrulama: katalog 200 + usdzUrl imzalı ve indirilebilir (HTTP 206), yanlış login 401 (verify_jwt=false handler'a ulaştırıyor), kısa şifre register 400. Kalan: TestFlight/Release build'inde uygulama-içi kontrol.
+- ~~Cihaz doğrulama turu~~ — **YAPILDI (aynı gün, 7/7)** — yukarıdaki bölüm.
 - `drop_splat_and_ai_task` migration'ı hâlâ uygulanmadı (24 Tem'de DB'den doğrulandı).
 
 ## Cihaz doğrulama turu sonuçları (aynı gün, kurucu telefonda)

@@ -40,11 +40,12 @@ updated: 2026-07-24
 - Detay: [[Experiment Index]].
 
 ## Güncel Öncelikler (Now)
-1. **Edge function deploy'u**: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth doğrulaması.
-2. **Tripo ölçek/rotasyon şüphesi** (24 Tem turunda bir modelde ölçek/yerleşim tuhaflığı görüldü; GPT-4o yerleşim testiyle birlikte ele alınacak).
-3. Katalog doldurma (Tripo3D'den gerçek ürünler).
-4. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14; turdaki yerleşim tuhaflığı bu testin önemini artırdı).
-5. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
+1. **Tripo ölçek/rotasyon şüphesi** (24 Tem turunda bir modelde ölçek/yerleşim tuhaflığı görüldü; GPT-4o yerleşim testiyle birlikte ele alınacak).
+2. Katalog doldurma (Tripo3D'den gerçek ürünler).
+3. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14; turdaki yerleşim tuhaflığı bu testin önemini artırdı).
+4. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
+
+> Edge function **deploy edildi ve canlıda doğrulandı (24 Tem)**: R2 secret'ları yüklendi; katalog imzalı-indirilebilir URL'lerle dönüyor, auth handler'da çalışıyor, register doğrulaması aktif. Kalan: TestFlight/Release build'inde uygulama-içi kontrol → [[Task Board]].
 
 > Cihaz doğrulama turu (24 Tem) **7/7 tamamlandı**: 360°/AR ✓ (ilk kez), tarama+too-close ✓, yakın çekim texture akışı uçtan uca ✓, Yeniden Tasarla ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri), AR relocalization ✓, USDZ QuickLook'ta materyallerle ✓. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]] ve [[Task Board]].
 

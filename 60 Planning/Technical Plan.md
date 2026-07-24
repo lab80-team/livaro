@@ -17,8 +17,8 @@ updated: 2026-07-24
 1. **Faz 3 gerçek-veri testi**: girintili odada `floorPolygon`; Tripo GLB ölçek/rotasyon işareti; Blender USDZ'nin QuickLook materyel uyumu; eğik duvarlarda kapı/pencere boolean kesimleri.
 2. **Yakın çekim akışının uçtan uca doğrulaması** (cihazda; Nest log "yakın çekimden kırpıldı [floor]" + USDZ'de birebir doku; atla senaryosunda GPT bölge yolu).
 3. **Katalog**: DB'de yalnızca 3 usdz'li test ürünü var (18 ürün bilinçli silindi, 15 Tem). Gerçek katalog ürünleri ekle + Tripo3D pipeline'ından toplu geçir — tasarım çeşitliliğinin ön koşulu.
-4. **Edge function deploy'u** (24 Tem overhaul çıktısı): `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth/360° doğrulaması.
-5. **Cihaz doğrulama turu** (overhaul sonrası): tarama + too-close, "Yeniden Tasarla" → yeni sahne, ProductDetail 360°/AR, Render sekmesi, AR relocalization.
+4. ~~Edge function deploy'u~~ — **YAPILDI (24 Tem)**: secret'lar yüklendi, deploy edildi, canlı API doğrulandı (imzalı URL'ler indirilebilir, auth çalışıyor). Kalan: TestFlight/Release build'inde uygulama-içi kontrol.
+5. ~~Cihaz doğrulama turu~~ — **YAPILDI (24 Tem, 7/7)** → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
 6. Opsiyonel: Blender çıktısını img2img ile fotogerçekçileştirme katmanı (mevcut `_enhance_render`).
 7. Açık: texture "Yeniden üret" butonu; ARKit mesh'i geri açma kararı; gsplat'a dönüş. (gpt-image-1 yolu ve `coverageGateEnabled` bayrağı 21+24 Tem temizlikleriyle kod tabanından çıktı — karar gerekmiyor.)
 
