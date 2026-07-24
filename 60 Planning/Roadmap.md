@@ -21,7 +21,7 @@ updated: 2026-07-20
 
 ## Later
 - **Checkout entegrasyonu** (sepet MVP'de; ödeme teknolojisi seçilince → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]])
-- Production deployment + TestFlight ([[Deployment Strategy]] — şu an tamamen açık)
+- ~~Production deployment~~ → **öne çekildi (2026-07-24 kararı)**: backend buluta taşınacak → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]; TestFlight zamanlaması açık ([[Deployment Strategy]])
 - Kısmi tasarım (dolu odada parça değiştirme, chat ile değişiklik, çıkarılan ürüne alternatif önerme); LiDAR'sız cihaz desteği; değerlendirme/puan sistemi; reklam/sponsorlu ürün; video walkthrough + Marble benzeri sanal dünya (abonelik/tek seferlik); ünlü tasarımları; indirim/hizmet bedeli modeli (fikir aşaması)
 - Opsiyonel: ARKit mesh'i geri açma; gsplat'a dönüş (rafta); render fotogerçekçileştirme katmanı
 

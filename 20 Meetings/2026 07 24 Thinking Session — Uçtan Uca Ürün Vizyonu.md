@@ -141,6 +141,10 @@ Sepet pasif liste olarak kalacak su anlık
 
 Bütçe aşım tavanı %20 eğer bütçeye ve tarzına seçimlerine uygun yoksa.
 
+### Bölüm 4 — PM 2. tur önerilerine kurucu cevabı (birebir)
+
+maliyet frenine şu an için gerek yok analizini biz kendimiz yapıp sonra sana anlatacağız. buluta taşınma önerisin kabul ediyorum. gpt-4o test edilecek gün sayısı belli değil tarama sayısı belli değil belki promptlar gireceğiz oraya orası da belli değil. 4 ü kabul ediyorum. bütçe aşımı rozet koysun. Bu dedikleri dikkate alarak onaylıyorum ve öncekileri onaylıyorum.
+
 ## Tartışma Özeti
 
 **Problem (kurucu hipotezi):** Ev dizmek/mobilya yenilemek isteyen kişi 1-2 ay mağaza mağaza geziyor (mobilya, halı, perde, avize ayrı mağazalar); ürünleri odasında bir arada göremiyor, profesyonel tasarım desteği alamıyor, toplam bütçeyi tek yerde takip edemediği için bütçesini aşıyor. Sonuç: zaman + fiziksel/mental enerji kaybı.
@@ -161,6 +165,7 @@ Bütçe aşım tavanı %20 eğer bütçeye ve tarzına seçimlerine uygun yoksa.
 - [[2026-07-24 Pilot marka kriterleri]]
 - [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]]
 - [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]
+- [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]] (Bölüm 4: maliyet freni reddedildi — analizi kurucular yapacak; buluta taşınma kabul; dolu oda/AR kalite çıtası kabul; bütçe aşımına rozet kabul; GPT-4o test detayları belirsiz)
 - Teyit edilen eski kararlar: misafir gezinme serbest ([[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]]), wizard akışı ([[60 Planning/Product Flows|Product Flows]]), Tripo3D pipeline, mevcut tarama adımları, bütçe yumuşak tercih ([[2026-06-20 Bütçe yumuşak tercih]]).
 
 ## Görevler

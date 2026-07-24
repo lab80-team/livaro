@@ -15,6 +15,8 @@ updated: 2026-07-24
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+- [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
+- [ ] Birim maliyet analizini yap ve sonuçları vault'a aktar (kurucular kendisi yapacak) — owner:: Selim/Yusuf · area:: business · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (Bölüm 4)
 - [ ] GPT-4o yerleşimini kapsamlı test et; sonuca göre teknoloji kararı (kural tabanlı sisteme geçiş dahil) — **sıralama (teyit turu): MVP altyapısı/3D model tamamlandıktan sonra** — area:: engineering/product · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 14 + Bölüm 3)
 - [ ] İade/iptal kurallarının hukuki tanımını araştır (14 gün cayma hakkı + özel üretim istisnası + emanet/lisans sorusu) — area:: business/legal · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 25)
 - [ ] Toplu ürün yükleme Excel şablonunu tasarla (fotoğraf bağlantısı çözümü dahil) — area:: product/engineering · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 16)

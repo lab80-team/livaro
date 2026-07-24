@@ -23,7 +23,7 @@ updated: 2026-07-24
 ## Güncel Teknik Durum
 - Yığın: SwiftUI iOS + NestJS/Prisma/Supabase + Cloudflare R2 + Modal (Blender, T4) + OpenAI GPT-4o + Replicate flux-schnell + Tripo3D. Detay: [[System Architecture]].
 - **Aktif 3D yolu**: RoomPlan geometri + fotoğraftan birebir kırpılan texture + Modal'da headless Blender render/USDZ. Detay: [[3D Render Pipeline]].
-- Backend dev ortamında kurucu Mac'inde koşuyor (mDNS); **production deployment tamamen açık** — [[Deployment Strategy]].
+- Backend dev ortamında kurucu Mac'inde koşuyor (mDNS); **KARAR (2026-07-24): buluta taşınacak** (arka plan render + bildirim ve kullanıcı çekme ön şartı) → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Hangi bulut/nasıl — açık: [[Deployment Strategy]].
 
 ## Oda Tarama Durumu
 - Temel: Apple RoomPlan (güvenilir). Yaklaşım geçmişi ve sonuçları: [[Room Scanning Approaches]] (gsplat başarısız→rafta; ARKit mesh çalıştı→offline; RoomPlan+AI texture aktif).
@@ -49,6 +49,7 @@ updated: 2026-07-24
 - Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
 
 ## Son Kararlar
+- [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
 - [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]]
 - [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]
 - [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]] (sepet şu anlık pasif liste)

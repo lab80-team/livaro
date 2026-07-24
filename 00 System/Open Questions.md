@@ -18,14 +18,12 @@ updated: 2026-07-24
 - ~~Emanet modeli?~~ **ÇÖZÜLDÜ**: lisanslı ödeme kuruluşuyla → [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]].
 - Ayrıca: iptal/iade **yasaya uygun** tasarlanacak (detay hâlâ açık, aşağıda); bütçe aşım tavanı **%20**; hizmet bedeli baştan alınacak (kurucu kararı); birim maliyet analizi bilinçli olarak MVP sonrasına bırakıldı; GPT-4o testi MVP altyapısı bitince.
 
-## PM 2. tur incelemesinin açık bıraktıkları (öneri; karar kurucularda)
-- Sınırsız ücretsiz tasarım + bilinmeyen birim maliyet: harcama tavanı/uyarı ve sunucudan açılabilir "limit anahtarı" şimdiden kurulmalı mı? Kötüye kullanım (bot) koruması?
-- Render arka planda çalışacaksa backend'in Mac'ten buluta taşınması öne çekilmeli mi? (Bildirim, Mac kapalıyken çalışmaz.)
-- Render sürerken kullanıcı ürün değiştirirse bildirimle gelen görsel eski tasarımı gösterir — sürüm/etiket kuralı gerekiyor.
-- Bütçeyi aşan ürünler kullanıcıya "bütçenin %X üstünde" rozetiyle mi gösterilsin, önce sorulsun mu?
-- Hizmet bedelinin iade koşulları + tahsilat yolu (ödeme sağlayıcısı yokken) tanımsız.
-- Dolu oda boşaltma ve AR için iç kalite çıtası/kontrol noktası (tutmazsa "deneysel" etiketiyle mi açılır?).
-- GPT-4o için tam testten önce ucuz ön deneme (eldeki 2-3 taramayla) yapılmalı mı; "iyi yerleşim" ölçütü şimdiden yazılmalı mı?
+## PM 2. tur önerileri — kurucu cevapları (2026-07-24, Bölüm 4)
+- ~~Harcama tavanı/limit anahtarı~~ — **RET**: şimdilik gerek yok; birim maliyet analizini kurucular kendileri yapıp paylaşacak → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]].
+- ~~Buluta taşınma öne çekilsin mi?~~ — **KABUL**: backend buluta taşınacak (aynı karar notu).
+- ~~Dolu oda/AR kalite çıtası~~ — **KABUL**: iç kontrol noktası; tutmazsa "deneysel" etiketiyle açılır (aynı karar notu).
+- ~~Bütçe aşımı rozeti~~ — **KABUL**: aşan ürünlere "bütçenin %X üstünde" rozeti (aynı karar notu).
+- Hâlâ açık (öneri statüsünde): render sürerken değişiklik yapılırsa görsel sürüm/etiket kuralı; hizmet bedelinin iade koşulları + tahsilat yolu; tek sayfalık iade akışı; bot/kötüye kullanım koruması; GPT-4o "iyi yerleşim" ölçütü + ucuz ön deneme (test detayları — gün sayısı, tarama sayısı, prompt kullanımı — **To Be Decided**).
 
 ## Ürün (Product)
 - ~~İlk ürün ne olmalı?~~ **ÇÖZÜLDÜ** (2026-07-21 + 2026-07-24): görselleştirme + sepet; checkout ödeme teknolojisi seçilince → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]].
@@ -64,7 +62,7 @@ updated: 2026-07-24
 - ⭐ KVKK: ev içi tarama + fotoğraflar yurt dışı işleyicilere (OpenAI, Modal, Replicate) gidiyor — açık rıza, aydınlatma metni, saklama süresi planı var mı? Dış teste çıkmadan asgari rıza + saklama politikası şart.
 
 ## Mühendislik
-- ⭐ TestFlight ve production deployment'ın önündeki somut engel ne? (Backend hâlâ kurucu Mac'inde; PM: çevre pilotundan önce bulut + TestFlight.)
+- ⭐ ~~Buluta taşınma gerekli mi?~~ **KARARLAŞTI (2026-07-24)**: backend buluta taşınacak → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Açık kalan: hangi bulut/nasıl, TestFlight zamanlaması → [[Deployment Strategy]].
 - Tripo3D sonuçları cache'lenmeli (retry'lar kredi yakıyor); toplu yüklemeden önce 20 ürünlük kalite+maliyet denemesi yapılacak mı?
 - Texture regresyonlarına karşı otomatik doğrulama kurulacak mı?
 - 2-3 dk'lık async render başarısız olduğunda kullanıcı ne görüyor? (Hata UX'i tanımsız.)

@@ -35,3 +35,4 @@ updated: 2026-07-24
 | 2026-07-24 | [[2026-07-24 Pilot marka kriterleri\|Pilot: her kategoriden 2 internette satan firma; mağazalara MVP bitince gidilecek]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda\|Anlık deneyim: canlı 3D sahne anında; fotogerçekçi render arka planda bildirimle]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla\|Emanet para lisanslı ödeme kuruluşuyla; iptal/iade yasaya uygun tasarlanacak]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti\|Backend buluta taşınacak; dolu oda/AR kalite çıtası; bütçe aşımı rozeti; maliyet freni ret]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |

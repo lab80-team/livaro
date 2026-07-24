@@ -9,6 +9,7 @@ related: ["[[2026-06-20 Bütçe yumuşak tercih]]"]
 # Bütçe aşım tavanı yüzde 10
 
 > **Güncelleme (2026-07-24, teyit turu)**: tavan **%20**'ye çıkarıldı — bütçe + tarz/seçimlere uygun tasarım bulunamıyorsa aşım en fazla ~%20 olabilir. Aşağıdaki %10 ifadesi ve "çok düşük bütçe" istisnası bu güncellemeyle geçersiz.
+> **Ek (aynı gün, Bölüm 4)**: bütçeyi aşan ürünler kullanıcıya **"bütçenin %X üstünde" rozetiyle** gösterilecek (kurucu onayı).
 
 ## Bağlam
 [[2026-06-20 Bütçe yumuşak tercih]] bütçeyi arama skorunda yumuşak tercih yapmıştı (aşım sınırı tanımsızdı). Problem tanımında "bütçe aşımı" ana kullanıcı derdi olduğu için sınır soruldu.
