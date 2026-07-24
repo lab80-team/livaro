@@ -12,18 +12,18 @@ related: []
 ## Gelir Modeli (kurucu planı, 2026-07-24)
 - **Kısa vade: %10 komisyon** — sepetteki fiyattan, her üründen/markadan.
 - **Orta vade: reklam** — mağazalar ürünlerine ve kendilerine reklam verebilecek; tarz+bütçe+renge uygun ürünler arasından reklamlı olan öne çıkacak; **"Sponsorlu" etiketiyle gösterilecek** (kurucu onayı, cevap 19). Showroom senaryosunun (kullanıcı tasarımı görüp mağazadan alırsa) gelir mantığı reklama dayanıyor — takip mekanizması **To Be Decided**.
-- **Uzun vade: indirim/hizmet bedeli** — "fark cebe" pazarlık modeli **büyük ihtimalle rafa** (çıkar çatışması + faturalandırma riski). Yerine düşünülen fikir: kullanıcı indirim talebi açar, **hizmet bedeli baştan alınır** (satın almasa bile), ekip mağazayla pazarlığı yapar. Strateji üzerine düşünülecek — **karar değil**. (PM itirazı: sıfır güvenle peşin ücret + elle pazarlık ölçeklenmez → [[2026-07-24 PM Gözden Geçirme — Thinking Session]].)
+- **Uzun vade: indirim/hizmet bedeli** — "fark cebe" pazarlık modeli **büyük ihtimalle rafa** (çıkar çatışması + faturalandırma riski). Yerine: kullanıcı indirim talebi açar, **hizmet bedeli baştan alınır** (satın almasa bile), ekip mağazayla pazarlığı yapar. **Teyit turu (2026-07-24): hizmet bedelinin baştan alınması kurucu kararı olarak korundu** (PM itirazına rağmen). Modelin detayları/zamanlaması hâlâ tasarlanacak.
 - **Ek özellik satışı (uzun vade)**: video walkthrough, Marble benzeri sanal dünya — abonelik paketi veya tek kullanımlık satın alım.
-- **Kullanıcıya fiyatlandırma: şimdilik ücretsiz**; maliyet kurucuların cebinden; limit ve paketler ileride (PM itirazı: sayaç ilk sürümde olmalı).
+- **Kullanıcıya fiyatlandırma: şimdilik ücretsiz**; maliyet kurucuların cebinden; limit ve paketler ileride. Teyit turu (2026-07-24): **toplam yeni tasarım sayısında kısa vadede sınır yok** (amaç kullanıcı çekmek; birim maliyet hesabından sonra süzgeç); yeniden tasarla 2 hak. **Birim maliyet analizi bilinçli olarak MVP hazır olunca yapılacak** — gerekçe: kullanılacak teknolojiler MVP'yle netleşir (PM'in "bu hafta hesapla" önerisinin tersine kurucu sıralaması).
 
 ## Ödeme (plan; sağlayıcı seçilmedi)
-- İki yönlü: kullanıcıdan tahsilat → mağazaya ödeme. **Para Livaro'da emanet bekleyecek** (kurucu ifadesi). ⚠️ PM uyarısı: emanet, Türkiye'de lisanslı ödeme kuruluşu gerektirir; lisanslı pazaryeri sağlayıcısının aracı hesabı kullanılmalı — sağlayıcı kararıyla birlikte çözülecek → [[Open Questions]].
+- İki yönlü: kullanıcıdan tahsilat → mağazaya ödeme. **KARAR (2026-07-24, teyit turu): emanet para lisanslı ödeme kuruluşu aracılığıyla tutulacak** — Livaro kendi hesabında emanet tutmayacak → [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]. Sağlayıcı seçimi hâlâ açık → [[Open Questions]].
 - **Stoklu** (halı, perde) ve **stoksuz/özel üretim** (mobilya) firmalar için **farklı ödeme planları**; plan kullanıcı+mağaza onaylarıyla oluşacak.
 - **Özel üretimde avans**; oranı mağazalarla ihtiyaçlarına göre konuşulup belirlenecek — **To Be Decided**.
 - Ödeme sağlayıcısı **To Be Decided** (Iyzico olasılık, taahhüt değil — 2026-07-21 kurucu beyanı).
 
 ## İptal / İade (plan)
-- **Sipariş iptali olmayacak**; iade kullanıcı-mağaza arasında **karşılıklı onayla**. Kuralın hukuki tanımı **araştırılacak** — ⚠️ 14 gün yasal cayma hakkıyla ilişkisi açık soru (standart üründe cayma hakkı mağaza onayına bağlanamaz; özel üretim istisnası ön bilgilendirme gerektirir) → [[Open Questions]].
+- **Güncellendi (2026-07-24, teyit turu): iptal/iade yasaya uygun tasarlanacak** — "iptal yok" katı kuralı yumuşatıldı; nasıl olacağı **henüz belli değil**, araştırılacak (14 gün cayma hakkı + özel üretim istisnası dahil) → [[Open Questions]]. İade yine kullanıcı-mağaza karşılıklı onay mantığıyla kurgulanıyor.
 - Defo/kırık sorumluluğu **tamamen mağazada** ("ibare geçilecek"). **İtiraz süresi 48 saat**; anlaşmazlığın mağaza-kullanıcı arasında çözüleceği varsayılıyor (hakemlik kuralı tanımsız — **To Be Decided**).
 - Satın alım sonrası **kullanıcı-mağaza birebir chat'i**: telefon paylaşımı yasak, **AI denetleyecek**; onay kayıtlarının nasıl tutulacağı **To Be Decided**.
 
@@ -44,8 +44,8 @@ related: []
 - Teknik altyapıda katalog + Tripo3D 3D üretim hattı hazır; katalogda 3 test ürünü (gerçek katalog pilot markalardan dolacak → [[2026-07-24 Pilot marka kriterleri]]).
 
 ## Bilinmeyenler
-- Checkout gelene kadar sepetin davranışı (mağazaya talep/lead olarak iletilir mi) — **To Be Decided**.
-- Birim ekonomisi (render + Tripo3D + OpenAI maliyeti) — **hiç hesaplanmadı**.
+- ~~Checkout gelene kadar sepetin davranışı~~ — **ÇÖZÜLDÜ (2026-07-24, teyit turu)**: sepet şu anlık **pasif liste** (mağazaya talep iletilmez).
+- Birim ekonomisi (render + Tripo3D + OpenAI maliyeti) — **hiç hesaplanmadı**; analiz bilinçli olarak MVP sonrasına bırakıldı.
 - Showroom kaçağının takibi (indirim kodu/referans) — **To Be Decided**.
 - Montaj/kurulum sorumluluğu — **To Be Decided**.
 

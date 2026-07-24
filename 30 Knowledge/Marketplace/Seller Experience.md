@@ -11,7 +11,7 @@ related: []
 - **Thinking session güncellemeleri (2026-07-24)**:
   - **Tripo3D hattı devam** (kurucu teyidi; anlatımdaki "tripodla çekim" Tripo3D/tripod karışıklığıydı, tripod fikri yok).
   - **Pilot marka kriterleri kararlaştı**: internette satan, vizyoner, çeşitliliği yüksek firmalardan her kategoriden 2 tane; mağazalara MVP bitince gidilecek → [[2026-07-24 Pilot marka kriterleri]].
-  - **Toplu ürün yükleme planı**: pilot firmaların web sitesi fotoğrafları kullanılacak; taslak **Excel şablonu** (mağaza tüm özellikleri girer; fotoğraf bağlantısı çözülecek) veya **API** ile toplu yükleme. (PM uyarısı: site fotoğrafları Tripo3D'nin 4 açı formatı değil; önce 20 ürünlük kalite+maliyet denemesi → [[2026-07-24 PM Gözden Geçirme — Thinking Session]].)
+  - **Toplu ürün yükleme planı — Excel şablonu ONAYLANDI (teyit turu, 2026-07-24)**: pilot firmaların web sitesi fotoğrafları kullanılacak; taslak **Excel şablonu** (mağaza tüm özellikleri girer; fotoğraflar link sütunuyla bağlanır) veya **API** ile toplu yükleme. (PM uyarısı geçerli: site fotoğrafları Tripo3D'nin 4 açı formatı değil; önce 20 ürünlük kalite+maliyet denemesi önerisi masada → [[2026-07-24 PM Gözden Geçirme — Thinking Session]].)
   - **Stok**: mağazalar stoklu ürünlerde stok girecek; özel üretimde stok takibi yok.
   - **İstenen admin paneli metrikleri (vizyon)**: ürün görüntüleme, tıklanma sayısı, kaç kişinin ürünle tasarım yaptığı, sepete eklenme sayısı.
   - Kaynak: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 5, 16, 30, 32).

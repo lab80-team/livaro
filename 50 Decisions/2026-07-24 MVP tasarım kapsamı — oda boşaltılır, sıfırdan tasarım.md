@@ -12,17 +12,18 @@ related: ["[[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]]", "[[3
 Thinking session'da MVP'nin tasarım kapsamı netleştirildi: sıfırdan tasarım mı, kısmi değişiklik mi; dolu odada tarama ne olacak; AR dahil mi?
 
 ## Karar
-- **MVP'de oda sıfırdan tasarlanır.** Dolu oda taranır; **AI odayı dijital olarak boşaltır** ve boş odanın üstüne tasarım yapar.
+- **MVP'de oda sıfırdan tasarlanır.** İki yol da desteklenir (teyit turu): **boş oda taraması** ve **dolu odanın taranıp AI ile dijital boşaltılması**; tasarım boş odanın üstüne yapılır.
 - **Dolu odada parça değiştirme** (mevcut eşyaların bir kısmını tutup gerisini değiştirme) **ileriki sürümde**.
 - **Ürün çıkarma MVP'de**: kullanıcı tasarımdan ürün çıkarabilir, yeri boş kalır (ileride: çıkarınca alternatif önerilir).
-- **AR MVP'de**: tüm oda tasarımını kamerada gösterir.
-- **Yeniden tasarla hakkı: 2 defa** (ilk belirleme; birim maliyet ölçülünce gözden geçirilebilir).
+- **Alternatifle değiştirme MVP'de YOK, sonra gelecek** (teyit turu — Bölüm 1-2 çelişkisi çözüldü).
+- **AR MVP'de**: tüm oda tasarımını kamerada gösterir (teyit turunda PM itirazına rağmen korundu).
+- **Yeniden tasarla hakkı: 2 defa.** Toplam **yeni tasarım sayısında kısa vadede sınır yok** — amaç olabildiğince kullanıcı çekmek; birim maliyet hesabından sonra süzgeçten geçirilecek (teyit turu).
 
 ## Gerekçe
 "MVP'de kafa karışıklığı olmasın" — tek net akış. Hedef an (taşınma/tadilat) sıfırdan tasarımla örtüşüyor.
 
 ## Sonuçlar (Consequences)
-- **Çelişki kaydı**: anlatımda "beğenilmeyen ürünün alternatiflerini görüp değiştirme MVP'de olmasın" denirken cevap 9'da "ürünü alternatif ile değiştirebilir" denildi — hangisi geçerli **teyit bekliyor** → [[Open Questions]].
+- ~~Çelişki kaydı (alternatifle değiştirme)~~ — **ÇÖZÜLDÜ (teyit turu, 2026-07-24)**: MVP'de yok, sonra gelecek.
 - "Odayı boşaltma" (taranan mobilyaları çıkarıp temiz oda gösterme) yeni bir teknik iş — pipeline'da planlanmalı.
 
 ## Riskler

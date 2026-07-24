@@ -46,3 +46,32 @@ related: ["[[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]]"]
 ## İşlenme
 - Riskler ve öneriler [[Open Questions]]'a soru olarak yansıtıldı; hiçbiri karar olarak kaydedilmedi.
 - İlgili: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]], [[2026-07-21 PM Panel Tartışması]]
+
+---
+
+# 2. Tur — Teyit Turu Kararlarının İncelemesi (aynı gün)
+
+> Kurucular 1. tur uyarılarını okuyup nihai kararlarını verdi (bazılarını kabul, bazılarını bilerek ret). 2 kıdemli PM merceği (iş/operasyon + ürün/teknik) nihai karar setini inceledi. **Öneridir, karar değildir.**
+
+## Genel değerlendirme
+Karar seti öncekinden belirgin şekilde daha sağlıklı: en büyük iki hukuki mayın (emanet, iade) doğru yöne çekildi; kapsam bazı yerlerde akıllıca budandı (sepet pasif, alternatif ertelendi). Asıl gerilim: en büyük iki bilinmeyen (AI yerleşim kalitesi, birim maliyet) bilinçli olarak sona ertelenirken kapsam geniş tutuldu (dolu oda boşaltma + AR) — risk sona yığılıyor; ucuz erken sinyallerle yönetilebilir.
+
+## İyi bulunanlar
+- Emanet lisanslı kuruluşa, iade/iptal yasaya — iki büyük yasal risk masadan kalktı.
+- Anlık 3D + arka planda render + tek ürün değişiminin render tetiklememesi: hem hız hem masraf açısından doğru mimari.
+- Kapsam disiplini: sepet pasif liste, alternatifle değiştirme ertelendi, checkout sonra.
+
+## Kalan riskler ve önerilen emniyet kemerleri
+1. **Maliyet freni yok** (sınırsız tasarım + bilinmeyen birim maliyet): servis sağlayıcılarda aylık harcama tavanı + uyarı; her tasarımın yaklaşık maliyetini ilk günden kaydet; sunucudan açılabilir gizli "limit anahtarı" hazırla; bot/kötüye kullanım için cihaz başına görünmez hız koruması.
+2. **Dolu oda boşaltma + AR birlikte MVP'de** (en ağır teknik yük): içeride sıralı ilerle — önce boş oda akışını sağlamlaştır; dolu oda/AR için tarihli iç kontrol noktası + kalite çıtası (ör. 10 odadan 7 kabul); tutmazsa lansmanı bloklamak yerine "deneysel" etiketiyle aç.
+3. **GPT-4o testi sona kaldı**: karar bozulmadan iki ucuz önlem — "iyi yerleşim" geçer/kalır ölçütünü ŞİMDİ yaz; eldeki 2-3 taramayla 1 günlük elle ön deneme yap (erken sinyal).
+4. **İade akışı boş**: ilk satıştan önce tek sayfa — iade kargosunu kim öder, hangi ürünler cayma dışı, para kaç günde döner, emanet satıcıya hangi anda geçer; bir kerelik e-ticaret hukuku danışmanlığı.
+5. **Hizmet bedeli kuralsız**: bedelin iade koşulları, mağaza gecikirse ne olacağı, tahsilat yolu (sağlayıcı seçilmeden teknik olarak boşlukta) — ücret almadan önce tek sayfalık kural seti.
+
+## Yeni endişeler
+- Arka planda render + bildirim, her an açık sunucu gerektirir → **buluta taşınma öne çekilmeli** (Mac kapalıyken bildirim çalışmaz); "olabildiğince kullanıcı çek" hedefi de aynı ön şarta bağlı.
+- Render sürerken kullanıcı ürün değiştirirse bildirimle gelen görsel eski tasarımı gösterir → basit sürüm/etiket kuralı gerek.
+- %20 bütçe aşımı kullanıcıya sorulmadan uygulanırsa "bütçemi deldi" hissi → aşan ürünlere "bütçenin %X üstünde" rozeti + isteğe bağlı gösterim.
+
+## İşlenme (2. tur)
+- Açık kalan noktalar [[Open Questions]]'ta "PM 2. tur incelemesinin açık bıraktıkları" bölümünde.

@@ -13,11 +13,11 @@ updated: 2026-07-24
 ## Güncel Ürün Durumu
 - Çalışan **iOS prototipi** var (LiDAR'lı iPhone): oda tarama (RoomPlan) → 4-8 köşe fotoğrafı → materyal analizi → texture'lı 3D oda → AI Designer wizard (tarz/bütçe) → .usdz mobilyalı tasarım sahnesi → Blender render galerisi (4 açı) + USDZ.
 - **Uçtan uca vizyon kayda geçti (2026-07-24 thinking session)**: gerçek ürünlerle AI oda tasarımı + pazaryeri + operasyon aracılığı; problem hipotezi netleşti → [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]], [[User Problems]].
-- **MVP kapsamı (21 Tem + 24 Tem kararları)**: sıfırdan tasarım (dolu oda AI ile boşaltılır), ürün çıkarma, AR (tüm oda), **sepet MVP'de — checkout ödeme teknolojisi seçilince**, yalnızca LiDAR'lı iPhone, bütçe aşım tavanı ~%10, yeniden tasarla 2 hak. Kararlar: [[Decision Index]].
+- **MVP kapsamı (21+24 Tem kararları, teyit turu dahil)**: sıfırdan tasarım (boş oda veya dolu oda AI ile boşaltılarak), ürün çıkarma (alternatifle değiştirme MVP'de yok), AR (tüm oda), **sepet MVP'de pasif liste — checkout ödeme teknolojisi seçilince**, yalnızca LiDAR'lı iPhone, bütçe aşım tavanı ~%20 (uygun tasarım yoksa), yeniden tasarla 2 hak (toplam tasarım sayısı şimdilik sınırsız), anlık deneyim = canlı 3D sahne + arka planda render. Kararlar: [[Decision Index]].
 - **Hedef kullanıcı anı (2026-07-21, teyit 24 Tem)**: taşınma + tadilat/yenileme; tek parça alım ileride → [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]].
 - **Gelir planı (2026-07-24)**: kısa vade %10 komisyon, orta vade reklam (Sponsorlu etiketli), uzun vade indirim/hizmet bedeli; şimdilik kullanıcıya ücretsiz → [[Marketplace Model]].
 - **Pilot marka kriterleri kararlaştı**: her kategoriden 2 internette satan firma; mağazalara MVP bitince gidilecek → [[2026-07-24 Pilot marka kriterleri]].
-- Bekleyen teyitler (24 Tem oturumundan): alternatifle değiştirme MVP'de mi; checkout öncesi sepet davranışı; anlık/gerçekçi görüntü stratejisi → [[Open Questions]].
+- Teyit turu (24 Tem) tüm bekleyen teyitleri kapattı; emanet lisanslı ödeme kuruluşuyla, iptal/iade yasaya uygun tasarlanacak (detay açık) → [[Open Questions]].
 - Katalog: yalnızca 3 usdz'li test ürünü (gerçek katalog pilot markalardan dolacak; henüz hiçbir satıcıyla görüşülmedi).
 
 ## Güncel Teknik Durum
@@ -49,12 +49,13 @@ updated: 2026-07-24
 - Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
 
 ## Son Kararlar
-- [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]]
+- [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]]
+- [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]
+- [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]] (sepet şu anlık pasif liste)
 - [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]
 - [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]]
-- [[2026-07-24 Bütçe aşım tavanı yüzde 10]]
+- [[2026-07-24 Bütçe aşım tavanı yüzde 10]] (tavan %20'ye güncellendi)
 - [[2026-07-24 Pilot marka kriterleri]]
-- [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]]
 - Tam liste: [[Decision Index]].
 
 ## Bilinen Riskler / Dikkat

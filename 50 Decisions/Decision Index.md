@@ -31,5 +31,7 @@ updated: 2026-07-24
 | 2026-07-24 | [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince\|Sepet MVP'de; checkout ödeme teknolojisi seçilince (21 Tem kararını günceller)]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 MVP yalnızca LiDAR'lı iPhone\|MVP yalnızca LiDAR'lı iPhone; LiDAR'sız çözüm ileride]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım\|MVP tasarım kapsamı: oda boşaltılır, sıfırdan tasarım; ürün çıkarma; AR tüm oda; yeniden tasarla 2 hak]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
-| 2026-07-24 | [[2026-07-24 Bütçe aşım tavanı yüzde 10\|Bütçe yumuşak tercih kalır; aşım tavanı ~%10 (çok düşük bütçede esner)]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 Bütçe aşım tavanı yüzde 10\|Bütçe yumuşak tercih kalır; aşım tavanı ~%20 (uygun tasarım yoksa; teyit turunda güncellendi)]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 Pilot marka kriterleri\|Pilot: her kategoriden 2 internette satan firma; mağazalara MVP bitince gidilecek]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda\|Anlık deneyim: canlı 3D sahne anında; fotogerçekçi render arka planda bildirimle]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-24 | [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla\|Emanet para lisanslı ödeme kuruluşuyla; iptal/iade yasaya uygun tasarlanacak]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |

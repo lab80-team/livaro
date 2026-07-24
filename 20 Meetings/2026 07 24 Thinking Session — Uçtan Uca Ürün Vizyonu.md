@@ -117,6 +117,30 @@ Bu arada bu thinking session'ı biz iki kişi konuşarak hazırladık. Yani mikr
 
 32- mağazalar stoklu ürünlerde stoklarını girecek. Özel üretimde sıkıntı olmaz üretilir.
 
+### Bölüm 3 — Teyit turu (kurucu cevapları, birebir)
+
+> PM incelemesi ve Claude'un önerileri sunulduktan sonra kurucuların nihai cevapları:
+
+Telefondaki 3d sahneyi onaylıyorum.
+
+Excel şablonunu da onaylıyorum.
+
+Emanet para lisans kuruluşu ile yapılacak.
+
+İptal yok yasaya uygun yapılacak ama belli değil daha tam nasıl olacagı.
+
+Gpt-4o mvp altyapısı 3d modeli tamamlandıktan sonra denin dedigin gibi test edilecek ona göre yol izlenecek.
+
+Birim maliyet analizi değişecek teknolojilere göre belirlenecek. Mvpnin hazır olması lazım ki hangi teknolojiyi kullanacağını bilsin ve ona göre birim maliyeti çıkartırsın.
+
+Hem boş oda hem de doluyu odayı boşaltıp yeni tasarım olacak. AR mvpde kalsın. Yeniden tasarla limiti 2 olarak kalsın. Yeni tasarım kısa vadede sınırı yok amacımız olabilidgince kullanıcı cekmek ve birim maliyeti hesabından sonra bunu süzgeçten geçirmek olacak. Hizmet bedeli baştan alınacak. Para cezası daha belli degil.
+
+Alternatifle değiştirme mvpde yok sonra olacak.
+
+Sepet pasif liste olarak kalacak su anlık
+
+Bütçe aşım tavanı %20 eğer bütçeye ve tarzına seçimlerine uygun yoksa.
+
 ## Tartışma Özeti
 
 **Problem (kurucu hipotezi):** Ev dizmek/mobilya yenilemek isteyen kişi 1-2 ay mağaza mağaza geziyor (mobilya, halı, perde, avize ayrı mağazalar); ürünleri odasında bir arada göremiyor, profesyonel tasarım desteği alamıyor, toplam bütçeyi tek yerde takip edemediği için bütçesini aşıyor. Sonuç: zaman + fiziksel/mental enerji kaybı.
@@ -125,16 +149,18 @@ Bu arada bu thinking session'ı biz iki kişi konuşarak hazırladık. Yani mikr
 
 **Bu oturumda netleşenler:** Sepet MVP'de, checkout ödeme teknolojisi seçilince; MVP yalnızca LiDAR'lı iPhone; MVP'de dolu oda "boşaltılıp" sıfırdan tasarlanır; AR (tüm oda) MVP'de; bütçe aşım tavanı ~%10; misafir gezinme ve mevcut wizard/tarama akışları korunuyor; Tripo3D devam, tripod fikri yok (karışıklıktı); pilot marka kriterleri (her kategoriden 2 internette satan firma); gelir sıralaması kısa→komisyon, orta→reklam (sponsorlu etiketli), uzun→indirim/hizmet bedeli; pazarlık "fark cebe" modeli büyük ihtimalle rafa — yerine baştan alınan hizmet bedeli fikri; şimdilik kullanıcıya ücretsiz; para Livaro'da emanet; iade karşılıklı onayla, itiraz 48 saat; fiyatlar nakliye dahil (nakliye mağazada); chat'te telefon paylaşımı yasak (AI denetimi); ekip: Yusuf (okul +6 ay), Selim (okul +2 yıl), AI danışmanı [[Ali Abi]], ilk yatırım babalardan.
 
-**Çelişki kaydı (çözülmedi):** Bölüm 1'de "beğenilmeyen ürünün alternatiflerini görme/değiştirme MVP'de olmasın" denirken, cevap 9'da "ürünü alternatif ile değiştirebilir" denildi. Hangisinin geçerli olduğu **teyit bekliyor** → [[Open Questions]].
+**Teyit turunda netleşenler (Bölüm 3):** Anlık deneyim önerisi kabul (canlı 3D sahne anında; render arka planda); Excel şablonu kabul; **emanet lisanslı ödeme kuruluşuyla**; iptal/iade **yasaya uygun** tasarlanacak (detay belirsiz); GPT-4o testi MVP altyapısı bitince; birim maliyet analizi MVP hazır olunca (teknoloji seçimleri netleşince) — bilinçli sıralama; MVP'de **hem boş oda hem dolu odayı boşaltıp** tasarım; AR MVP'de kalıyor; yeniden tasarla 2 hak, toplam yeni tasarım sayısında kısa vadede sınır yok (birim maliyet sonrası süzgeç); hizmet bedeli baştan alınacak; gecikme cezası belirsiz; **alternatifle değiştirme MVP'de YOK** (Bölüm 1-2 çelişkisi çözüldü); **sepet şu anlık pasif liste**; bütçe aşım tavanı **%20** (bütçe+tarz seçimlerine uygun tasarım yoksa).
 
 **Kurucuların Claude'a sorduğu sorular (cevap 8, 15, 16):** tek ürün değişiminde render'ın yeniden üretilip üretilmeyeceği; anlık + gerçekçi görüntünün birlikte nasıl sağlanacağı; toplu yüklemenin maliyeti neden artırdığı. Claude'un önerisi (öneri, karar değil): canlı 3D sahnede anlık değişiklik + arka planda fotogerçekçi render tazeleme; birim maliyet ölçülmeden toplu yüklemeye limit; Excel şablonunda fotoğraf URL sütunu.
 
 ## Kararlar
-- [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]]
+- [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]] (teyit turu: sepet şu anlık pasif liste)
 - [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]
-- [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]]
-- [[2026-07-24 Bütçe aşım tavanı yüzde 10]]
+- [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]] (teyit turu: boş+dolu oda; AR kalıyor; alternatifle değiştirme MVP'de yok)
+- [[2026-07-24 Bütçe aşım tavanı yüzde 10]] (teyit turu: tavan %20'ye güncellendi)
 - [[2026-07-24 Pilot marka kriterleri]]
+- [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]]
+- [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]
 - Teyit edilen eski kararlar: misafir gezinme serbest ([[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]]), wizard akışı ([[60 Planning/Product Flows|Product Flows]]), Tripo3D pipeline, mevcut tarama adımları, bütçe yumuşak tercih ([[2026-06-20 Bütçe yumuşak tercih]]).
 
 ## Görevler

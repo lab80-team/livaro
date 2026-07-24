@@ -11,31 +11,42 @@ updated: 2026-07-24
 > ⭐ = PM incelemelerinin öncelikli işaretledikleri ([[2026-07-21 PM Panel Tartışması]], [[2026-07-24 PM Gözden Geçirme — Thinking Session]]).
 > 2026-07-24 thinking session'da çok sayıda soru çözüldü → [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] ve yeni kararlar: [[Decision Index]].
 
-## Kuruculara bekleyen teyitler (2026-07-24 oturumundan)
-- ⭐ **Alternatifle değiştirme MVP'de mi?** Anlatımda "alternatifleri görme/değiştirme MVP'de olmasın" denildi; cevap 9'da "ürünü alternatif ile değiştirebilir" denildi. Çelişki kayıtlı, hangisi geçerli?
-- ⭐ **Checkout gelene kadar sepet nasıl davranacak?** Sepete eklenen ürünler mağazaya talep (lead) olarak iletilecek mi, yoksa pasif liste mi? 21 Tem kararındaki "ince lead katmanı"nın akıbeti buna bağlı → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]].
-- **Anlık + gerçekçi görüntü stratejisi**: Claude/PM önerisi (canlı 3D sahnede anlık değişiklik; fotogerçekçi render arka planda "hazır" bildirimiyle; tek ürün değişimi tam render tetiklemez) kurucularca benimsenecek mi?
+## Teyit turu sonuçları (2026-07-24 — hepsi çözüldü)
+- ~~Alternatifle değiştirme MVP'de mi?~~ **ÇÖZÜLDÜ**: MVP'de yok, sonra gelecek.
+- ~~Checkout gelene kadar sepet?~~ **ÇÖZÜLDÜ**: şu anlık **pasif liste** (mağazaya talep iletilmez).
+- ~~Anlık + gerçekçi görüntü stratejisi?~~ **ÇÖZÜLDÜ**: öneri kabul edildi → [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]].
+- ~~Emanet modeli?~~ **ÇÖZÜLDÜ**: lisanslı ödeme kuruluşuyla → [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]].
+- Ayrıca: iptal/iade **yasaya uygun** tasarlanacak (detay hâlâ açık, aşağıda); bütçe aşım tavanı **%20**; hizmet bedeli baştan alınacak (kurucu kararı); birim maliyet analizi bilinçli olarak MVP sonrasına bırakıldı; GPT-4o testi MVP altyapısı bitince.
+
+## PM 2. tur incelemesinin açık bıraktıkları (öneri; karar kurucularda)
+- Sınırsız ücretsiz tasarım + bilinmeyen birim maliyet: harcama tavanı/uyarı ve sunucudan açılabilir "limit anahtarı" şimdiden kurulmalı mı? Kötüye kullanım (bot) koruması?
+- Render arka planda çalışacaksa backend'in Mac'ten buluta taşınması öne çekilmeli mi? (Bildirim, Mac kapalıyken çalışmaz.)
+- Render sürerken kullanıcı ürün değiştirirse bildirimle gelen görsel eski tasarımı gösterir — sürüm/etiket kuralı gerekiyor.
+- Bütçeyi aşan ürünler kullanıcıya "bütçenin %X üstünde" rozetiyle mi gösterilsin, önce sorulsun mu?
+- Hizmet bedelinin iade koşulları + tahsilat yolu (ödeme sağlayıcısı yokken) tanımsız.
+- Dolu oda boşaltma ve AR için iç kalite çıtası/kontrol noktası (tutmazsa "deneysel" etiketiyle mi açılır?).
+- GPT-4o için tam testten önce ucuz ön deneme (eldeki 2-3 taramayla) yapılmalı mı; "iyi yerleşim" ölçütü şimdiden yazılmalı mı?
 
 ## Ürün (Product)
 - ~~İlk ürün ne olmalı?~~ **ÇÖZÜLDÜ** (2026-07-21 + 2026-07-24): görselleştirme + sepet; checkout ödeme teknolojisi seçilince → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]].
 - ~~MVP tasarım kapsamı?~~ **ÇÖZÜLDÜ (2026-07-24)**: dolu oda boşaltılır, sıfırdan tasarım; ürün çıkarma var; AR tüm oda; yeniden tasarla 2 hak → [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]].
 - ⭐ İlk 30 kullanıcı hangi kanaldan gelecek? Kurucu beyanı (2026-07-24): ilk test kendi çevrede; **B2C go-to-market belli değil**.
 - Hangi akışlar basit kalmalı? (6 adımlık tarama akışının terk oranı ölçülmedi.)
-- Bütçe aşıldığında/bütçeye uygun tasarım bulunamadığında kullanıcıya ne gösterilecek? ("Çok düşük bütçe" eşiği tanımsız → [[2026-07-24 Bütçe aşım tavanı yüzde 10]].)
+- Bütçe aşıldığında kullanıcıya ne gösterilecek? (Tavan %20'ye güncellendi → [[2026-07-24 Bütçe aşım tavanı yüzde 10]]; PM önerisi: "bütçenin %X üstünde" rozeti + kullanıcıya sorma.)
 - "Dolu odayı dijital boşaltma" teknik olarak nasıl yapılacak? (PM alternatifi: MVP'de "boş odanı tara" demek.)
 - Teslimat tarihi tercihi akışın neresinde sorulacak (tasarımdan önce mi sonra mı)?
 - Bkz. [[Product Overview]], [[60 Planning/Product Flows|Product Flows]]
 
 ## Pazaryeri / İş Modeli
-- ⭐ **Ödeme sağlayıcısı/teknolojisi ne olacak?** (Iyzico olasılık, karar değil.) ⚠️ Bağlı soru: "para Livaro'da emanet" planı lisanslı ödeme kuruluşu gerektirir — sağlayıcının aracı/emanet hesabı mı kullanılacak? PM: bu seçim MVP sıralamasında öne alınmalı → [[2026-07-24 PM Gözden Geçirme — Thinking Session]].
-- ⭐ **"İptal yok, iade karşılıklı onayla" kuralı 14 gün yasal cayma hakkıyla nasıl bağdaşacak?** Stoklu/özel üretim ayrımı nasıl tanımlanacak? (Kurucu: araştırılacak. PM önerisi: e-ticaret avukatından pilot paketi.)
-- ⭐ Render + Tripo3D + OpenAI kullanım başına maliyet ne? (Birim ekonomisi hiç hesaplanmadı; "şimdilik ücretsiz + limit ileride" kararı bu sayıya muhtaç. PM: kişi başı sayaç ilk sürümde olmalı.)
+- ⭐ **Ödeme sağlayıcısı hangisi olacak?** (Iyzico Pazaryeri/PayTR/Craftgate vb. adaylar; hiçbiri seçilmedi.) Emanet modeli kararlaştı (lisanslı kuruluş → [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]); seçim, emanet/ödeme planı özelliklerine göre yapılacak. Hizmet bedelinin tahsilat yolu da buna bağlı.
+- ⭐ **İptal/iade "yasaya uygun" nasıl tanımlanacak?** (Yön kararlaştı; detay belli değil.) 14 gün cayma + özel üretim istisnası + iade kargosunu kim öder + para kaç günde döner + emanetin satıcıya geçiş anı. (PM önerisi: e-ticaret avukatından pilot paketi; ilk satıştan önce tek sayfalık iade akışı.)
+- ⭐ Render + Tripo3D + OpenAI kullanım başına maliyet ne? **Kurucu kararı (teyit turu): tam analiz MVP hazır olunca** (teknoloji seçimleri netleşince). Ara önlem soruları (harcama tavanı, tasarım başına maliyet kaydı) yukarıda.
 - Avans oranı ne olacak? (Mağazalarla konuşulup belirlenecek.) Gecikme cezasının oranı/meblağı?
 - Defo anlaşmazlığında hakemlik: 48 saat itiraz penceresi var; mağaza kabul etmezse son kararı kim verir? Emanetteki para hangi kuralla serbest bırakılır? Geri taşıma masrafı kimde?
 - Çok markalı sepette bir marka teslim tarihine yetişemezse süreç ne? Montaj/kurulum kimin sorumluluğu?
 - Chat'te karşılıklı onayın kaydı (fiyat/ölçü/tarih tek yerde) nasıl tutulacak? Platform dışına kaçış (telefon yasağını AI denetleyecek) yeterli mi?
 - Showroom kaçağı: kullanıcının mağazadan alımı nasıl takip edilecek (indirim kodu/referans)? Reklam geliri bunu gerçekten telafi eder mi?
-- Hizmet bedelli indirim modeli (uzun vade fikri) yaşayacak mı? (PM: MVP'den tamamen çıkarılmalı; bedel ancak başarıda alınmalı.)
+- ~~Hizmet bedelli indirim modeli yaşayacak mı?~~ **Kurucu kararı (teyit turu)**: hizmet bedeli **baştan alınacak** (uzun vade modeli). Açık kalan: bedelin iade koşulları, tutar, tahsilat yolu, mağaza gecikirse ne olacağı.
 - Reklamın tasarım algoritmasına gömülmesi (kurucu planı) ↔ tasarım tarafsızlığı (PM itirazı) — nihai kural ne?
 - ⭐ İlk satıcı görüşmesi ne zaman? (Karar: MVP bitince. PM önerisi: MVP bitmeden 5-10 firmayla ön görüşme + 1 sayfalık pilot teklifi.) Pilot kategori listesi (kaç kategori × 2 firma) netleşmedi.
 - Fiyat güncelliği: Excel/API ile yüklenen fiyatlar nasıl güncel tutulacak; satın alma anında fiyat değişmişse/ürün tükenmişse tasarım ne olur?
@@ -43,7 +54,7 @@ updated: 2026-07-24
 
 ## Oda Tarama / 3D
 - ~~LiDAR zorunluluğu bilinçli mi?~~ **ÇÖZÜLDÜ (2026-07-24)**: geçici kısıt; MVP LiDAR-only, LiDAR'sız çözüm ileride → [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]. Açık kalan: LiDAR'sız cihaz sahibi ilk açılışta ne yaşar (mesaj/bekleme listesi?); elle ölçü girişi (PM önerisi) denenmeli mi?
-- ⭐ GPT-4o yerleşim kalitesi: kapsamlı test edilecek (kurucu, cevap 14) — geçer/kalır ölçütü ne olacak; kural tabanlı sisteme geçiş eşiği ne? (PM önerisi: 10-30 oda × tarz, geçti/kaldı listesi.)
+- ⭐ GPT-4o yerleşim kalitesi: **kurucu kararı (teyit turu): test MVP altyapısı/3D model tamamlandıktan sonra**; sonuca göre yol (kural tabanlı dahil). Açık: geçer/kalır ölçütü şimdiden yazılmalı mı; tam testten önce ucuz ön deneme yapılmalı mı? (PM önerileri.)
 - ARKit mesh (ısınma nedeniyle kapalı) tarama-sonrası işlemeyle geri açılabilir mi?
 - RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme aracı gerekir mi?
 - Kabul edilebilir minimum kalite çıtası ne? (Dış kullanıcı verisi sıfır.)

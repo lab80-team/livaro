@@ -20,10 +20,9 @@ related: []
   - Wizard akışı **korunuyor** (serbest metin → tarz → renk → bütçe); anlatımdaki "önce bütçe, en son chat" sırası benimsenmedi. **Tarz kartlarına fotoğraf eklenecek**; karşılıklı konuşan **chat ileriki sürümde**.
   - Onay adımı: kullanıcı istediklerini anlattıktan sonra AI **özet sunar ve onay ister**; onay sonrası tasarım üretilir.
   - Tasarım sonucu otomatik çıkar (kullanıcı ayrıca render butonuna basmaz); yanında gerçekçi **2D fotoğraflar**.
-  - MVP: dolu oda taranır, AI boşaltır, sıfırdan tasarlar; ürün çıkarma (yeri boş kalır); **AR tüm oda, MVP'de**; **yeniden tasarla 2 hak** (ilk belirleme) → [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]].
-  - **Çelişki (teyit bekliyor)**: ürünü alternatifle değiştirme MVP'de mi (cevap 9 "değiştirebilir" ↔ anlatım "MVP'de olmasın") → [[Open Questions]].
+  - MVP: hem boş oda hem dolu oda (AI boşaltır) taranır, sıfırdan tasarlanır; ürün çıkarma (yeri boş kalır); **alternatifle değiştirme MVP'de YOK, sonra** (teyit turu — çelişki çözüldü); **AR tüm oda, MVP'de**; **yeniden tasarla 2 hak**, toplam tasarım sayısında kısa vadede sınır yok → [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]].
+  - **KARAR (teyit turu)**: anlık deneyim — canlı 3D sahnede anında değişiklik; fotogerçekçi render arka planda bildirimle; tek ürün değişimi tam render tetiklemez → [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]].
   - Welcome page vizyonu: güzel ev tasarımı arka planı + "Odayı tara" / "Projelerim" seçenekleri (tasarlanmadı).
-  - Kurucuların açık sorusu: tek ürün değişiminde render'ın yeniden mi üretileceği, "anlık + gerçekçi"nin nasıl birlikte sağlanacağı. Claude/PM önerisi (karar değil): canlı 3D sahnede anlık değişiklik, fotogerçekçi render arka planda bildirimle → [[Open Questions]].
   - Kaynak: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]].
 
 ## Varsayımlar
