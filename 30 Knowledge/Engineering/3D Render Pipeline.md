@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-20
+updated: 2026-07-24
 related: []
 ---
 
@@ -37,12 +37,13 @@ related: []
 - RoomPlan, büyük TV/ekranı **pencere** olarak yanlış algılayabiliyor → USDZ'de olmayan cam panel. Blender tarafında çözülemez; farkındalık gerekli (kullanıcıya düzeltme aracı ileride düşünülebilir — **Open Question**).
 
 ## Varsayımlar
-- Fotoğraftan kırpılan texture + mirror tile, kullanıcının "kendi odam" hissi için yeterli — **Needs Validation** (cihazda uçtan uca test bekliyor).
+- Fotoğraftan kırpılan texture + mirror tile, kullanıcının "kendi odam" hissi için yeterli — **kısmen doğrulandı (24 Tem)**: doku birebir odadan geliyor; ama kırpılan fotoğraftaki ışık farkı karo tekrarında ızgara deseni yaratıyor (kabul edilebilirliği değerlendirilecek → [[Task Board]]).
 
 ## Bilinmeyenler
-- Yakın çekim akışının cihazda uçtan uca durumu — **Needs Validation**.
-- `floorPolygon` zincirleme algoritmasının girintili odalarda doğruluğu — **Needs Validation**.
-- Blender USDZ'nin QuickLook'ta materyallerle tam uyumu — kısmen doğrulandı, gerçek odalarda sürmeli.
+- ~~Yakın çekim akışının cihazda uçtan uca durumu~~ — **DOĞRULANDI (2026-07-24)**: floor.jpg zemin yakın çekiminden kırpıldı (R2 + manifest + görsel karşılaştırmayla kanıtlı) → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
+- ~~`floorPolygon` girintili odalarda~~ — **DOĞRULANDI (2026-07-24)**: gerçek girintili odada oda şekli doğru render edildi.
+- Blender USDZ'nin QuickLook'ta materyallerle tam uyumu — kısmen doğrulandı; 24 Tem turunda tek kalan kontrol maddesi.
+- Tripo GLB ölçek/rotasyon işareti — **şüphe güçlendi (24 Tem)**: bir modelde ölçek/yerleşim tuhaflığı (render'da koltuğa giriyor; AR'da içerik taşıyor).
 
 ## Önemli Sorular
 - Texture regresyonlarına karşı otomatik doğrulama (örn. render sonrası renk histogram karşılaştırması) kurulmalı mı?

@@ -39,6 +39,17 @@ status: processed
 - Cihaz doğrulama turu: tarama + too-close, Yeniden Tasarla → yeni sahne, ProductDetail 360°/AR, Render sekmesi, AR relocalization.
 - `drop_splat_and_ai_task` migration'ı hâlâ uygulanmadı (24 Tem'de DB'den doğrulandı).
 
+## Cihaz doğrulama turu sonuçları (aynı gün, kurucu telefonda)
+
+- **360°/AR butonu ✓** — presign düzeltmesiyle İLK KEZ çalıştı.
+- **Tarama + too-close uyarısı ✓** — coverage sökümü regresyon yaratmadı.
+- **Yakın çekim texture akışı uçtan uca ✓** — scan `be15108e…`: R2'de 4 köşe foto + src_floor/src_wall + walls/floor/manifest; `floor.jpg`'nin zemin yakın çekiminden kırpıldığı görsel karşılaştırmayla kanıtlandı; manifest alanları sözleşmeye birebir uygun.
+- **Yeniden Tasarla ✓** — dönüşte yeni sahne görünüyor (bugünkü düzeltme çalışıyor).
+- **Render gerçek odayla ✓** — girintili odada floorPolygon doğru; kapı/pencere kesimleri doğru; gerçek parke dokusu zeminde.
+- **AR relocalization ✓** — mobilyalar gerçek odanın zeminine oturuyor.
+- Kalan tek kontrol: Blender USDZ'nin QuickLook'ta açılması.
+- **Gözlemler (yeni işler doğurdu → [[Task Board]])**: (1) karo tekrarında ışık farkı ızgara deseni; (2) bir Tripo modelinde ölçek/yerleşim tuhaflığı (GPT-4o yerleşim testi + Tripo ölçek/rotasyon doğrulamasının önemi arttı); (3) RoomScan `createdAt` 3 saat geride (saat dilimi tuhaflığı).
+
 ## İşlendiği notlar
 
 [[Current State]], [[System Architecture]], [[Known Pitfalls]], [[E2E Testing Strategy]], [[60 Planning/Technical Plan|Technical Plan]], [[Open Questions]], [[Task Board]]

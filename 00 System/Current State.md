@@ -28,7 +28,7 @@ updated: 2026-07-24
 
 ## Oda Tarama Durumu
 - Temel: Apple RoomPlan (güvenilir). Yaklaşım geçmişi ve sonuçları: [[Room Scanning Approaches]] (gsplat başarısız→rafta; ARKit mesh çalıştı→offline; RoomPlan+AI texture aktif).
-- Son eklenen: tarama akışına isteğe bağlı zemin/duvar yakın çekim adımları (push edildi; cihaz doğrulaması bekliyor).
+- Zemin/duvar yakın çekim adımları **cihazda uçtan uca doğrulandı (24 Tem)**: floor.jpg gerçek parke fotoğrafından kırpılıyor, manifest sözleşmeye uygun. Gözlem: kırpılan fotoğraftaki ışık farkı karo tekrarında ızgara deseni olarak görünüyor (aynalı karo yönteminin bilinen takası — kabul edilebilirliği değerlendirilecek, [[Task Board]]).
 
 ## Çalıştığı Bilinenler
 - RoomPlan tarama + saf Transform render; Kat Planı/Roomplan/Render sekmeleri; AI Designer wizard (4 adım; pgvector + GPT-4o iç mimar rolü + yerleşim doğrulama); Blender pipeline (test odası + gerçek oda render'ları); fotoğraftan texture kırpma + mirror tile; Tripo3D ürün 3D kuyruğu; brand-panel satıcı ürün yükleme (Haziran'da uçtan uca doğrulandı; güncel durumu Needs Validation); LivaroTheme tasarım sistemi; mDNS bağlantı; presigned R2 akışı.
@@ -40,12 +40,13 @@ updated: 2026-07-24
 - Detay: [[Experiment Index]].
 
 ## Güncel Öncelikler (Now)
-1. **Cihaz doğrulama turu** (overhaul sonrası): tarama + too-close, "Yeniden Tasarla" → yeni sahne, ProductDetail 360°/AR (ilk kez presigned), Render sekmesi, AR relocalization + yakın çekim texture akışının uçtan uca doğrulaması.
-2. **Edge function deploy'u**: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth doğrulaması.
-3. Blender pipeline gerçek-veri testleri (floorPolygon, Tripo ölçek/rotasyon, USDZ/QuickLook, boolean kesimler).
-4. Katalog doldurma (Tripo3D'den gerçek ürünler).
-5. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14).
-6. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
+1. **Edge function deploy'u**: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth doğrulaması.
+2. Blender gerçek-veri kalanları: USDZ/QuickLook kontrolü + **Tripo ölçek/rotasyon şüphesi** (24 Tem turunda bir modelde ölçek/yerleşim tuhaflığı görüldü).
+3. Katalog doldurma (Tripo3D'den gerçek ürünler).
+4. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14; turdaki yerleşim tuhaflığı bu testin önemini artırdı).
+5. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
+
+> Cihaz doğrulama turu (24 Tem) tamamlandı: 360°/AR ✓ (ilk kez), tarama+too-close ✓, yakın çekim texture akışı uçtan uca ✓, Yeniden Tasarla ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri), AR relocalization ✓. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]] ve [[Task Board]].
 
 ## Güncel Blocker'lar
 - Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
