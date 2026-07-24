@@ -42,7 +42,7 @@ related: []
 ## Bilinmeyenler
 - ~~Yakın çekim akışının cihazda uçtan uca durumu~~ — **DOĞRULANDI (2026-07-24)**: floor.jpg zemin yakın çekiminden kırpıldı (R2 + manifest + görsel karşılaştırmayla kanıtlı) → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
 - ~~`floorPolygon` girintili odalarda~~ — **DOĞRULANDI (2026-07-24)**: gerçek girintili odada oda şekli doğru render edildi.
-- Blender USDZ'nin QuickLook'ta materyallerle tam uyumu — kısmen doğrulandı; 24 Tem turunda tek kalan kontrol maddesi.
+- ~~Blender USDZ'nin QuickLook'ta materyallerle tam uyumu~~ — **DOĞRULANDI (2026-07-24)**: gerçek oda USDZ'si QuickLook'ta materyallerle açıldı (parke dokusu, duvar rengi, kapı/pencere panelleri görünür).
 - Tripo GLB ölçek/rotasyon işareti — **şüphe güçlendi (24 Tem)**: bir modelde ölçek/yerleşim tuhaflığı (render'da koltuğa giriyor; AR'da içerik taşıyor).
 
 ## Önemli Sorular

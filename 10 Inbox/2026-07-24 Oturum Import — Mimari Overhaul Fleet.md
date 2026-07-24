@@ -47,7 +47,7 @@ status: processed
 - **Yeniden Tasarla ✓** — dönüşte yeni sahne görünüyor (bugünkü düzeltme çalışıyor).
 - **Render gerçek odayla ✓** — girintili odada floorPolygon doğru; kapı/pencere kesimleri doğru; gerçek parke dokusu zeminde.
 - **AR relocalization ✓** — mobilyalar gerçek odanın zeminine oturuyor.
-- Kalan tek kontrol: Blender USDZ'nin QuickLook'ta açılması.
+- **Blender USDZ QuickLook'ta materyallerle açıldı ✓** (parke dokusu, duvar rengi, kapı/pencere panelleri) — tur 7/7 tamamlandı.
 - **Gözlemler (yeni işler doğurdu → [[Task Board]])**: (1) karo tekrarında ışık farkı ızgara deseni; (2) bir Tripo modelinde ölçek/yerleşim tuhaflığı (GPT-4o yerleşim testi + Tripo ölçek/rotasyon doğrulamasının önemi arttı); (3) RoomScan `createdAt` 3 saat geride (saat dilimi tuhaflığı).
 
 ## İşlendiği notlar

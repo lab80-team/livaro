@@ -16,7 +16,6 @@ updated: 2026-07-24
 ## Next
 - [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı; gereksinim listesi kod reposunda README'de) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
 - [ ] Edge function'ı deploy et: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth/360° doğrula — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
-- [ ] Blender USDZ'nin QuickLook'ta materyallerle açıldığını cihazda kontrol et (doğrulama turunun tek kalan maddesi) — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [ ] `drop_splat_and_ai_task` migration'ını uygula (`npx prisma migrate deploy`; splat_captures'ta silinecek 6 satır) — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [ ] Birim maliyet analizini yap ve sonuçları vault'a aktar (kurucular kendisi yapacak) — owner:: Selim/Yusuf · area:: business · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (Bölüm 4)
 - [ ] GPT-4o yerleşimini kapsamlı test et; sonuca göre teknoloji kararı (kural tabanlı sisteme geçiş dahil) — **sıralama (teyit turu): MVP altyapısı/3D model tamamlandıktan sonra** — area:: engineering/product · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 14 + Bölüm 3)
@@ -39,7 +38,7 @@ _(boş)_
 _(boş)_
 
 ## Done
-- [x] Cihaz doğrulama turu (24 Tem): 360°/AR butonu ✓ (ilk kez çalışıyor), tarama + too-close ✓, yakın çekim texture akışı uçtan uca ✓ (floor.jpg gerçek parke fotoğrafından kırpıldı, R2+manifest doğrulandı), Yeniden Tasarla → yeni sahne ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri doğru), AR relocalization ✓. Kalan: USDZ/QuickLook kontrolü (Next'te) — source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
+- [x] Cihaz doğrulama turu (24 Tem): 360°/AR butonu ✓ (ilk kez çalışıyor), tarama + too-close ✓, yakın çekim texture akışı uçtan uca ✓ (floor.jpg gerçek parke fotoğrafından kırpıldı, R2+manifest doğrulandı), Yeniden Tasarla → yeni sahne ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri doğru), AR relocalization ✓, Blender USDZ QuickLook'ta materyallerle açıldı ✓ — TUR TAMAMLANDI (7/7) — source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [x] Yakın çekim texture akışını cihazda uçtan uca doğrula — 24 Tem turunda doğrulandı (yukarıda) — source:: [[2026-07-19 Tarama akışına zemin-duvar yakın çekim adımları]]
 - [x] Faz 3 gerçek-veri testi: girintili odada `floorPolygon` zincirleme — 24 Tem render'ında gerçek girintili odada doğru çalıştı — source:: `PROJECT_STATUS.md`
 - [x] Faz 3 gerçek-veri testi: kapı/pencere boolean kesimleri — 24 Tem render'ında gerçek duvarlarda doğru çıktı — source:: `PROJECT_STATUS.md`
