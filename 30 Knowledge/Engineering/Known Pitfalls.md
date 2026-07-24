@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-20
+updated: 2026-07-24
 related: []
 ---
 
@@ -34,6 +34,12 @@ related: []
 - Mobilya min-oran fit: GLB oranı üründen farklıysa mobilya küçük görünür; `widthCm` boşsa hiç ölçeklenmez.
 - ARKit/RoomPlan pozları 3DGS eğitimi için **yetersiz** (COLMAP teşhisiyle kanıtlandı) — splat'a dönülürse bunu unutma. Bkz. [[Gaussian Splatting self-hosted gsplat]].
 - Tarama sırasında ağır ek işlem (video kaydı, mesh, analiz) ısınma/crash yaratır — ağır işler tarama **bittikten sonra**.
+
+## Güvenlik / API (24 Tem overhaul dersleri)
+- **Presign oracle**: gelen herhangi bir URL'nin pathname'ini körlemesine imzalamak, R2'deki KEYFÎ nesne için imza dağıtan bir oracle oluşturur (satıcı, DTO'ya sahte host + bilinen key yazıp imzalı URL alabilirdi — Codex buldu). Kural: yalnız `R2_PUBLIC_URL` prefix'iyle başlayan URL imzalanır; eşleşmeyen olduğu gibi döner.
+- **Supabase Edge Functions varsayılanı platform JWT doğrulaması**: custom auth kullanan function'da `config.toml` içinde `verify_jwt=false` olmalı, yoksa register/login istekleri handler'a hiç ulaşmaz.
+- **Ayna tutarlılığı elle yaşamaz**: Nest ↔ edge function davranış farkları (rol sabitleme, şifre doğrulaması, JWT süresi) sessizce birikti; ayna dosyasına dokunan her değişiklikte iki taraf yan yana gözden geçirilmeli.
+- **jest fake timers + sharp** thread pool'u kilitliyor — retry beklemelerini fake timer yerine `setTimeout` spy'ıyla atla.
 
 ## Web / backend (Haziran dönemi dersleri)
 - **Tripo3D retry kredi yakar**: pipeline retry mekanizması Tripo3D sonucunu cache'lemez — her "Yeniden dene" gerçek paralı yeni çağrıdır. Dev'de `POST /3d-pipeline` mock DEĞİL: gerçek Tripo3D + R2 harcar.

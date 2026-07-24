@@ -23,6 +23,7 @@ updated: 2026-07-24
 ## Güncel Teknik Durum
 - Yığın: SwiftUI iOS + NestJS/Prisma/Supabase + Cloudflare R2 + Modal (Blender, T4) + OpenAI GPT-4o + Replicate flux-schnell + Tripo3D. Detay: [[System Architecture]].
 - **Aktif 3D yolu**: RoomPlan geometri + fotoğraftan birebir kırpılan texture + Modal'da headless Blender render/USDZ. Detay: [[3D Render Pipeline]].
+- **Mimari overhaul (2026-07-24)**: iki-mimar fleet + Codex incelemesiyle kod tabanı 24 Tem kararlarına göre elden geçirildi (7 commit, `cleanup/dead-code`): ölü modüller söküldü (backend order/user; iOS coverage kalıntıları), güvenlik sıkılaştırıldı (kayıt yalnız CUSTOMER; presign açığı kapandı; okuma/yazma sahiplik guard'ları), 3D model URL'leri her yüzeyde presigned ("360°/AR'da Gör" ilk kez çalışır durumda — cihaz doğrulaması bekliyor), RoomScene3DView 839→467 satır, testler backend 21→39 / iOS 53→62. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet|import notu]] ve kod reposu `PROJECT_STATUS.md`. Tespit edilen **karar-kod boşlukları** (bilinçli yapılmadı — özellik işi): sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı, render bildirimi.
 - Backend dev ortamında kurucu Mac'inde koşuyor (mDNS); **KARAR (2026-07-24): buluta taşınacak** (arka plan render + bildirim ve kullanıcı çekme ön şartı) → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Hangi bulut/nasıl — açık: [[Deployment Strategy]].
 
 ## Oda Tarama Durumu
@@ -39,11 +40,12 @@ updated: 2026-07-24
 - Detay: [[Experiment Index]].
 
 ## Güncel Öncelikler (Now)
-1. Yakın çekim texture akışının cihazda uçtan uca doğrulaması.
-2. Blender pipeline gerçek-veri testleri (floorPolygon, Tripo ölçek/rotasyon, USDZ/QuickLook, boolean kesimler).
-3. Katalog doldurma (Tripo3D'den gerçek ürünler).
-4. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14).
-5. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
+1. **Cihaz doğrulama turu** (overhaul sonrası): tarama + too-close, "Yeniden Tasarla" → yeni sahne, ProductDetail 360°/AR (ilk kez presigned), Render sekmesi, AR relocalization + yakın çekim texture akışının uçtan uca doğrulaması.
+2. **Edge function deploy'u**: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth doğrulaması.
+3. Blender pipeline gerçek-veri testleri (floorPolygon, Tripo ölçek/rotasyon, USDZ/QuickLook, boolean kesimler).
+4. Katalog doldurma (Tripo3D'den gerçek ürünler).
+5. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14).
+6. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
 
 ## Güncel Blocker'lar
 - Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
@@ -60,7 +62,7 @@ updated: 2026-07-24
 - Tam liste: [[Decision Index]].
 
 ## Bilinen Riskler / Dikkat
-- Texture pipeline regresyona açık (iki kez yaşandı) — değişikliklerde log/R2 doğrulaması: [[Known Pitfalls]].
+- Texture pipeline regresyona açık (iki kez yaşandı) — artık karakterizasyon testleriyle korunuyor (24 Tem); görsel çıktı (R2 içerik) doğrulaması yine de manuel: [[Known Pitfalls]].
 - RoomPlan'ın TV'yi pencere sanması gibi veri hataları çıktıya yansıyor.
 - LiDAR'lı iPhone zorunluluğu pazarı daraltıyor (bilinçli geçici kısıt — [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]).
 - PM incelemesinin (24 Tem) öne çıkardığı riskler: emanet para = lisans sorunu; "iptal yok" ↔ 14 gün cayma hakkı; AI yerleşim kalitesi ölçülmedi; birim maliyet bilinmeden ücretsiz model; kapsam-kaynak uçurumu → [[2026-07-24 PM Gözden Geçirme — Thinking Session]].

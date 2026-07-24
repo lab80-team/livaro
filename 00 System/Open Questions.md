@@ -63,10 +63,12 @@ updated: 2026-07-24
 
 ## Mühendislik
 - ⭐ ~~Buluta taşınma gerekli mi?~~ **KARARLAŞTI (2026-07-24)**: backend buluta taşınacak → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Açık kalan: hangi bulut/nasıl, TestFlight zamanlaması → [[Deployment Strategy]].
-- Tripo3D sonuçları cache'lenmeli (retry'lar kredi yakıyor); toplu yüklemeden önce 20 ürünlük kalite+maliyet denemesi yapılacak mı?
-- Texture regresyonlarına karşı otomatik doğrulama kurulacak mı?
+- Tripo3D sonuçları cache'lenmeli (retry'lar kredi yakıyor; 24 Tem overhaul'u "stage-aware resume" tasarımı önerdi — rapor `PROJECT_STATUS.md`/import notunda); toplu yüklemeden önce 20 ürünlük kalite+maliyet denemesi yapılacak mı?
+- ~~Texture regresyonlarına karşı otomatik doğrulama?~~ **Kısmen çözüldü (2026-07-24)**: kontrat karakterizasyon testleriyle donduruldu → [[E2E Testing Strategy]]; görsel çıktı (R2 içerik) doğrulaması hâlâ manuel.
 - 2-3 dk'lık async render başarısız olduğunda kullanıcı ne görüyor? (Hata UX'i tanımsız.)
-- Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı.
+- ~~Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı~~ — **ÇÖZÜLDÜ**: ikisi de 21+24 Tem temizlikleriyle kod tabanından çıktı (geri dönüş: `pre-cleanup-2026-07-21` tag'i).
+- **Karar-kod boşlukları (24 Tem overhaul tespiti) hangi sırayla kapatılacak?** Sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı + rozet, render bildirimi → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
+- Edge function'ın bulut sonrası kaderi: Nest buluta çıkınca APIConfig RELEASE URL'i Nest'e dönecek — ayna emekli mi olur, katalog cache'i mi kalır?
 - brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? Excel/API toplu yükleme bunun üstüne mi inşa edilecek?
 - Bkz. [[System Architecture]], [[Known Pitfalls]]
 

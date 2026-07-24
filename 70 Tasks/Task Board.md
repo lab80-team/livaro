@@ -10,12 +10,14 @@ updated: 2026-07-24
 > Format: `- [ ] Görev — owner:: · area:: · source:: kaynak-linki · due::`
 
 ## Inbox
-- [ ] Eski gpt-image-1 render yolunun (`POST /design-results/:id/render`) akıbetine karar ver — area:: engineering · source:: `PROJECT_STATUS.md`
 - [ ] Texture "Yeniden üret" butonu — area:: engineering · source:: `PROJECT_STATUS.md`
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
-- [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
+- [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı; gereksinim listesi kod reposunda README'de) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
+- [ ] Edge function'ı deploy et: `deno check` + Supabase secret'ları (R2_* 5 adet + APP_JWT_*) + TestFlight'ta katalog/auth/360° doğrula — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
+- [ ] Cihaz doğrulama turu: tarama + too-close, "Yeniden Tasarla" → yeni sahne, ProductDetail 360°/AR, Render sekmesi, AR relocalization — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
+- [ ] `drop_splat_and_ai_task` migration'ını uygula (`npx prisma migrate deploy`; splat_captures'ta silinecek 6 satır) — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [ ] Birim maliyet analizini yap ve sonuçları vault'a aktar (kurucular kendisi yapacak) — owner:: Selim/Yusuf · area:: business · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (Bölüm 4)
 - [ ] GPT-4o yerleşimini kapsamlı test et; sonuca göre teknoloji kararı (kural tabanlı sisteme geçiş dahil) — **sıralama (teyit turu): MVP altyapısı/3D model tamamlandıktan sonra** — area:: engineering/product · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 14 + Bölüm 3)
 - [ ] İade/iptal kurallarının hukuki tanımını araştır (14 gün cayma hakkı + özel üretim istisnası + emanet/lisans sorusu) — area:: business/legal · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 25)
@@ -39,4 +41,5 @@ _(boş)_
 _(boş)_
 
 ## Done
+- [x] Eski gpt-image-1 render yolunun akıbetine karar ver — yol 21 Tem temizliğinde söküldü, 24 Tem overhaul'unda doğrulandı; karar gerekmiyor (geri dönüş: `pre-cleanup-2026-07-21` tag'i) — source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [x] Oda tarama deney sonuçlarını [[Experiment Index]]'e ekle — source:: [[2026-07-19 Proje Kurulum Brief]] (oturum import'larıyla tamamlandı, 2026-07-20)
