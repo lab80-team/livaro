@@ -35,7 +35,7 @@ status: processed
 
 ## Dışarıda kalan işler (deploy/cihaz) — güncelleme: aynı gün kapatıldı
 
-- ~~Edge function deploy'u~~ — **YAPILDI (aynı gün)**: 5 R2 secret'ı yüklendi, function deploy edildi; canlı doğrulama: katalog 200 + usdzUrl imzalı ve indirilebilir (HTTP 206), yanlış login 401 (verify_jwt=false handler'a ulaştırıyor), kısa şifre register 400. Kalan: TestFlight/Release build'inde uygulama-içi kontrol.
+- ~~Edge function deploy'u~~ — **YAPILDI (aynı gün)**: 5 R2 secret'ı yüklendi, function deploy edildi; canlı doğrulama: katalog 200 + usdzUrl imzalı ve indirilebilir (HTTP 206), yanlış login 401 (verify_jwt=false handler'a ulaştırıyor), kısa şifre register 400. **Release build telefonda da doğrulandı** (katalog + 360°/AR + giriş 3/3 ✓; Release config doğrudan kuruldu — TestFlight ile aynı kod yolu; test sonrası Debug geri kuruldu). Gerçek TestFlight yüklemesi dağıtım gerektiğinde yapılacak.
 - ~~Cihaz doğrulama turu~~ — **YAPILDI (aynı gün, 7/7)** — yukarıdaki bölüm.
 - `drop_splat_and_ai_task` migration'ı hâlâ uygulanmadı (24 Tem'de DB'den doğrulandı).
 
