@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-24
+updated: 2026-07-25
 ---
 
 # Current State
@@ -45,7 +45,7 @@ updated: 2026-07-24
 3. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14; turdaki yerleşim tuhaflığı bu testin önemini artırdı).
 4. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
 
-> Edge function **deploy edildi ve uçtan uca doğrulandı (24 Tem)**: R2 secret'ları yüklendi; canlı API testleri geçti; **Release build telefonda uygulama içinden de doğrulandı** (katalog + 360°/AR + giriş — TestFlight kullanıcısıyla aynı kod yolu). Gerçek TestFlight yüklemesi henüz yapılmadı (dağıtım gerektiğinde).
+> Edge function **deploy edildi ve uçtan uca doğrulandı (24 Tem)**: R2 secret'ları yüklendi; canlı API testleri geçti; **Release build telefonda uygulama içinden de doğrulandı** (katalog + 360°/AR + giriş). **İlk TestFlight yüklemesi yapıldı (25 Tem)**: build 1.0 (2026072401) App Store Connect'e çıktı; uygulama artık iPhone-only hedefli (iPad+salt-dikey reddi 90474 → MVP LiDAR-iPhone kararıyla zaten uyumlu). Apple işlemesi sonrası TestFlight'ta test edilebilir.
 
 > Cihaz doğrulama turu (24 Tem) **7/7 tamamlandı**: 360°/AR ✓ (ilk kez), tarama+too-close ✓, yakın çekim texture akışı uçtan uca ✓, Yeniden Tasarla ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri), AR relocalization ✓, USDZ QuickLook'ta materyallerle ✓. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]] ve [[Task Board]].
 
