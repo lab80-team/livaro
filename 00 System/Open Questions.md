@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-24
+updated: 2026-07-28
 ---
 
 # Open Questions
@@ -33,6 +33,7 @@ updated: 2026-07-24
 - Bütçe aşıldığında kullanıcıya ne gösterilecek? (Tavan %20'ye güncellendi → [[2026-07-24 Bütçe aşım tavanı yüzde 10]]; PM önerisi: "bütçenin %X üstünde" rozeti + kullanıcıya sorma.)
 - "Dolu odayı dijital boşaltma" teknik olarak nasıl yapılacak? (PM alternatifi: MVP'de "boş odanı tara" demek.)
 - Teslimat tarihi tercihi akışın neresinde sorulacak (tasarımdan önce mi sonra mı)?
+- İnterneti olmayan ama oturumu olan kullanıcı, uygulama açılışında giriş sayfasını (login gate) görmeli mi? Şu anki davranış (2026-07-28, ilk açılış giriş kapısı işinin kod incelemesinde çıktı): oturum silinmez ama o açılışta giriş sayfası görünür; internet gelince sonraki açılışta oturum kendiliğinden tanınır. Offline'da farklı bir ekran (ör. "bağlantı yok") gösterilmeli mi — **To Be Decided**.
 - Bkz. [[Product Overview]], [[60 Planning/Product Flows|Product Flows]]
 
 ## Pazaryeri / İş Modeli
