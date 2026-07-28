@@ -1,13 +1,21 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-24
+updated: 2026-07-28
 related: []
 ---
 
 # Seller Experience
 
 ## Şu An Bilinenler
+- **Mağaza web paneli user journey kararlaştı (2026-07-28 thinking session)** → [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]:
+  - **Kayıt (self-serve):** e-posta, telefon, ad-soyad, mağaza adı, şehir, ilçe, kategori(ler), şifre; KVKK + satıcı sözleşmesi onay kutuları; opsiyonel web sitesi/Instagram alanı; yasal belgeler (vergi levhası vb.) MVP'de yok. Kaydol → kuruculara e-posta → net beklentili "onaya gönderildi" ekranı → admin onayıyla hesap açılır (onay/red e-postası) → [[2026-07-28 Mağaza kaydı self-serve + admin onayı]].
+  - **Giriş:** şifre veya telefona SMS kodu (ikisi de).
+  - **Panel açılışı:** ilk günden boş metrik yerine ürün durumu (yüklendi / 3D bekliyor / yayında); metrikler veri birikince.
+  - **Ürün ekleme:** ad, kategori, kategoriye özel sorular (setler hazır değil — ayrı session planlı), fiyat, ölçüler, stoklu kategorilerde stok; fotoğraflar + örnekli çekim rehberi. Ürün düzenleme/silme + "stokta yok" işaretleme var → [[2026-07-28 Ürün yükleme ve panel — 3D zorunlu, Tripo 2 hak]].
+  - **3D:** Tripo3D arka planda; mağaza modeli web'de döndürerek inceler, Onayla/Reddet. 2 deneme hakkı; aynı fotoğraflarla tekrar engelli; 2 hak biterse admin kuyruğuna "takıldı" düşer. **3D zorunlu** — 3D'siz ürün katalogda kayıtlı ama yayında değil. Mağaza onayı sonrası **admin ürün onayı** → yayın.
+  - **Excel toplu yükleme de olacak** (tekil için web formu).
+  - **Sorular:** herkese açık (Trendyol benzeri); telefon/IBAN/link filtresi; yeni soruda mağazaya e-posta bildirimi. **Sohbet MVP'de yok**, sipariş/checkout ile → [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]].
 - **Thinking session güncellemeleri (2026-07-24)**:
   - **Tripo3D hattı devam** (kurucu teyidi; anlatımdaki "tripodla çekim" Tripo3D/tripod karışıklığıydı, tripod fikri yok).
   - **Pilot marka kriterleri kararlaştı**: internette satan, vizyoner, çeşitliliği yüksek firmalardan her kategoriden 2 tane; mağazalara MVP bitince gidilecek → [[2026-07-24 Pilot marka kriterleri]].
@@ -27,8 +35,9 @@ related: []
 
 ## Bilinmeyenler
 - Satıcıların kim olacağı (mağazalar, bireysel, üreticiler) — **Unknown**. Kurucu beyanı (2026-07-21): **satıcı adayı var, henüz görüşülmedi** (kaynak: [[2026-07-21 PM Panel Tartışması]]).
-- Satıcı onboarding'i (davet mi, self-serve mi) — **To Be Decided**.
+- ~~Satıcı onboarding'i (davet mi, self-serve mi)~~ — **ÇÖZÜLDÜ (2026-07-28)**: self-serve kayıt + admin onayı → [[2026-07-28 Mağaza kaydı self-serve + admin onayı]].
 - Katalog import/entegrasyon ihtiyacı — **Unknown**.
+- Başvuru onay/red kriterleri; Tripo aylık bütçesi; herkese açık soruların denetim kuralı; kategori soru setleri — **To Be Decided** → [[Open Questions]].
 
 ## Önemli Sorular
 - Satıcı tarafı MVP'de mi? Katalog kim tarafından doldurulacak (ilk fazda ekip mi, satıcılar mı)?

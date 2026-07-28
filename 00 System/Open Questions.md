@@ -48,6 +48,12 @@ updated: 2026-07-28
 - ~~Hizmet bedelli indirim modeli yaşayacak mı?~~ **Kurucu kararı (teyit turu)**: hizmet bedeli **baştan alınacak** (uzun vade modeli). Açık kalan: bedelin iade koşulları, tutar, tahsilat yolu, mağaza gecikirse ne olacağı.
 - Reklamın tasarım algoritmasına gömülmesi (kurucu planı) ↔ tasarım tarafsızlığı (PM itirazı) — nihai kural ne?
 - ⭐ İlk satıcı görüşmesi ne zaman? (Karar: MVP bitince. PM önerisi: MVP bitmeden 5-10 firmayla ön görüşme + 1 sayfalık pilot teklifi.) Pilot kategori listesi (kaç kategori × 2 firma) netleşmedi.
+- **Mağaza paneli journey'sinden kalan açıklar (2026-07-28)** → [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]:
+  - Mağaza başvurularının **onay/red kriterleri** ne olacak; red gerekçesi mağazaya söylenecek mi? (Self-serve kayıt kaldığı için kapının tek filtresi bu — PM uyarısı.)
+  - Tripo3D için **aylık bütçe/harcama tavanı** var mı? (2 deneme hakkı var ama toplam maliyet tavanı yok.)
+  - Herkese açık ürün sorularında **denetim kuralı**: hakaret/spam/yanlış bilgiye kim, hangi sıklıkla bakacak? (Telefon/IBAN/link filtresi kararlaştı; içerik denetimi açık.)
+  - **KVKK aydınlatma + satıcı sözleşmesi metinlerini** kim/nasıl hazırlayacak (avukat?) — kayıtta iki onay kutusu kararlaştı, metinler yok.
+  - **Kategori listesi + kategoriye özel soru setleri** hazır değil; ayrı bir thinking session planlandı, ekip önceden hazırlanacak (görev: [[Task Board]]). Ürün formu ve Excel şablonu buna bağımlı — gecikirse panel inşasını bloklar (PM uyarısı).
 - Fiyat güncelliği: Excel/API ile yüklenen fiyatlar nasıl güncel tutulacak; satın alma anında fiyat değişmişse/ürün tükenmişse tasarım ne olur?
 - Bkz. [[Marketplace Model]], [[Seller Experience]]
 
@@ -70,7 +76,7 @@ updated: 2026-07-28
 - ~~Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı~~ — **ÇÖZÜLDÜ**: ikisi de 21+24 Tem temizlikleriyle kod tabanından çıktı (geri dönüş: `pre-cleanup-2026-07-21` tag'i).
 - **Karar-kod boşlukları (24 Tem overhaul tespiti) hangi sırayla kapatılacak?** Sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı + rozet, render bildirimi → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
 - Edge function'ın bulut sonrası kaderi: Nest buluta çıkınca APIConfig RELEASE URL'i Nest'e dönecek — ayna emekli mi olur, katalog cache'i mi kalır?
-- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? Excel/API toplu yükleme bunun üstüne mi inşa edilecek?
+- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? Excel/API toplu yükleme bunun üstüne mi inşa edilecek? 2026-07-28 journey kararları mevcut panelin üstüne mi inşa edilir, yeniden mi yazılır — açık.
 - Bkz. [[System Architecture]], [[Known Pitfalls]]
 
 ## Test (Testing)

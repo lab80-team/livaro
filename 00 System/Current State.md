@@ -17,6 +17,7 @@ updated: 2026-07-28
 - **Hedef kullanıcı anı (2026-07-21, teyit 24 Tem)**: taşınma + tadilat/yenileme; tek parça alım ileride → [[2026-07-21 Hedef kullanıcı anı — taşınma ve tadilat]].
 - **Gelir planı (2026-07-24)**: kısa vade %10 komisyon, orta vade reklam (Sponsorlu etiketli), uzun vade indirim/hizmet bedeli; şimdilik kullanıcıya ücretsiz → [[Marketplace Model]].
 - **Pilot marka kriterleri kararlaştı**: her kategoriden 2 internette satan firma; mağazalara MVP bitince gidilecek → [[2026-07-24 Pilot marka kriterleri]].
+- **Mağaza web paneli journey kararlaştı (2026-07-28 thinking session, 2 PM'li tartışmayla)**: self-serve kayıt + admin onayı (KVKK + satıcı sözleşmesi kutuları; şifre veya SMS girişi); ürün formu fiyat/ölçü/stok + kategoriye özel sorularla; **3D zorunlu** (Tripo 2 deneme hakkı, aşımda admin kuyruğu; 3D'siz ürün yayında olmaz); admin ürün onayı; Excel toplu yükleme; sorular herkese açık + filtreli; **sohbet MVP dışı** (checkout ile) → [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]], [[Seller Experience]]. Açık: onay kriterleri, Tripo bütçesi, kategori soru setleri (ayrı session planlı).
 - Teyit turu (24 Tem) tüm bekleyen teyitleri kapattı; emanet lisanslı ödeme kuruluşuyla, iptal/iade yasaya uygun tasarlanacak (detay açık) → [[Open Questions]].
 - Katalog: yalnızca 3 usdz'li test ürünü (gerçek katalog pilot markalardan dolacak; henüz hiçbir satıcıyla görüşülmedi).
 
@@ -55,6 +56,9 @@ updated: 2026-07-28
 - Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
 
 ## Son Kararlar
+- [[2026-07-28 Mağaza kaydı self-serve + admin onayı]]
+- [[2026-07-28 Ürün yükleme ve panel — 3D zorunlu, Tripo 2 hak]]
+- [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]]
 - [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
 - [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda]]
 - [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla]]

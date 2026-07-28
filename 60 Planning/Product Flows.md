@@ -1,7 +1,7 @@
 ---
 type: planning
 status: living
-updated: 2026-07-20
+updated: 2026-07-28
 aliases: ["Product Flows (Planning)"]
 ---
 
@@ -24,8 +24,10 @@ aliases: ["Product Flows (Planning)"]
 | Furniture placement | Prototype | GPT-4o yerleşim + 3D sahnede .usdz gösterim + AR görünüm |
 | Design render | Prototype | Blender 4 açı + USDZ; bkz. [[3D Render Pipeline]] |
 | Product detail | Prototype | ProductDetailView + "360°/AR'da Gör" |
-| Seller onboarding | Not explored | Bkz. [[Seller Experience]] |
-| Seller product upload | Prototype | brand-panel'de çalışıyor (form + 4 açı foto → Tripo3D); güncel bakım durumu Needs Validation |
+| Seller onboarding | Defined | 2026-07-28: self-serve kayıt + admin onayı; giriş şifre veya SMS → [[2026-07-28 Mağaza kaydı self-serve + admin onayı]], [[Seller Experience]] |
+| Seller product upload | Prototype (tasarım 2026-07-28'de güncellendi) | brand-panel'de çalışıyor (form + 4 açı foto → Tripo3D; güncel bakım durumu Needs Validation). Yeni tasarım: fiyat/ölçü/stok + kategoriye özel sorular + 3D zorunlu + Tripo 2 hak + admin ürün onayı + Excel toplu yükleme → [[2026-07-28 Ürün yükleme ve panel — 3D zorunlu, Tripo 2 hak]] |
+| Seller Q&A (ürün soruları) | Defined | 2026-07-28: herkese açık; telefon/IBAN/link filtresi; mağazaya e-posta bildirimi → [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]] |
+| Customer–seller chat | Defined (MVP dışı) | Sipariş/checkout ile birlikte gelecek → [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]] |
 | Checkout or lead generation | Defined (v1: sepet, checkout sonra) | Güncellendi 2026-07-24: sepete ekleme MVP'de; checkout ödeme teknolojisi seçilince → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]]. Checkout öncesi sepet davranışı (lead gibi mi) To Be Decided |
 | Returning user flow | Not explored | |
 

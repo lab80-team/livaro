@@ -1,7 +1,7 @@
 ---
 type: decision-index
 status: living
-updated: 2026-07-24
+updated: 2026-07-28
 ---
 
 # Decision Index
@@ -36,3 +36,6 @@ updated: 2026-07-24
 | 2026-07-24 | [[2026-07-24 Anlık deneyim — canlı 3D sahne, render arka planda\|Anlık deneyim: canlı 3D sahne anında; fotogerçekçi render arka planda bildirimle]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 Emanet lisanslı ödeme kuruluşuyla\|Emanet para lisanslı ödeme kuruluşuyla; iptal/iade yasaya uygun tasarlanacak]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
 | 2026-07-24 | [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti\|Backend buluta taşınacak; dolu oda/AR kalite çıtası; bütçe aşımı rozeti; maliyet freni ret]] | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] |
+| 2026-07-28 | [[2026-07-28 Mağaza kaydı self-serve + admin onayı\|Mağaza kaydı self-serve + admin onayı; şifre + SMS girişi; KVKK + satıcı sözleşmesi kutuları]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |
+| 2026-07-28 | [[2026-07-28 Ürün yükleme ve panel — 3D zorunlu, Tripo 2 hak\|Ürün yükleme: fiyat/ölçü/stok; 3D zorunlu; Tripo 2 hak + admin kuyruğu; admin ürün onayı; Excel toplu yükleme]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |
+| 2026-07-28 | [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı\|Ürün soruları herkese açık + filtreli; sohbet MVP dışı (checkout ile)]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |

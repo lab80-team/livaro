@@ -1,7 +1,7 @@
 ---
 type: tasks
 status: living
-updated: 2026-07-24
+updated: 2026-07-28
 ---
 
 # Task Board
@@ -14,6 +14,7 @@ updated: 2026-07-24
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+- [ ] Kategori listesi + kategoriye özel soru setlerini hazırla (bir sonraki thinking session'ın ön hazırlığı; ürün formu ve Excel şablonu buna bağımlı) — owner:: Selim/Yusuf · area:: product · source:: [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]
 - [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı; gereksinim listesi kod reposunda README'de) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
 - [ ] `drop_splat_and_ai_task` migration'ını uygula (`npx prisma migrate deploy`; splat_captures'ta silinecek 6 satır) — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [ ] Birim maliyet analizini yap ve sonuçları vault'a aktar (kurucular kendisi yapacak) — owner:: Selim/Yusuf · area:: business · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (Bölüm 4)
