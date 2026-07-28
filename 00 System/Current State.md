@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-25
+updated: 2026-07-28
 ---
 
 # Current State
@@ -24,6 +24,8 @@ updated: 2026-07-25
 - Yığın: SwiftUI iOS + NestJS/Prisma/Supabase + Cloudflare R2 + Modal (Blender, T4) + OpenAI GPT-4o + Replicate flux-schnell + Tripo3D. Detay: [[System Architecture]].
 - **Aktif 3D yolu**: RoomPlan geometri + fotoğraftan birebir kırpılan texture + Modal'da headless Blender render/USDZ. Detay: [[3D Render Pipeline]].
 - **Mimari overhaul (2026-07-24)**: iki-mimar fleet + Codex incelemesiyle kod tabanı 24 Tem kararlarına göre elden geçirildi (7 commit, `cleanup/dead-code`): ölü modüller söküldü (backend order/user; iOS coverage kalıntıları), güvenlik sıkılaştırıldı (kayıt yalnız CUSTOMER; presign açığı kapandı; okuma/yazma sahiplik guard'ları), 3D model URL'leri her yüzeyde presigned ("360°/AR'da Gör" ilk kez çalışır durumda — cihaz doğrulaması bekliyor), RoomScene3DView 839→467 satır, testler backend 21→39 / iOS 53→62. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet|import notu]] ve kod reposu `PROJECT_STATUS.md`. Tespit edilen **karar-kod boşlukları** (bilinçli yapılmadı — özellik işi): sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı, render bildirimi.
+- **Giriş sistemi genişledi (2026-07-28)**: telefonla SMS kodu (Twilio Verify), Google ve Apple girişleri eklendi. Supabase Auth kimliği yeni `auth/supabase` ucuyla mevcut app JWT'sine takas ediliyor (Nest + edge function aynı); users tablosunda email/şifre artık opsiyonel, phone + supabaseId kolonları eklendi. Panel: Twilio Verify bağlı, Google/Apple açık, kullanılmayan Supabase e-posta girişi güvenlik için kapatıldı. Edge function deploy edildi, canlı smoke 3/3 (OTP ucu Twilio'ya ulaşıyor). İki turlu Codex incelemesi işlendi; commit: kod reposu `cleanup/dead-code` 73c0926. **Bekleyen**: cihazda uçtan uca giriş testi + yeni TestFlight build (Twilio trial modda SMS yalnız doğrulanmış numaralara gider).
+- Gözlem (2026-07-28): iOS **simülatöründe** uygulama açılışta beyaz "Livaro" ekranında kalıyor; eski sürümde de aynı (bu değişikliklerle ilgisi yok) ve cihazda görülmüyor. Nedeni araştırılmadı — açık.
 - Backend dev ortamında kurucu Mac'inde koşuyor (mDNS); **KARAR (2026-07-24): buluta taşınacak** (arka plan render + bildirim ve kullanıcı çekme ön şartı) → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Hangi bulut/nasıl — açık: [[Deployment Strategy]].
 
 ## Oda Tarama Durumu
