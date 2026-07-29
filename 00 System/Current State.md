@@ -54,8 +54,8 @@ updated: 2026-07-29
 > Cihaz doğrulama turu (24 Tem) **7/7 tamamlandı**: 360°/AR ✓ (ilk kez), tarama+too-close ✓, yakın çekim texture akışı uçtan uca ✓, Yeniden Tasarla ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri), AR relocalization ✓, USDZ QuickLook'ta materyallerle ✓. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]] ve [[Task Board]].
 
 ## Güncel Blocker'lar
-- **R2 bucket'ta CORS politikası yok (2026-07-29 bulgusu)**: mağaza/yönetim sitesinde 3D model tarayıcıda yüklenmiyor (`<model-viewer>` presigned URL'i çekemiyor — curl/Node'dan çalışıyor, tarayıcı CORS kısıtı yüzünden reddediyor). Onay/red akışı buna bağımlı değil (butonlar modelin görsel yüklenmesini beklemiyor), yalnız görsel önizleme çalışmıyor. Kod dışı — Cloudflare R2 panelinden kurucu düzeltmeli (mevcut R2 API anahtarının `GetBucketCors`/`PutBucketCors` yetkisi yok) → [[Open Questions]].
-- Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.
+- Bilinen aktif blocker yok.
+- Geçmişte: R2 bucket CORS eksikliği (29 Tem bulgusu — 3D model tarayıcıda yüklenmiyordu; kurucu Cloudflare panelinden CORS politikasını ekledi, aynı gün canlı doğrulandı: model indi ve döndürüldü); Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.
 
 ## Son Kararlar
 - [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model]]

@@ -32,6 +32,7 @@ related: ["[[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]",
 Turun bulduğu **2 gerçek entegrasyon sorunu** (izole görev testlerinde görünmüyordu):
 
 1. **R2 bucket'ta CORS politikası yok** → `<model-viewer>` presigned GLB/USDZ URL'sini tarayıcıda çekemiyor (`TypeError: Failed to fetch`; curl/Node'dan 200 OK — tarayıcı CORS kısıtını curl uygulamıyor). Bu oturumdaki R2 API anahtarının `GetBucketCors`/`PutBucketCors` yetkisi yok → `AccessDenied`. **Kod dışı**, Cloudflare R2 panelinden kurucu düzeltmeli. Onay/red akışı modelin görsel yüklenmesine bağımlı değil (butonlar her zaman aktif) — yalnız görsel önizleme çalışmıyor.
+   **Sonuç (aynı gün akşamı):** kurucu Cloudflare panelinden CORS politikasını ekledi; canlı doğrulandı (presigned GLB tarayıcıdan 200 OK, 11,8 MB indi; `<model-viewer>` modeli render etti ve sürükleyince döndü). Kabul turu böylece 8/8 tamamlandı.
 2. **Fotoğraflar birikiyor, Tripo yalnız ilk fotoğrafı kullanıyordu** → "reddet ve farklı fotoğrafla dene" akışı fiilen çalışmıyordu. Ayrıntı ve kurucu kararıyla düzeltilmesi aşağıda (Task 24-25).
 
 ## Task 24-25 — kurucu onaylı düzeltmeler (kritik bulgu + 2 karar)
