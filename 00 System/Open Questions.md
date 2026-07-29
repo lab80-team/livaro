@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-28
+updated: 2026-07-29
 ---
 
 # Open Questions
@@ -49,11 +49,18 @@ updated: 2026-07-28
 - Reklamın tasarım algoritmasına gömülmesi (kurucu planı) ↔ tasarım tarafsızlığı (PM itirazı) — nihai kural ne?
 - ⭐ İlk satıcı görüşmesi ne zaman? (Karar: MVP bitince. PM önerisi: MVP bitmeden 5-10 firmayla ön görüşme + 1 sayfalık pilot teklifi.) Pilot kategori listesi (kaç kategori × 2 firma) netleşmedi.
 - **Mağaza paneli journey'sinden kalan açıklar (2026-07-28)** → [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]:
-  - Mağaza başvurularının **onay/red kriterleri** ne olacak; red gerekçesi mağazaya söylenecek mi? (Self-serve kayıt kaldığı için kapının tek filtresi bu — PM uyarısı.)
+  - Mağaza başvurularının **onay/red kriterleri** ne olacak; red gerekçesi mağazaya söylenecek mi? (Self-serve kayıt kaldığı için kapının tek filtresi bu — PM uyarısı.) **Not (2026-07-29 build):** mevcut kod red gerekçesini (`rejectionNote`) mağazaya GÖSTERMİYOR (iç kayıt) — bu, build'in kendi spec'inin bir varsayımıydı, kurucu kararı değil; soru resmen hâlâ açık.
   - Tripo3D için **aylık bütçe/harcama tavanı** var mı? (2 deneme hakkı var ama toplam maliyet tavanı yok.)
   - Herkese açık ürün sorularında **denetim kuralı**: hakaret/spam/yanlış bilgiye kim, hangi sıklıkla bakacak? (Telefon/IBAN/link filtresi kararlaştı; içerik denetimi açık.)
-  - **KVKK aydınlatma + satıcı sözleşmesi metinlerini** kim/nasıl hazırlayacak (avukat?) — kayıtta iki onay kutusu kararlaştı, metinler yok.
-  - **Kategori listesi + kategoriye özel soru setleri** hazır değil; ayrı bir thinking session planlandı, ekip önceden hazırlanacak (görev: [[Task Board]]). Ürün formu ve Excel şablonu buna bağımlı — gecikirse panel inşasını bloklar (PM uyarısı).
+  - **KVKK aydınlatma + satıcı sözleşmesi metinlerini** kim/nasıl hazırlayacak (avukat?) — kayıtta iki onay kutusu kararlaştı. **Güncelleme (2026-07-29 build):** `/kvkk` ve `/satici-sozlesmesi` yer tutucu sayfaları artık var ve kayıt formundan linkleniyor, ama içerik hâlâ "TASLAK — hukuki metin değildir, avukat onayı beklenmektedir" şeridiyle işaretli — gerçek hukuki metin hâlâ yok.
+  - **Kategori listesi + kategoriye özel soru setleri** hazır değil; ayrı bir thinking session planlandı, ekip önceden hazırlanacak (görev: [[Task Board]]). Ürün formu ve Excel şablonu buna bağımlı. **Güncelleme (2026-07-29 build):** geçici liste (mobilya/halı/perde) artık ürün formunun canlı kategori kaynağı; Excel toplu yükleme hâlâ yapılmadı, bu listeye bağımlılığı devam ediyor.
+- **Mağaza web + yönetim sitesi build'inden kalan açıklar (2026-07-29)** → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]:
+  - **R2 bucket'ta CORS politikası yok** → 3D model tarayıcıda yüklenmiyor (approve/reject akışı çalışıyor, yalnız görsel önizleme yok). Kod dışı, kurucunun Cloudflare panelinden çözmesi gerekiyor → [[Current State]] (Güncel Blocker'lar).
+  - **Gerçek tek-ürün multi-view Tripo denemesi hiç koşulmadı** (her şey `TRIPO3D_FAKE=1` sahte modda test edildi, kredi harcanmadı) — ön/arka/sol/sağ → Tripo front/left/back/right eşlemesinin gerçekten doğru (aynalanmamış) model ürettiğini teyit etmek gerekiyor. Kredi harcar, **kurucu onayı şart**.
+  - E-posta gönderimi hâlâ dev-only log taşıyıcı; gerçek sağlayıcı seçilmedi.
+  - **"Şifremi unuttum" akışı yok.**
+  - `users.phone`'da DB seviyesinde `@unique` kısıtı yok — iki hesap aynı telefon numarasıyla yarışarak kayıt olabilir (e-posta yolu P2002 ile korunuyor, telefon değil).
+  - SMS girişinde `signInWithOtp` Supabase'in varsayılanı `shouldCreateUser: true` ile çağrılıyor — gerçek Supabase kimlik bilgileri yapılandırılınca herkes rastgele bir telefon numarasına gerçek SMS gönderilmesini tetikleyebilir (maliyet/kötüye kullanım riski; hesap ele geçirme değil, çünkü backend hâlâ eşleşen SELLER/ADMIN telefonu arıyor). Şu an `.env` boş olduğu için SMS sekmesi hiç görünmüyor, risk aktif değil.
 - Fiyat güncelliği: Excel/API ile yüklenen fiyatlar nasıl güncel tutulacak; satın alma anında fiyat değişmişse/ürün tükenmişse tasarım ne olur?
 - Bkz. [[Marketplace Model]], [[Seller Experience]]
 
@@ -76,7 +83,7 @@ updated: 2026-07-28
 - ~~Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı~~ — **ÇÖZÜLDÜ**: ikisi de 21+24 Tem temizlikleriyle kod tabanından çıktı (geri dönüş: `pre-cleanup-2026-07-21` tag'i).
 - **Karar-kod boşlukları (24 Tem overhaul tespiti) hangi sırayla kapatılacak?** Sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı + rozet, render bildirimi → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
 - Edge function'ın bulut sonrası kaderi: Nest buluta çıkınca APIConfig RELEASE URL'i Nest'e dönecek — ayna emekli mi olur, katalog cache'i mi kalır?
-- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? Excel/API toplu yükleme bunun üstüne mi inşa edilecek? 2026-07-28 journey kararları mevcut panelin üstüne mi inşa edilir, yeniden mi yazılır — açık.
+- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? ~~2026-07-28 journey kararları mevcut panelin üstüne mi inşa edilir, yeniden mi yazılır~~ — **ÇÖZÜLDÜ (2026-07-29 build)**: yeniden yazıldı, tamamen ayrı bir site (`web/`) olarak kuruldu; brand-panel'e dokunulmadı (yalnız referans). brand-panel'in emekliye ayrılması kararı merge aşamasına bırakıldı (henüz kurucu onayı yok) → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]. Açık kalan: Excel/API toplu yükleme hâlâ yapılmadı, hangi panelin üstüne inşa edileceği hâlâ belirsiz.
 - Bkz. [[System Architecture]], [[Known Pitfalls]]
 
 ## Test (Testing)

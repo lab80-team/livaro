@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-24
+updated: 2026-07-29
 related: []
 ---
 
@@ -39,7 +39,9 @@ related: []
 - Geciken mağaza: puanı düşer, algoritmada geriler; **2 gecikmeden sonra ceza** — oran/meblağ **To Be Decided**, kalan bakiyeden kesilir (PM itirazı: pilotta parasal ceza arzı kaçırır).
 
 ## Roller / Yapı
-- Roller sistemde tanımlı: **CUSTOMER** (iOS), **SELLER** (web brand-panel), **ADMIN**. Bkz. [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]].
+- Roller sistemde tanımlı: **CUSTOMER** (iOS), **SELLER**, **ADMIN**. Bkz. [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]].
+- **Satıcı paneli yeniden yazıldı (2026-07-29)**: yeni ayrı `web/` sitesi build edildi (mağaza kaydı/giriş/ürün yönetimi), yerelde uçtan uca çalışıyor, main'e merge edilmedi. Eski `brand-panel/`'e bu turda dokunulmadı (referans); emekliye ayrılma kararı merge aşamasında verilecek.
+- **Admin artık ayrı bir site (`admin/`)** — kurucu kararı (2026-07-28 sohbeti): başvuru onayı, ürün yayın onayı, takılan ürünler kuyruğu (bu turda kasıtlı asgari; kapsamlı yönetim paneli — metrikler, kullanıcı yönetimi, içerik denetimi — ayrı bir gelecek thinking session'da tasarlanacak) → [[Seller Experience]], [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]].
 - **Keşfet sayfası**: pazaryeri vitrini; ilk gün pilot marka ürünleriyle dolacak. Markalar mı ürünler mi listelenecek **To Be Decided**. Kullanıcı manuel ürün seçip onlardan AI tasarım yaptırabilecek.
 - Teknik altyapıda katalog + Tripo3D 3D üretim hattı hazır; katalogda 3 test ürünü (gerçek katalog pilot markalardan dolacak → [[2026-07-24 Pilot marka kriterleri]]).
 

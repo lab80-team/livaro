@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-24
+updated: 2026-07-29
 related: []
 ---
 
@@ -55,8 +55,12 @@ related: []
 - macOS'ta `/usr/bin/python3` Xcode python3'üne symlink — pxr/usd-core gibi paketler için hangi python'a kurulduğuna dikkat.
 - `nest start --watch` `nest-cli.json` assets kopyalamayı çalıştırmaz (+`deleteOutDir:true` her başlatmada siler) — `.py` yardımcı script'leri dist'te kaybolabilir.
 
+## NestJS / TypeScript (29 Tem mağaza paneli build)
+- **`ParseFilePipe` + `FileFieldsInterceptor` uyumsuz**: `ParseFilePipe`, `FileFieldsInterceptor`'ın çoklu-alan (obje) şeklini anlamıyor ve İÇERİKTEN BAĞIMSIZ olarak HER yüklemeyi sessizce reddediyor. Etiketli çoklu-foto yüklemede (ör. ön/arka/sol/sağ slotları) `ParseFilePipe` kullanmayın — özel bir validation pipe yazın (bu turda `ValidateLabeledPhotosPipe` ile çözüldü, canlıda yakalandı).
+- **`tsconfig` `extends`, `exclude` dizilerini birleştirmiyor**: alt dosyanın `exclude`'u üst (`extends` edilen) dosyanınkini override eder, birleştirmez. Yeni bir alt-uygulama (ör. `web/`, `admin/`) eklerken hem `tsconfig.json` HEM `tsconfig.build.json`'a ayrı ayrı exclude eklenmeli — yalnız birine eklemek kök `nest build`'i (ve dolayısıyla önceki tüm görevlerin dayandığı derleme kapısını) sessizce kırar. Bu turda Task 13'te canlı yaşandı.
+
 ## İlgili Notlar
 [[System Architecture]], [[3D Render Pipeline]], [[Deployment Strategy]]
 
 ## Kaynaklar
-`~/Desktop/livaro/PROJECT_STATUS.md`; [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]; [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]]; [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
+`~/Desktop/livaro/PROJECT_STATUS.md`; [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]; [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]]; [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]; [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]

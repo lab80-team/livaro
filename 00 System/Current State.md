@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-28
+updated: 2026-07-29
 ---
 
 # Current State
@@ -18,6 +18,7 @@ updated: 2026-07-28
 - **Gelir planı (2026-07-24)**: kısa vade %10 komisyon, orta vade reklam (Sponsorlu etiketli), uzun vade indirim/hizmet bedeli; şimdilik kullanıcıya ücretsiz → [[Marketplace Model]].
 - **Pilot marka kriterleri kararlaştı**: her kategoriden 2 internette satan firma; mağazalara MVP bitince gidilecek → [[2026-07-24 Pilot marka kriterleri]].
 - **Mağaza web paneli journey kararlaştı (2026-07-28 thinking session, 2 PM'li tartışmayla)**: self-serve kayıt + admin onayı (KVKK + satıcı sözleşmesi kutuları; şifre veya SMS girişi); ürün formu fiyat/ölçü/stok + kategoriye özel sorularla; **3D zorunlu** (Tripo 2 deneme hakkı, aşımda admin kuyruğu; 3D'siz ürün yayında olmaz); admin ürün onayı; Excel toplu yükleme; sorular herkese açık + filtreli; **sohbet MVP dışı** (checkout ile) → [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]], [[Seller Experience]]. Açık: onay kriterleri, Tripo bütçesi, kategori soru setleri (ayrı session planlı).
+- **Mağaza web sitesi + yönetim sitesi build edildi (2026-07-29)**: 2026-07-28 journey kararlarının uygulaması tamamlandı — `web/` (mağaza) ve ayrı `admin/` (yönetim, bu turda asgari: başvuru/ürün onayı/takılanlar) iki ayrı site olarak kuruldu; kayıt→admin onayı→giriş→ürün+4 etiketli foto→3D→mağaza onayı→admin onayı→herkese açık katalog zinciri yerelde uçtan uca canlı doğrulandı. **main'e merge edilmedi**, dal (`feature/store-web`, 109 commit) kurucu + Codex incelemesini bekliyor. Build sırasında bulunup kurucu onayıyla düzeltilen iki hata: 3D üretimi gerçekte yalnız ilk fotoğrafı kullanıyordu (artık 4 açının tamamı, Tripo `multiview_to_model`) ve yeni foto seti eskisine ekleniyordu (artık yerine geçiyor) → [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model]], [[2026-07-29 Yeni fotoğraf seti eskisinin yerine geçer, tekil silme yok]]. Detay: [[Seller Experience]], [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]].
 - Teyit turu (24 Tem) tüm bekleyen teyitleri kapattı; emanet lisanslı ödeme kuruluşuyla, iptal/iade yasaya uygun tasarlanacak (detay açık) → [[Open Questions]].
 - Katalog: yalnızca 3 usdz'li test ürünü (gerçek katalog pilot markalardan dolacak; henüz hiçbir satıcıyla görüşülmedi).
 
@@ -53,9 +54,12 @@ updated: 2026-07-28
 > Cihaz doğrulama turu (24 Tem) **7/7 tamamlandı**: 360°/AR ✓ (ilk kez), tarama+too-close ✓, yakın çekim texture akışı uçtan uca ✓, Yeniden Tasarla ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri), AR relocalization ✓, USDZ QuickLook'ta materyallerle ✓. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]] ve [[Task Board]].
 
 ## Güncel Blocker'lar
-- Bilinen aktif blocker yok. (Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.)
+- **R2 bucket'ta CORS politikası yok (2026-07-29 bulgusu)**: mağaza/yönetim sitesinde 3D model tarayıcıda yüklenmiyor (`<model-viewer>` presigned URL'i çekemiyor — curl/Node'dan çalışıyor, tarayıcı CORS kısıtı yüzünden reddediyor). Onay/red akışı buna bağımlı değil (butonlar modelin görsel yüklenmesini beklemiyor), yalnız görsel önizleme çalışmıyor. Kod dışı — Cloudflare R2 panelinden kurucu düzeltmeli (mevcut R2 API anahtarının `GetBucketCors`/`PutBucketCors` yetkisi yok) → [[Open Questions]].
+- Geçmişte: Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.
 
 ## Son Kararlar
+- [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model]]
+- [[2026-07-29 Yeni fotoğraf seti eskisinin yerine geçer, tekil silme yok]]
 - [[2026-07-28 Mağaza kaydı self-serve + admin onayı]]
 - [[2026-07-28 Ürün yükleme ve panel — 3D zorunlu, Tripo 2 hak]]
 - [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]]

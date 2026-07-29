@@ -1,7 +1,7 @@
 ---
 type: decision-index
 status: living
-updated: 2026-07-28
+updated: 2026-07-29
 ---
 
 # Decision Index
@@ -39,3 +39,5 @@ updated: 2026-07-28
 | 2026-07-28 | [[2026-07-28 Mağaza kaydı self-serve + admin onayı\|Mağaza kaydı self-serve + admin onayı; şifre + SMS girişi; KVKK + satıcı sözleşmesi kutuları]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |
 | 2026-07-28 | [[2026-07-28 Ürün yükleme ve panel — 3D zorunlu, Tripo 2 hak\|Ürün yükleme: fiyat/ölçü/stok; 3D zorunlu; Tripo 2 hak + admin kuyruğu; admin ürün onayı; Excel toplu yükleme]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |
 | 2026-07-28 | [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı\|Ürün soruları herkese açık + filtreli; sohbet MVP dışı (checkout ile)]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |
+| 2026-07-29 | [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model\|3D üretimi 4 açının tamamını kullanır (Tripo multiview_to_model); tek-fotoğraf üretimi terk edildi]] | [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]] |
+| 2026-07-29 | [[2026-07-29 Yeni fotoğraf seti eskisinin yerine geçer, tekil silme yok\|Yeni fotoğraf seti eskisinin yerine geçer (replace, accumulate değil); tekil silme arayüzü yok]] | [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]] |

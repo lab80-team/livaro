@@ -1,13 +1,21 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-28
+updated: 2026-07-29
 related: []
 ---
 
 # Seller Experience
 
 ## Şu An Bilinenler
+- **Mağaza web sitesi + yönetim (admin) sitesi build edildi, yerelde uçtan uca çalışıyor (2026-07-29)** → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]:
+  - İki ayrı site: `web/` (mağaza/satıcı — herkese açık tanıtım/kayıt/giriş/panel) ve `admin/` (yalnız kurucular — başvurular/ürün onayı/takılanlar). Bu ayrım kurucu kararı (2026-07-28 sohbeti, kod reposu spec dokümanı). Admin'in bu turu **kasıtlı olarak asgari**; kapsamlı yönetim paneli (metrikler, kullanıcı yönetimi, içerik denetimi) ayrı bir **gelecek thinking session'da** tasarlanacak.
+  - Uçtan uca akış yerelde canlı doğrulandı: kayıt → admin onayı → giriş (şifre; SMS sekmesi Supabase env boşken hiç görünmüyor, DOM'da yok) → ürün + 4 etiketli foto → 3D (fake modda) → mağaza 3D onayı → admin yayın onayı → herkese açık katalogda görünür + "stokta yok" işaretlenince listeden düşer.
+  - **Fotoğraflar artık serbest çoklu-seçim değil, 4 ETİKETLİ slot** (ön/arka/sol/sağ) — hem `web/` hem `admin/`'de. Tripo'nun sıralı girdi beklediği ve Tripo'nun "sol"unun NESNENİN kendi solu olduğu (aynalı-model riski) build sırasında netleşince eklendi; çekim rehberi benzetme yerine mekanik tarifle yeniden yazıldı ("ön noktadan sağa yürü = Sol").
+  - Yeni foto seti yüklenince eskisi silinir, üzerine eklenmez (kurucu kararı) → [[2026-07-29 Yeni fotoğraf seti eskisinin yerine geçer, tekil silme yok]].
+  - **main'e merge edilmedi, push edilmedi** — dal (`feature/store-web`, main'e göre 109 commit) kurucu incelemesini ve reponun zorunlu Codex inceleme kapısını bekliyor.
+  - Geride kalan gerçek entegrasyon sorunu: R2 bucket'ta CORS politikası yok, 3D model tarayıcıda yüklenmiyor (onay/red akışı buna bağımlı değil) → [[Open Questions]].
+  - Eski `brand-panel/`'e bu turda dokunulmadı (yalnız referans); emekliye ayrılma kararı merge aşamasında verilecek.
 - **Mağaza web paneli user journey kararlaştı (2026-07-28 thinking session)** → [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]:
   - **Kayıt (self-serve):** e-posta, telefon, ad-soyad, mağaza adı, şehir, ilçe, kategori(ler), şifre; KVKK + satıcı sözleşmesi onay kutuları; opsiyonel web sitesi/Instagram alanı; yasal belgeler (vergi levhası vb.) MVP'de yok. Kaydol → kuruculara e-posta → net beklentili "onaya gönderildi" ekranı → admin onayıyla hesap açılır (onay/red e-postası) → [[2026-07-28 Mağaza kaydı self-serve + admin onayı]].
   - **Giriş:** şifre veya telefona SMS kodu (ikisi de).
@@ -24,7 +32,8 @@ related: []
   - **İstenen admin paneli metrikleri (vizyon)**: ürün görüntüleme, tıklanma sayısı, kaç kişinin ürünle tasarım yaptığı, sepete eklenme sayısı.
   - Kaynak: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 5, 16, 30, 32).
 - **Satıcı web paneli (brand-panel) prototipte mevcut** (Haziran, Faz 3): Vite + React Router; yalnızca SELLER/ADMIN rolleri girebilir (CUSTOMER engellenir). Kaynak: [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]].
-- **Ürün yükleme akışı çalışıyor**: form (ad, açıklama, fiyat, **en/boy/yükseklik cm — üçü zorunlu** çünkü 3D model gerçek ölçülere göre scale ediliyor; kumaş opsiyonel) + **4 açı fotoğrafı (ön/arka/sol/sağ)** — Tripo3D multi-view 3D model üretiminin girdisi. Kaydetme resumable state machine: ürün oluştur → fotoğrafları yükle → 3D pipeline tetikle; hatada "Tekrar dene" kaldığı adımdan sürer.
+- **Ürün yükleme akışı çalışıyor** (brand-panel, Haziran): form (ad, açıklama, fiyat, **en/boy/yükseklik cm — üçü zorunlu** çünkü 3D model gerçek ölçülere göre scale ediliyor; kumaş opsiyonel) + 4 açı fotoğrafı (ön/arka/sol/sağ) isteniyordu. Kaydetme resumable state machine: ürün oluştur → fotoğrafları yükle → 3D pipeline tetikle; hatada "Tekrar dene" kaldığı adımdan sürer.
+  - **DÜZELTME (2026-07-29):** Bu not daha önce burada "4 açı fotoğrafı Tripo3D multi-view 3D model üretiminin girdisi" diyordu — bu **yanlıştı**. Mağaza web + yönetim sitesi build oturumunun uçtan uca kabul turunda bulundu: kod Tripo'ya yalnızca İLK fotoğrafı gönderiyordu (`image_to_model`); satıcı 4 açı çekmesine rağmen model tek-fotoğraf kalitesinde üretiliyordu. Kurucu kararıyla (2026-07-29) düzeltildi: artık gerçekten 4 açının TAMAMI Tripo'nun `multiview_to_model` ucuna gönderiliyor → [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model]]. Kayıt: [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]].
 - slug/sku gibi teknik alanlar satıcıdan gizlenip otomatik üretiliyor. Markası olmayan satıcı ürün ekleyemez (bilinçli engelleme mesajı).
 - Görsel kimlik: "Sıcak/Lüks" — koyu kahve-siyah #1C1917 + altın #A16207, dark-first, Inter (kurucu seçimi, 17-19 Haz).
 - Maliyet notu: 3D pipeline retry'ı Tripo3D sonucunu cache'lemiyor — her "Yeniden dene" gerçek kredi harcar (bkz. [[Known Pitfalls]]).
@@ -48,3 +57,4 @@ related: []
 
 ## Kaynaklar
 - [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]
+- [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]
