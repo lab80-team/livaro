@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-29
+updated: 2026-07-31
 ---
 
 # Open Questions
@@ -64,6 +64,13 @@ updated: 2026-07-29
   - **"Şifremi unuttum" akışı yok.**
   - `users.phone`'da DB seviyesinde `@unique` kısıtı yok — iki hesap aynı telefon numarasıyla yarışarak kayıt olabilir (e-posta yolu P2002 ile korunuyor, telefon değil).
   - SMS girişinde `signInWithOtp` Supabase'in varsayılanı `shouldCreateUser: true` ile çağrılıyor — gerçek Supabase kimlik bilgileri yapılandırılınca herkes rastgele bir telefon numarasına gerçek SMS gönderilmesini tetikleyebilir (maliyet/kötüye kullanım riski; hesap ele geçirme değil, çünkü backend hâlâ eşleşen SELLER/ADMIN telefonu arıyor). Şu an `.env` boş olduğu için SMS sekmesi hiç görünmüyor, risk aktif değil.
+- **Kategori 3D stratejisi + main merge turundan kalan açıklar (2026-07-29 – 31)** → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]:
+  - **Perde tedarik yolu seçilmedi** — hazır kıvrımlı model kütüphanesi hangi yoldan edinilecek (freelancer $500-1500/3-5 hafta mı, hazır asset mi)? Lisansların "kumaş değiştirilebilir UV" desteği satın almadan bilinmiyor — asıl risk → [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]].
+  - **Mobilyada Tripo'nun ön/arka/sol/sağ → front/left/back/right eşlemesi hâlâ doğrulanmadı** — halı denemesi bunu ölçemedi (halı düz ürün, yan açı kavramı anlamsız + kullanılan 4 fotoğraf gerçek 4 açı değildi). Gerçek bir mobilyanın 4 gerçek açısıyla ayrı bir test gerekiyor — **pilottan önce yapılmalı**.
+  - **AI aramada oda taraması sahiplik kontrolü YOK** — giriş yapmış herhangi bir kullanıcı başkasının `roomScanId`'sini gönderip ev geometrisini alabiliyor, o veri OpenAI'a gidiyor. Temmuz'dan kalma kod; main merge turunda bulundu, kurucu kararıyla bu turun kapsamı dışında bırakıldı, ayrı iş olarak işaretlendi. **Pilottan önce kapatılmalı.**
+  - **Blender render mükerrer tetikleme koruması atomik değil** — aynı render birden çok kez ücretli koşabilir. Ayrı iş olarak işaretlendi, tarih belirlenmedi.
+  - **iOS Xcode'da bir kez derlenip test edilmedi**: KVKK sızıntı düzeltmesi `ios/Livaro/Models/Brand.swift`'te `ownerId` alanını opsiyonel yaptı (backend artık döndürmüyor); derleme ve cihaz doğrulaması yapılmadı.
+  - Kalan artık riskler (Codex "merge-engeli değil" dedi, ama kayıtlı): çökme anına denk gelen milisaniyelik eşzamanlılık pencereleri; admin için "sadece köprüyü tekrar dene" gibi dar bir kurtarma aksiyonunun olmaması (şu an tek yol tam retry).
 - Fiyat güncelliği: Excel/API ile yüklenen fiyatlar nasıl güncel tutulacak; satın alma anında fiyat değişmişse/ürün tükenmişse tasarım ne olur?
 - Bkz. [[Marketplace Model]], [[Seller Experience]]
 
@@ -77,6 +84,7 @@ updated: 2026-07-29
 
 ## Veri / Gizlilik
 - ⭐ KVKK: ev içi tarama + fotoğraflar yurt dışı işleyicilere (OpenAI, Modal, Replicate) gidiyor — açık rıza, aydınlatma metni, saklama süresi planı var mı? Dış teste çıkmadan asgari rıza + saklama politikası şart.
+- ⭐ **AI aramada oda taraması sahiplik kontrolü YOK** (2026-07-31 main merge turunda bulundu): herhangi bir giriş yapmış kullanıcı başkasının `roomScanId`'sini gönderip ev geometrisini alabiliyor, o veri OpenAI'a gidiyor. Temmuz'dan kalma kod; ayrı iş olarak işaretlendi, **pilottan önce kapatılmalı** → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]].
 
 ## Mühendislik
 - ⭐ ~~Buluta taşınma gerekli mi?~~ **KARARLAŞTI (2026-07-24)**: backend buluta taşınacak → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Açık kalan: hangi bulut/nasıl, TestFlight zamanlaması → [[Deployment Strategy]].
@@ -86,7 +94,7 @@ updated: 2026-07-29
 - ~~Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı~~ — **ÇÖZÜLDÜ**: ikisi de 21+24 Tem temizlikleriyle kod tabanından çıktı (geri dönüş: `pre-cleanup-2026-07-21` tag'i).
 - **Karar-kod boşlukları (24 Tem overhaul tespiti) hangi sırayla kapatılacak?** Sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı + rozet, render bildirimi → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
 - Edge function'ın bulut sonrası kaderi: Nest buluta çıkınca APIConfig RELEASE URL'i Nest'e dönecek — ayna emekli mi olur, katalog cache'i mi kalır?
-- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? ~~2026-07-28 journey kararları mevcut panelin üstüne mi inşa edilir, yeniden mi yazılır~~ — **ÇÖZÜLDÜ (2026-07-29 build)**: yeniden yazıldı, tamamen ayrı bir site (`web/`) olarak kuruldu; brand-panel'e dokunulmadı (yalnız referans). brand-panel'in emekliye ayrılması kararı merge aşamasına bırakıldı (henüz kurucu onayı yok) → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]. Açık kalan: Excel/API toplu yükleme hâlâ yapılmadı, hangi panelin üstüne inşa edileceği hâlâ belirsiz.
+- brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? ~~2026-07-28 journey kararları mevcut panelin üstüne mi inşa edilir, yeniden mi yazılır~~ — **ÇÖZÜLDÜ (2026-07-29 build)**: yeniden yazıldı, tamamen ayrı bir site (`web/`) olarak kuruldu; brand-panel'e dokunulmadı (yalnız referans). **Güncelleme (2026-07-31):** `web/`+`admin/` main'e birleştirildi ve push edildi, ama brand-panel'in emekliye ayrılması kararı hâlâ verilmedi (merge aşamasına bırakılmıştı, merge geçti, karar hâlâ açık) → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]. Açık kalan: Excel/API toplu yükleme hâlâ yapılmadı, hangi panelin üstüne inşa edileceği hâlâ belirsiz.
 - Bkz. [[System Architecture]], [[Known Pitfalls]]
 
 ## Test (Testing)

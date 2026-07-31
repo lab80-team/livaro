@@ -1,7 +1,7 @@
 ---
 type: planning
 status: living
-updated: 2026-07-29
+updated: 2026-07-31
 aliases: ["Product Flows (Planning)"]
 ---
 
@@ -24,8 +24,8 @@ aliases: ["Product Flows (Planning)"]
 | Furniture placement | Prototype | GPT-4o yerleşim + 3D sahnede .usdz gösterim + AR görünüm |
 | Design render | Prototype | Blender 4 açı + USDZ; bkz. [[3D Render Pipeline]] |
 | Product detail | Prototype | ProductDetailView + "360°/AR'da Gör" |
-| Seller onboarding | Implemented | 2026-07-29: `web/` (kayıt → admin onayı → giriş) + ayrı `admin/` (başvuru onay/red) build edildi, yerelde uçtan uca canlı doğrulandı. main'e merge edilmedi; gerçek satıcı henüz kullanmadı (**Validated değil**) → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]], [[Seller Experience]] |
-| Seller product upload | Implemented | 2026-07-29: yeni `web/` panelinde ürün formu (fiyat/ölçü/stok) + 4 ETİKETLİ foto (ön/arka/sol/sağ) + Tripo 3D (artık gerçekten 4 açının tamamıyla, `multiview_to_model`) + mağaza 3D onayı + admin ürün onayı zinciri yerelde canlı doğrulandı; eski brand-panel'e dokunulmadı (ayrı, yeni site). main'e merge edilmedi; gerçek satıcı henüz kullanmadı (**Validated değil**) → [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model]], [[Seller Experience]] |
+| Seller onboarding | Implemented | 2026-07-29: `web/` (kayıt → admin onayı → giriş) + ayrı `admin/` (başvuru onay/red) build edildi, yerelde uçtan uca canlı doğrulandı. **main'e birleştirildi ve push edildi (2026-07-31, `44a4497`)**, Codex kapısı 7 turda 22 açık buldu ve hepsi kapatıldı; gerçek satıcı henüz kullanmadı (**Validated değil**) → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]], [[Seller Experience]] |
+| Seller product upload | Implemented | 2026-07-29: yeni `web/` panelinde ürün formu (fiyat/ölçü/stok) + 4 ETİKETLİ foto (ön/arka/sol/sağ) + kategoriye göre 3D (mobilya: Tripo `multiview_to_model` v3.1, ~60 kredi/ürün; halı: Tripo'suz düz yüzey, 0 kredi; perde: tedarik yolu seçilmedi) + mağaza 3D onayı + admin ürün onayı zinciri yerelde canlı doğrulandı; eski brand-panel'e dokunulmadı (ayrı, yeni site). **main'e birleştirildi (2026-07-31)**; gerçek satıcı henüz kullanmadı (**Validated değil**); mobilyada sol/sağ eşleme gerçek 4 açıyla hâlâ doğrulanmadı → [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]], [[Seller Experience]] |
 | Seller Q&A (ürün soruları) | Defined | 2026-07-28: herkese açık; telefon/IBAN/link filtresi; mağazaya e-posta bildirimi → [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]] |
 | Customer–seller chat | Defined (MVP dışı) | Sipariş/checkout ile birlikte gelecek → [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı]] |
 | Checkout or lead generation | Defined (v1: sepet, checkout sonra) | Güncellendi 2026-07-24: sepete ekleme MVP'de; checkout ödeme teknolojisi seçilince → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]]. Checkout öncesi sepet davranışı (lead gibi mi) To Be Decided |

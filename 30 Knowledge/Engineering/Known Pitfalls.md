@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-29
+updated: 2026-07-31
 related: []
 ---
 
@@ -31,7 +31,8 @@ related: []
 - **Dollhouse**: dıştan kamerada duvarlar içi kapatır → kameraya bakan duvarları o render'da gizle + `film_transparent`.
 - **Texture pipeline hassas**: kapı fix'i gibi ilgisiz görünen değişiklikler texture yolunu bozdu ("zemin yine kahverengi", 18 Tem, iki kez). Değişiklik sonrası R2'deki `floor.jpg` içeriği ve backend log'u ("fotoğraftan kırpıldı [floor]") doğrulanmalı.
 - **RoomPlan yanlış algı**: büyük TV/ekran pencere sanılabiliyor — model çıktısında olmayan cam panel görülürse önce RoomPlan verisindeki `windows` dizisine bak.
-- Mobilya min-oran fit: GLB oranı üründen farklıysa mobilya küçük görünür; `widthCm` boşsa hiç ölçeklenmez.
+- Mobilya ölçekleme: GLB, ürünün cm kutusuna eksen bazlı ayrı ayrı gerilerek (non-uniform stretch) oturtulur — "min-oran uniform fit" değil (2026-07-31'de düzeltilen yanlış vault bilgisi, bkz. [[System Architecture]]); GLB oranı üründen farklıysa model üç eksende de distorte olabilir. `widthCm` boşsa hiç ölçeklenmez.
+- **USDZ dönüştürücü yalnız renk dokusunu taşıyabilir**: `glb_to_usdz.py` bir süre yalnız renk (albedo) dokusunu aktarıyor, normal/pürüzlülük/metaliklik haritalarını sessizce atıyordu — sonuç derlenip çalışıyor ama AR'da model "düz" görünüyordu (hiçbir hata/uyarı yok). Bu sınıf kayıp dosyanın hiç testi olmadığı için fark edilmemişti (30 Tem'de ilk testler eklendi). Ders: bir 3D dönüştürücünün "çalıştığını" doğrulamak yetmez — hangi PBR haritalarının gerçekten taşındığı ayrıca doğrulanmalı.
 - ARKit/RoomPlan pozları 3DGS eğitimi için **yetersiz** (COLMAP teşhisiyle kanıtlandı) — splat'a dönülürse bunu unutma. Bkz. [[Gaussian Splatting self-hosted gsplat]].
 - Tarama sırasında ağır ek işlem (video kaydı, mesh, analiz) ısınma/crash yaratır — ağır işler tarama **bittikten sonra**.
 
@@ -59,8 +60,11 @@ related: []
 - **`ParseFilePipe` + `FileFieldsInterceptor` uyumsuz**: `ParseFilePipe`, `FileFieldsInterceptor`'ın çoklu-alan (obje) şeklini anlamıyor ve İÇERİKTEN BAĞIMSIZ olarak HER yüklemeyi sessizce reddediyor. Etiketli çoklu-foto yüklemede (ör. ön/arka/sol/sağ slotları) `ParseFilePipe` kullanmayın — özel bir validation pipe yazın (bu turda `ValidateLabeledPhotosPipe` ile çözüldü, canlıda yakalandı).
 - **`tsconfig` `extends`, `exclude` dizilerini birleştirmiyor**: alt dosyanın `exclude`'u üst (`extends` edilen) dosyanınkini override eder, birleştirmez. Yeni bir alt-uygulama (ör. `web/`, `admin/`) eklerken hem `tsconfig.json` HEM `tsconfig.build.json`'a ayrı ayrı exclude eklenmeli — yalnız birine eklemek kök `nest build`'i (ve dolayısıyla önceki tüm görevlerin dayandığı derleme kapısını) sessizce kırar. Bu turda Task 13'te canlı yaşandı.
 
+## Süreç / Kod İncelemesi (31 Tem main merge dersi)
+- **Görev-bazlı inceleme eski kapıları görmez.** Mağaza web sitesi dalı main'e birleştirilirken (2026-07-31) her ajanın yalnız kendi diff'ine baktığı görev-bazlı incelemeler, "Haziran'dan kalma eski kapılar hâlâ açık mı?" sorusunu HİÇ sormamıştı — bu yüzden yeni build tamamlanana kadar şu açıklar fark edilmedi: satıcı eski `POST /products` ucundan `status:PUBLISHED` göndererek 3D zorunluluğu + admin onayını atlayabiliyordu; eski `/3d-pipeline` ucu satıcıya açık ve hak sayacına kör kalmıştı (sınırsız ücretli Tripo üretimi riski); `GET /brands` kimliksiz tüm marka satırını (telefon, red gerekçesi dahil) döndürüyordu (KVKK). Merge öncesi ayrı, bütüne bakan bir Codex turu (7 tur, 22 bulgu) bunları yakaladı. **Ders**: özellik bazlı/görev bazlı incelemeye ek olarak, main'e birleştirmeden önce "bu değişiklik eski/kullanılmayan uçları es geçiyor mu, onlar hâlâ ulaşılabilir mi" sorusunu soran ayrı, bütünsel bir güvenlik/sızıntı turu şart — tek başına iyi task-scoped review'lar bunu yakalamıyor. Detay: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]].
+
 ## İlgili Notlar
 [[System Architecture]], [[3D Render Pipeline]], [[Deployment Strategy]]
 
 ## Kaynaklar
-`~/Desktop/livaro/PROJECT_STATUS.md`; [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]; [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]]; [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]; [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]
+`~/Desktop/livaro/PROJECT_STATUS.md`; [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]; [[2026-07-16 Oturum Import — 3D Pipeline Evrimi]]; [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]; [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]; [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]

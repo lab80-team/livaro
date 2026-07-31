@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-24
+updated: 2026-07-31
 related: []
 ---
 
@@ -27,7 +27,7 @@ related: []
 - Duvar 15 cm; kapı boşluğu + çift kanat kapı paneli + siyah metal kol (18 Tem eklendi); pencere boşluğu + cam; zemin duvar iç kenarlarından zincirlenmiş poligon (kopma eşiği 1.5 m); tavan yok (16 Tem'de kesin kaldırıldı).
 - 4 kamera: izometrik / eye-level / top / bird-eye; **dollhouse tekniği** (kameraya bakan duvarlar o render'da gizlenir) + `film_transparent`.
 - `_enhance_render` (modal_blender.py): yalnızca eye-level PNG'ye flux img2img güzelleştirme (prompt_strength 0.55); `replicateToken` payload'da yoksa atlanır.
-- Mobilya: Tripo GLB'leri cm ölçülerine min-oran fit; `widthCm` yoksa ölçeklenmez (bilinen zayıflık).
+- Mobilya: Tripo GLB'leri cm ölçülerine eksen bazlı ayrı ayrı gerilerek (non-uniform stretch) ölçeklenir — "min-oran uniform fit" DEĞİL, düzeltildi (2026-07-31, bkz. [[System Architecture]]); `widthCm` yoksa ölçeklenmez (bilinen zayıflık).
 
 ### Görüntüleyici (USDZ)
 - QuickLook auto-frame; app tarafında ölçek çarpanı yok. Kamera elevation kısıtı QuickLook'ta yapılamıyor; custom viewer denemeleri 18 Tem'de beğenilmedi ve **revert edildi** (4 commit).

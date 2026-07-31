@@ -1,7 +1,7 @@
 ---
 type: experiment-index
 status: living
-updated: 2026-07-20
+updated: 2026-07-29
 ---
 
 # Experiment Index
@@ -11,6 +11,9 @@ updated: 2026-07-20
 ## Aktif Deneyler
 - [[Blender mimari render Modal]] — Faz 3; gerçek veri testleri sürüyor
 - [[Texture üretimi generic flux vs fotoğraftan kırpma]] — fotoğraftan kırpma aktif; yakın çekim akışı doğrulama bekliyor
+
+## Tamamlanan Deneyler
+- [[Kategori bazlı 3D üretim denemeleri — halı Tripo vs düz yüzey, kanepe kredi-kalite ölçümü]] — halıda düz yüzey net kazandı (kalite + maliyet); kanepede gerçek Tripo kredi tablosu ölçüldü, dokümanın P1 fiyatı yanlış çıktı (29 Tem 2026)
 
 ## Rafta / Süperseded Deneyler
 > Değerli bilgi — burada tutulur, kod silinmedi.
@@ -27,6 +30,7 @@ updated: 2026-07-20
 | [[Fotogerçekçi render denemeleri gpt-image-1 ControlNet]] | 15-16 Tem | Superseded | Geometri sadakati yok |
 | [[Blender mimari render Modal]] | 16 Tem → | **Aktif** | Çalışıyor; test sürüyor |
 | [[Texture üretimi generic flux vs fotoğraftan kırpma]] | 18 Tem → | **Aktif** | Kırpma çalıştı; regresyona açık |
+| [[Kategori bazlı 3D üretim denemeleri — halı Tripo vs düz yüzey, kanepe kredi-kalite ölçümü]] | 29 Tem | **Tamamlandı** | Halı: düz yüzey kazandı; kanepe: gerçek kredi tablosu ölçüldü |
 
 ## Not
 Kurulum brief'indeki "birkaç yaklaşım denendi, bazıları kısmen çalıştı, bazıları başarısız" ifadesinin somut karşılığı yukarıdaki tablodur. Bkz. [[Room Scanning Approaches]].

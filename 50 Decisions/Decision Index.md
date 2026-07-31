@@ -1,7 +1,7 @@
 ---
 type: decision-index
 status: living
-updated: 2026-07-29
+updated: 2026-07-31
 ---
 
 # Decision Index
@@ -41,3 +41,5 @@ updated: 2026-07-29
 | 2026-07-28 | [[2026-07-28 Mağaza iletişimi — herkese açık sorular, sohbet MVP dışı\|Ürün soruları herkese açık + filtreli; sohbet MVP dışı (checkout ile)]] | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]] |
 | 2026-07-29 | [[2026-07-29 3D üretimi 4 açının tamamını kullanır — Tripo multiview_to_model\|3D üretimi 4 açının tamamını kullanır (Tripo multiview_to_model); tek-fotoğraf üretimi terk edildi]] | [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]] |
 | 2026-07-29 | [[2026-07-29 Yeni fotoğraf seti eskisinin yerine geçer, tekil silme yok\|Yeni fotoğraf seti eskisinin yerine geçer (replace, accumulate değil); tekil silme arayüzü yok]] | [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]] |
+| 2026-07-29 | [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya\|Kategori bazlı 3D stratejisi: halı Tripo'suz düz yüzey; mobilya Tripo multiview (v3.1) devam; perde sonraya bırakıldı]] | [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]] |
+| 2026-07-31 | [[2026-07-31 Kullanılmayan 3d-pipeline HTTP uçları tamamen kaldırıldı\|Kullanılmayan /3d-pipeline HTTP uç katmanı tamamen kaldırıldı (yama değil, söküm)]] | [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]] |

@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-29
+updated: 2026-07-31
 related: []
 ---
 
@@ -40,14 +40,14 @@ related: []
 
 ## Roller / Yapı
 - Roller sistemde tanımlı: **CUSTOMER** (iOS), **SELLER**, **ADMIN**. Bkz. [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]].
-- **Satıcı paneli yeniden yazıldı (2026-07-29)**: yeni ayrı `web/` sitesi build edildi (mağaza kaydı/giriş/ürün yönetimi), yerelde uçtan uca çalışıyor, main'e merge edilmedi. Eski `brand-panel/`'e bu turda dokunulmadı (referans); emekliye ayrılma kararı merge aşamasında verilecek.
+- **Satıcı paneli yeniden yazıldı (2026-07-29) ve main'e birleştirildi (2026-07-31, `44a4497`)**: yeni ayrı `web/` sitesi (mağaza kaydı/giriş/ürün yönetimi) uçtan uca çalışıyor, main'de ve push edilmiş durumda; gerçek satıcı henüz kullanmadı. Eski `brand-panel/`'e dokunulmadı (referans); emekliye ayrılma kararı hâlâ verilmedi → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]].
 - **Admin artık ayrı bir site (`admin/`)** — kurucu kararı (2026-07-28 sohbeti): başvuru onayı, ürün yayın onayı, takılan ürünler kuyruğu (bu turda kasıtlı asgari; kapsamlı yönetim paneli — metrikler, kullanıcı yönetimi, içerik denetimi — ayrı bir gelecek thinking session'da tasarlanacak) → [[Seller Experience]], [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]].
 - **Keşfet sayfası**: pazaryeri vitrini; ilk gün pilot marka ürünleriyle dolacak. Markalar mı ürünler mi listelenecek **To Be Decided**. Kullanıcı manuel ürün seçip onlardan AI tasarım yaptırabilecek.
 - Teknik altyapıda katalog + Tripo3D 3D üretim hattı hazır; katalogda 3 test ürünü (gerçek katalog pilot markalardan dolacak → [[2026-07-24 Pilot marka kriterleri]]).
 
 ## Bilinmeyenler
 - ~~Checkout gelene kadar sepetin davranışı~~ — **ÇÖZÜLDÜ (2026-07-24, teyit turu)**: sepet şu anlık **pasif liste** (mağazaya talep iletilmez).
-- Birim ekonomisi (render + Tripo3D + OpenAI maliyeti) — **hiç hesaplanmadı**; analiz bilinçli olarak MVP sonrasına bırakıldı.
+- Birim ekonomisi (render + Tripo3D + OpenAI maliyeti) — **tam analiz hâlâ yapılmadı**; analiz bilinçli olarak MVP sonrasına bırakıldı. Kısmi girdi: mobilya başına Tripo3D maliyeti artık ölçüldü (kullanılabilir kalite ~60 kredi/ürün — bkz. [[Seller Experience]]), ama render/OpenAI/işçilik dahil tam birim maliyeti hâlâ hesaplanmadı.
 - Showroom kaçağının takibi (indirim kodu/referans) — **To Be Decided**.
 - Montaj/kurulum sorumluluğu — **To Be Decided**.
 
@@ -58,3 +58,4 @@ related: []
 ## Kaynaklar
 - [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 1, 18-28, 30, 32)
 - [[2026-07-24 PM Gözden Geçirme — Thinking Session]]
+- [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]

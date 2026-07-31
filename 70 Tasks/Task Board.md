@@ -1,7 +1,7 @@
 ---
 type: tasks
 status: living
-updated: 2026-07-28
+updated: 2026-07-31
 ---
 
 # Task Board
@@ -14,6 +14,11 @@ updated: 2026-07-28
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+- [ ] AI aramada oda taraması sahiplik kontrolünü ekle (herhangi bir kullanıcı başkasının `roomScanId`'sini gönderip geometrisini alabiliyor, veri OpenAI'a gidiyor) — **pilottan önce kapatılmalı** — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
+- [ ] Blender render mükerrer tetikleme korumasını atomik yap (aynı render birden çok kez ücretli koşabiliyor) — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
+- [ ] Mobilyada Tripo ön/arka/sol/sağ eşlemesini gerçek 4 açılı bir ürünle doğrula (kredi harcar) — **pilottan önce** — area:: engineering · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
+- [ ] iOS'u Xcode'da derle ve test et (KVKK sızıntı düzeltmesi `Brand.swift`'te `ownerId` alanını opsiyonel yaptı, henüz doğrulanmadı) — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
+- [ ] Perde tedarik yolunu seç (freelancer $500-1500/3-5 hafta vs hazır asset kütüphanesi; "kumaş değiştirilebilir UV" desteği doğrulanmalı) — area:: product/business · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
 - [ ] Kategori listesi + kategoriye özel soru setlerini hazırla (bir sonraki thinking session'ın ön hazırlığı; ürün formu ve Excel şablonu buna bağımlı) — owner:: Selim/Yusuf · area:: product · source:: [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]
 - [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı; gereksinim listesi kod reposunda README'de) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
 - [ ] `drop_splat_and_ai_task` migration'ını uygula (`npx prisma migrate deploy`; splat_captures'ta silinecek 6 satır) — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
