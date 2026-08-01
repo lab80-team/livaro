@@ -1,7 +1,7 @@
 ---
 type: tasks
 status: living
-updated: 2026-07-31
+updated: 2026-08-02
 ---
 
 # Task Board
@@ -14,14 +14,11 @@ updated: 2026-07-31
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
-- [ ] AI aramada oda taraması sahiplik kontrolünü ekle (herhangi bir kullanıcı başkasının `roomScanId`'sini gönderip geometrisini alabiliyor, veri OpenAI'a gidiyor) — **pilottan önce kapatılmalı** — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
-- [ ] Blender render mükerrer tetikleme korumasını atomik yap (aynı render birden çok kez ücretli koşabiliyor) — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
 - [ ] Mobilyada Tripo ön/arka/sol/sağ eşlemesini gerçek 4 açılı bir ürünle doğrula (kredi harcar) — **pilottan önce** — area:: engineering · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
 - [ ] iOS'u Xcode'da derle ve test et (KVKK sızıntı düzeltmesi `Brand.swift`'te `ownerId` alanını opsiyonel yaptı, henüz doğrulanmadı) — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
 - [ ] Perde tedarik yolunu seç (freelancer $500-1500/3-5 hafta vs hazır asset kütüphanesi; "kumaş değiştirilebilir UV" desteği doğrulanmalı) — area:: product/business · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
 - [ ] Kategori listesi + kategoriye özel soru setlerini hazırla (bir sonraki thinking session'ın ön hazırlığı; ürün formu ve Excel şablonu buna bağımlı) — owner:: Selim/Yusuf · area:: product · source:: [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey]]
 - [ ] Backend'i kurucu Mac'inden buluta taşı (arka plan render + bildirim ön şartı; gereksinim listesi kod reposunda README'de) — area:: engineering · source:: [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]
-- [ ] `drop_splat_and_ai_task` migration'ını uygula (`npx prisma migrate deploy`; splat_captures'ta silinecek 6 satır) — area:: engineering · source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [ ] Birim maliyet analizini yap ve sonuçları vault'a aktar (kurucular kendisi yapacak) — owner:: Selim/Yusuf · area:: business · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (Bölüm 4)
 - [ ] GPT-4o yerleşimini kapsamlı test et; sonuca göre teknoloji kararı (kural tabanlı sisteme geçiş dahil) — **sıralama (teyit turu): MVP altyapısı/3D model tamamlandıktan sonra** — area:: engineering/product · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 14 + Bölüm 3)
 - [ ] İade/iptal kurallarının hukuki tanımını araştır (14 gün cayma hakkı + özel üretim istisnası + emanet/lisans sorusu) — area:: business/legal · source:: [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu]] (cevap 25)
@@ -43,6 +40,9 @@ _(boş)_
 _(boş)_
 
 ## Done
+- [x] AI aramada oda taraması sahiplik kontrolü eklendi (2026-08-02): yabancı/olmayan `roomScanId` → bilgi sızdırmayan 404, sahiplik geçmeden OpenAI çağrısı yok; main'e merge + push (`0477596`), 6 tur Codex incelemesi — source:: [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]]
+- [x] Blender render mükerrer tetikleme koruması atomik yapıldı (2026-08-02): `renderClaimedAt` CAS kilidi + fence + 3 dk spawn zaman aşımı + belirsiz-start koruması; migration uygulandı — source:: [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]]
+- [x] `drop_splat_and_ai_task` migration'ını uygula — bayatlamış görev: `prisma migrate status` (2026-08-02) 13 migration'ın tamamının uygulandığını, şemanın senkron olduğunu doğruladı (ne zaman uygulandığı kayıtlı değil) — source:: [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]]
 - [x] Release build'inde edge yolu uygulama içinden doğrulandı (24 Tem): katalog ✓, 360°/AR ✓, giriş ✓ (Release config doğrudan cihaza kuruldu — TestFlight kullanıcısıyla aynı kod yolu; tarama/AI tasarım bilinçli 501). Test sonrası Debug build geri kuruldu — source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [x] Edge function deploy'u (24 Tem): 5 R2 secret'ı yüklendi (APP_JWT_* zaten vardı), function deploy edildi, canlıda doğrulandı — katalog 200 + usdzUrl imzalı ve indirilebilir (206), yanlış login 401 (verify_jwt=false çalışıyor), kısa şifre register 400 (yeni doğrulama) — source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]
 - [x] Cihaz doğrulama turu (24 Tem): 360°/AR butonu ✓ (ilk kez çalışıyor), tarama + too-close ✓, yakın çekim texture akışı uçtan uca ✓ (floor.jpg gerçek parke fotoğrafından kırpıldı, R2+manifest doğrulandı), Yeniden Tasarla → yeni sahne ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri doğru), AR relocalization ✓, Blender USDZ QuickLook'ta materyallerle açıldı ✓ — TUR TAMAMLANDI (7/7) — source:: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]

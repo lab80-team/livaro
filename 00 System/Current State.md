@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-07-31
+updated: 2026-08-02
 ---
 
 # Current State
@@ -49,21 +49,20 @@ updated: 2026-07-31
 - Detay: [[Experiment Index]].
 
 ## Güncel Öncelikler (Now)
-1. **AI aramada oda taraması sahiplik kontrolü eksikliğinin kapatılması** — giriş yapmış herhangi bir kullanıcı başkasının `roomScanId`'sini gönderip ev geometrisini alabiliyor (o veri OpenAI'a gidiyor). Temmuz'dan kalma, bilinçli olarak bu turun dışında bırakıldı; **pilottan önce kapatılmalı** → [[Open Questions]].
-2. **iOS'un Xcode'da bir kez derlenip test edilmesi** (KVKK sızıntı düzeltmesi `Brand.swift`'te bir alanı opsiyonel yaptı, henüz canlı doğrulanmadı).
-3. **Mobilyada Tripo sol/sağ eşleme doğrulaması** — gerçek 4 açılı bir ürünle, pilottan önce.
-4. **Perde tedarik yolu seçimi** (hazır kıvrımlı model kütüphanesi — freelancer mı, hazır asset mi).
-5. **Tripo ölçek/rotasyon şüphesi** (24 Tem turunda bir modelde ölçek/yerleşim tuhaflığı görüldü; GPT-4o yerleşim testiyle birlikte ele alınacak).
-6. Katalog doldurma (Tripo3D'den gerçek ürünler; mobilya artık ~60 kredi/ürün maliyetiyle).
-7. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14; turdaki yerleşim tuhaflığı bu testin önemini artırdı).
-8. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
+1. **iOS'un Xcode'da bir kez derlenip test edilmesi** (KVKK sızıntı düzeltmesi `Brand.swift`'te bir alanı opsiyonel yaptı, henüz canlı doğrulanmadı).
+2. **Mobilyada Tripo sol/sağ eşleme doğrulaması** — gerçek 4 açılı bir ürünle, pilottan önce.
+3. **Perde tedarik yolu seçimi** (hazır kıvrımlı model kütüphanesi — freelancer mı, hazır asset mi).
+4. **Tripo ölçek/rotasyon şüphesi** (24 Tem turunda bir modelde ölçek/yerleşim tuhaflığı görüldü; GPT-4o yerleşim testiyle birlikte ele alınacak).
+5. Katalog doldurma (Tripo3D'den gerçek ürünler; mobilya artık ~60 kredi/ürün maliyetiyle).
+6. **GPT-4o yerleşiminin kapsamlı testi** (sonuca göre teknoloji kararı — 24 Tem, cevap 14; turdaki yerleşim tuhaflığı bu testin önemini artırdı).
+7. Kalan ürün belirsizliklerinin kapatılması (bekleyen teyitler, ödeme sağlayıcısı, birim maliyet) — bkz. [[Open Questions]].
 
 > Edge function **deploy edildi ve uçtan uca doğrulandı (24 Tem)**: R2 secret'ları yüklendi; canlı API testleri geçti; **Release build telefonda uygulama içinden de doğrulandı** (katalog + 360°/AR + giriş). **İlk TestFlight yüklemesi yapıldı (25 Tem)**: build 1.0 (2026072401) App Store Connect'e çıktı; uygulama artık iPhone-only hedefli (iPad+salt-dikey reddi 90474 → MVP LiDAR-iPhone kararıyla zaten uyumlu). Apple işlemesi sonrası TestFlight'ta test edilebilir.
 
 > Cihaz doğrulama turu (24 Tem) **7/7 tamamlandı**: 360°/AR ✓ (ilk kez), tarama+too-close ✓, yakın çekim texture akışı uçtan uca ✓, Yeniden Tasarla ✓, Render gerçek odayla ✓ (girintili floorPolygon + kapı/pencere kesimleri), AR relocalization ✓, USDZ QuickLook'ta materyallerle ✓. Detay: [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]] ve [[Task Board]].
 
 ## Güncel Blocker'lar
-- Geliştirmeyi durduran aktif blocker yok. **Pilot öncesi kapatılması gereken iki ayrı iş** (31 Tem merge incelemesinde bulundu, bilinçli olarak bu turun kapsamı dışında bırakıldı): AI aramada oda taraması sahiplik kontrolü yok (KVKK riski); Blender render mükerrer tetikleme koruması atomik değil (çift ücretli koşabilir) → [[Open Questions]].
+- Geliştirmeyi durduran aktif blocker yok. 31 Tem merge incelemesinin bulduğu iki pilot-öncesi iş **2026-08-02'de kapatıldı** (oda taraması sahiplik kontrolü + atomik render kilidi; main `0477596`, 415 test yeşil, 6 tur Codex incelemesi) → [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]].
 - Geçmişte: R2 bucket CORS eksikliği (29 Tem bulgusu — 3D model tarayıcıda yüklenmiyordu; kurucu Cloudflare panelinden CORS politikasını ekledi, aynı gün canlı doğrulandı: model indi ve döndürüldü); Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.
 
 ## Son Kararlar
@@ -85,7 +84,6 @@ updated: 2026-07-31
 - Tam liste: [[Decision Index]].
 
 ## Bilinen Riskler / Dikkat
-- **AI aramada oda taraması sahiplik kontrolü yok** — pilottan önce kapatılmalı (bkz. Güncel Öncelikler).
 - **Mobilyada Tripo sol/sağ eşleme doğrulanmadı** — gerçek 4 açılı ürünle test edilmeden pilotta aynalanmış model riski var.
 - Texture pipeline regresyona açık (iki kez yaşandı) — artık karakterizasyon testleriyle korunuyor (24 Tem); görsel çıktı (R2 içerik) doğrulaması yine de manuel: [[Known Pitfalls]].
 - RoomPlan'ın TV'yi pencere sanması gibi veri hataları çıktıya yansıyor.
