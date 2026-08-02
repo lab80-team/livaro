@@ -1,4 +1,4 @@
-# CLAUDE.md — Livaro Vault
+# AGENTS.md — Livaro Vault
 
 Bu, **Livaro** (online mobilya pazaryeri) projesinin Obsidian vault'u ve ortak proje hafızasıdır. Bu dosya, vault'ta çalışan herkes (ve AI ajanı) için pratik kılavuzdur.
 
