@@ -32,6 +32,12 @@ Kapsamlı yönetim (admin) panelinin baştan sona tasarımı. 2026-07-29 build o
 7. "Kaç mağaza giriş yapmış" → **kayıt olan (başvuran) toplam** (onaylı/bekleyen/reddedilen ayrımıyla).
 8. Giriş (ana) sayfası pilotta → **kuyruk + listeler**; grafikler veri birikince.
 
+**Kurucunun ikinci tur cevabı (aynı gün, işleme sonrası):**
+
+> 1 ve 2. evet. roomplan çıktısını da kişi bazlı görelim ben onu öyle istiyorum. sonrasında avukatla konuşup ayarlarız
+
+(1 = işlem günlüğü, 2 = sessiz olay defteri — ikisi de kabul; kişi bazlı RoomPlan görünümü teyit edildi, KVKK/aydınlatma tarafı sonrasında avukatla ayarlanacak.)
+
 ## Tartışma Özeti
 
 - Kurucu, admin panelinin tam halini anlattı: yetkili girişi (2 hesap), Mağazalar sekmesi (kartlar + kırmızı bildirim rozeti + detay), Ürünler sekmesi (her şey görünür + silme + değişiklikte yeniden onay), giriş sayfası = analiz (grafikler + kaydolan mağaza/kullanıcı listeleri), mağaza başına ciro, kullanıcı başına tarama bilgisi.
@@ -47,6 +53,7 @@ Kapsamlı yönetim (admin) panelinin baştan sona tasarımı. 2026-07-29 build o
 - [[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları]]
 - [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı]]
 - [[2026-08-04 Admin hesap yönetimi — panelden yetkili ekleme]]
+- [[2026-08-04 İşlem günlüğü ve sessiz olay defteri kabul edildi]] (ikinci tur cevabıyla)
 
 ## Görevler
 > Açıkça atanmış görev yok. (Panelin inşa zamanlaması kararlaştırılmadı → [[Open Questions]].)
@@ -57,8 +64,8 @@ Yok.
 ## Açık Sorular
 > [[Open Questions]]'a taşındı.
 
-- İşlem günlüğü (kim onayladı/reddetti + red nedeni kaydı) — PM ortak önerisi; kurucuya ayrıca onaylatılmadı.
-- Sessiz olay defteri (4 olay: ürün görüntüleme, tasarımda kullanım, sepete ekleme, tarama tamamlama) şimdi mi kurulacak — PM'ler uzlaştı; kurucuya ayrıca onaylatılmadı. Not: kurucunun istediği kişi bazlı "kullanım istatistikleri" bu kaydı fiilen gerektiriyor.
+- ~~İşlem günlüğü — kurucuya ayrıca onaylatılmadı~~ — **ÇÖZÜLDÜ (aynı gün, ikinci tur)**: kabul → [[2026-08-04 İşlem günlüğü ve sessiz olay defteri kabul edildi]].
+- ~~Sessiz olay defteri şimdi mi kurulacak~~ — **ÇÖZÜLDÜ (aynı gün, ikinci tur)**: kabul, en dar kapsamla → aynı karar notu.
 - KVKK aydınlatma metnine, kullanıcı verilerinin (kullanım istatistikleri + RoomPlan çıktısı) kuruculara panelde gösterileceğinin eklenmesi (avukat metni zaten bekleniyor).
 - Yayındaki üründe foto değişince 3D yeniden tetiklenmiyor — vitrin-onayı kararıyla birlikte çözülmeli (onaylanan foto ↔ 3D uyuşmazlığı).
 - Ciro gösterimi ödeme kuruluşu seçimine, reklam sayıları "Sponsorlu" ürününe bağlı (mevcut açık sorularla bağlantılı).

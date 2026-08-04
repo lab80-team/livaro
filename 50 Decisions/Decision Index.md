@@ -48,3 +48,4 @@ updated: 2026-08-04
 | 2026-08-04 | [[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları\|Yeniden onay yalnız vitrin alanlarında (foto/başlık/açıklama); stok-fiyat düşmez]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
 | 2026-08-04 | [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı\|Adminde kişi bazlı kullanıcı kartı: tüm bilgiler + kullanım istatistikleri + RoomPlan çıktısı (KVKK aydınlatma şartıyla)]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
 | 2026-08-04 | [[2026-08-04 Admin hesap yönetimi — panelden yetkili ekleme\|Admin hesapları: başlangıçta 2 yetkili; panelden yetkili ekleme]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
+| 2026-08-04 | [[2026-08-04 İşlem günlüğü ve sessiz olay defteri kabul edildi\|İşlem günlüğü (kim/ne zaman/red nedeni) + sessiz olay defteri (4 olay, tek tablo, ekransız, pilottan önce)]] | [[2026 08 04 Thinking Session — Admin Paneli]] |

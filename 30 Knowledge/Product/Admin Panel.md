@@ -22,14 +22,12 @@ Kaynak: [[2026 08 04 Thinking Session — Admin Paneli]] (2 PM'li tartışmayla:
 - **Mağazalar sekmesi**: kartlar (logo, isim, açıklama, ürün sayısı, yayınlanmış 3D sayısı, kayıt tarihi) + sağ üstte kırmızı rozet (bekleyen ürün onayı + STUCK + düzenleme onayı toplamı); karta tıklayınca detay. Mağaza sayısı göstergesi = başvuran toplam (onaylı/bekleyen/reddedilen ayrımıyla).
 - **Ürünler sekmesi**: tüm ürünler (durum, stok, 3D). Admin müdahalesi = **yayından kaldırma**; kalıcı silme yalnız yasaklı içerik, kayıtlı → [[2026-08-04 Admin ürün müdahalesi — yayından kaldırma, kalıcı silme yalnız yasaklı içerik]].
 - **Yeniden onay**: yayındaki üründe **yalnız vitrin alanları** (foto/başlık/açıklama) değişince ürün onay kuyruğuna düşer; stok/fiyat düşmez → [[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları]].
-- **Kullanıcılar**: her kullanıcının kendi kartı — bütün bilgileri, uygulama kullanım istatistikleri ve RoomPlan çıktısı görünür (kurucu kararı; PM'lerin KVKK itirazı ve aydınlatma şartı kayıtlı) → [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı]].
+- **Kullanıcılar**: her kullanıcının kendi kartı — bütün bilgileri, uygulama kullanım istatistikleri ve RoomPlan çıktısı görünür (kurucu kararı, ikinci turda teyitli: "avukatla konuşup ayarlarız"; PM'lerin KVKK itirazı ve aydınlatma şartı kayıtlı) → [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı]].
 - **Ciro/satış/reklam alanları v1'de YOK** — ciro/satış ödeme kuruluşu + checkout sonrası, reklam sayıları "Sponsorlu" ürünü sonrası eklenecek (kurucunun uzun vadeli isteği kayıtlı: mağaza başına ciro, ürün başına reklam durumu).
 - İstenen admin metrik vizyonu (2026-07-24'ten beri): ürün görüntüleme, tıklanma, kaç kişinin ürünle tasarım yaptığı, sepete eklenme → [[Seller Experience]].
 
-### PM önerileri (öneri statüsünde — kurucuya ayrıca onaylatılmadı)
-- **İşlem günlüğü**: kim neyi onayladı/reddetti + red nedeni kaydı (iki PM ortak önerisi).
-- **Sessiz olay defteri**: 4 olay tipi (ürün görüntüleme, tasarımda kullanım, sepete ekleme, tarama tamamlama), tek tablo, ekransız; "geçmiş veri sonradan satın alınamaz" gerekçesiyle pilottan önce açılması önerildi. Kullanıcı kartındaki "kullanım istatistikleri" bunu fiilen gerektiriyor.
-→ İkisi de [[Open Questions]]'da.
+- **İşlem günlüğü** (kabul, 2026-08-04 ikinci tur): onay/red işlemleri kim / ne zaman / red nedeni ile kaydedilir → [[2026-08-04 İşlem günlüğü ve sessiz olay defteri kabul edildi]].
+- **Sessiz olay defteri** (kabul, aynı karar): 4 olay tipi (ürün görüntüleme, tasarımda kullanım, sepete ekleme, tarama tamamlama), tek tablo, ekransız; pilottan önce açık olmalı; en dar kapsam — pilot-öncesi işleri geciktirmez. Kullanıcı kartındaki istatistiklerin veri kaynağı.
 
 ## Varsayımlar
 - İki kişilik ekibin onay kuyruklarını (başvuru + ürün + düzenleme + STUCK) eritebileceği — pilotta gözlenecek.

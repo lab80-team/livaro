@@ -17,6 +17,8 @@ Kurucu, PM önerisinin aksine **kişi bazlı** görünümü seçti: admin'de **h
 ## Gerekçe
 Kurucu tercihi (2026-08-04 soru cevabı): "roomplan cıktısı da gözüksün kişi bazli da görünsün. Her kullanıcının kendi kartı olsun ve o kartta bütün bilgileri ve uygulama kullanım istatistikleri görünsün."
 
+**Kurucu teyidi (aynı gün, ikinci tur, KVKK uyarısı üzerine):** "roomplan çıktısını da kişi bazlı görelim ben onu öyle istiyorum. sonrasında avukatla konuşup ayarlarız." — karar kesin; aydınlatma/hukuk tarafı sonrasında avukatla ayarlanacak.
+
 ## Değerlendirilen Alternatifler
 - Kişisiz, toplu huni sayımı (tarama→tasarım→sepet) — iki PM'in ortak önerisiydi; kurucu kişi bazlı kartı seçti.
 

@@ -73,8 +73,8 @@ updated: 2026-08-04
   - Kalan artık riskler (Codex "merge-engeli değil" dedi, ama kayıtlı): çökme anına denk gelen milisaniyelik eşzamanlılık pencereleri; admin için "sadece köprüyü tekrar dene" gibi dar bir kurtarma aksiyonunun olmaması (şu an tek yol tam retry).
 - Fiyat güncelliği: Excel/API ile yüklenen fiyatlar nasıl güncel tutulacak; satın alma anında fiyat değişmişse/ürün tükenmişse tasarım ne olur?
 - **Admin paneli v1 session'ından kalan açıklar (2026-08-04)** → [[2026 08 04 Thinking Session — Admin Paneli]]:
-  - **İşlem günlüğü** (kim neyi onayladı/reddetti + red nedeni kaydı) — iki PM'in ortak önerisi; kurucuya ayrıca onaylatılmadı — **To Be Decided**.
-  - **Sessiz olay defteri** (4 olay: ürün görüntüleme, tasarımda kullanım, sepete ekleme, tarama tamamlama; tek tablo, ekransız) şimdi mi kurulacak — PM'ler "pilottan önce, geçmiş veri sonradan satın alınamaz" diye uzlaştı; kurucuya ayrıca onaylatılmadı. Not: [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı|kullanıcı kartı kararı]]ndaki "kullanım istatistikleri" bu kaydı fiilen gerektiriyor — **To Be Decided**.
+  - ~~**İşlem günlüğü** — kurucuya ayrıca onaylatılmadı~~ — **ÇÖZÜLDÜ (2026-08-04, ikinci tur)**: kabul → [[2026-08-04 İşlem günlüğü ve sessiz olay defteri kabul edildi]].
+  - ~~**Sessiz olay defteri** şimdi mi kurulacak~~ — **ÇÖZÜLDÜ (2026-08-04, ikinci tur)**: kabul, en dar kapsamla (4 olay, tek tablo, ekransız; pilottan önce açık) → aynı karar notu.
   - **Foto-3D tutarlılığı**: yayındaki üründe foto değişikliği onaya düşecek ([[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları|karar]]) ama bugün foto değişse 3D yeniden tetiklenmiyor — onaylanan foto ile 3D uyuşmazlığı nasıl çözülecek (yeniden Tripo = kredi maliyeti)?
   - **Admin v1'in inşa sırası**: pilot-öncesi öncelikler (Tripo eşleme doğrulaması, katalog doldurma) karşısındaki yeri — **To Be Decided**.
   - Grafiklerin ekleneceği "veri birikti" eşiği tanımsız — **Unknown**. Ciro alanı ödeme kuruluşu seçimine (yukarıdaki ⭐ soru), reklam alanları "Sponsorlu" ürününe bağlı.
@@ -90,7 +90,7 @@ updated: 2026-08-04
 
 ## Veri / Gizlilik
 - ⭐ KVKK: ev içi tarama + fotoğraflar yurt dışı işleyicilere (OpenAI, Modal, Replicate) gidiyor — açık rıza, aydınlatma metni, saklama süresi planı var mı? Dış teste çıkmadan asgari rıza + saklama politikası şart.
-- ⭐ **KVKK — admin'de kişi bazlı kullanıcı kartı (2026-08-04)**: kurucu kararıyla adminde kullanıcı başına kart (tüm bilgiler + kullanım istatistikleri + RoomPlan çıktısı) gösterilecek → [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı]]. İki PM de kişi-oda eşlemesini KVKK gerekçesiyle riskli buldu (itiraz kayıtlı). Aydınlatma metnine bu kullanım eklenmeden görünüm açılmamalı — metin kim/ne zaman hazırlayacak, **To Be Decided** (üstteki avukat metni sorusuyla bağlantılı).
+- ⭐ **KVKK — admin'de kişi bazlı kullanıcı kartı (2026-08-04)**: kurucu kararıyla adminde kullanıcı başına kart (tüm bilgiler + kullanım istatistikleri + RoomPlan çıktısı) gösterilecek → [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı]]. İki PM de kişi-oda eşlemesini KVKK gerekçesiyle riskli buldu (itiraz kayıtlı). **Kurucu teyidi (aynı gün, ikinci tur)**: kişi bazlı görünüm kesin; "sonrasında avukatla konuşup ayarlarız". Açık kalan: aydınlatma metnine bu kullanımın eklenmesi + avukat görüşmesi — görünüm metin hazır olmadan açılmamalı (üstteki avukat metni sorusuyla bağlantılı).
 - ~~⭐ **AI aramada oda taraması sahiplik kontrolü YOK** (2026-07-31 main merge turunda bulundu)~~ — **ÇÖZÜLDÜ (2026-08-02)**: tarama artık yalnız sahibine açılıyor (bilgi sızdırmayan 404); sahiplik geçmeden hiçbir veri OpenAI'a gitmiyor → [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]].
 
 ## Mühendislik
