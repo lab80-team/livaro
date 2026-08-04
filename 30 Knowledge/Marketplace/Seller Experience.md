@@ -63,6 +63,7 @@ related: []
 
 ## İlgili Notlar
 - [[Marketplace Model]], [[60 Planning/Product Flows|Product Flows]], [[2026-06-22 iOS uygulaması yalnızca müşteri tarafı]]
+- [[Admin Panel]] — yönetim sitesinin durumu ve v1 tasarımı (2026-08-04 session) artık kendi notunda
 
 ## Kaynaklar
 - [[2026-07-08 Oturum Import — Web Temelleri ve iOS Başlangıcı]]

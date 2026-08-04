@@ -1,7 +1,7 @@
 ---
 type: decision-index
 status: living
-updated: 2026-07-31
+updated: 2026-08-04
 ---
 
 # Decision Index
@@ -43,3 +43,8 @@ updated: 2026-07-31
 | 2026-07-29 | [[2026-07-29 Yeni fotoğraf seti eskisinin yerine geçer, tekil silme yok\|Yeni fotoğraf seti eskisinin yerine geçer (replace, accumulate değil); tekil silme arayüzü yok]] | [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]] |
 | 2026-07-29 | [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya\|Kategori bazlı 3D stratejisi: halı Tripo'suz düz yüzey; mobilya Tripo multiview (v3.1) devam; perde sonraya bırakıldı]] | [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]] |
 | 2026-07-31 | [[2026-07-31 Kullanılmayan 3d-pipeline HTTP uçları tamamen kaldırıldı\|Kullanılmayan /3d-pipeline HTTP uç katmanı tamamen kaldırıldı (yama değil, söküm)]] | [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]] |
+| 2026-08-04 | [[2026-08-04 Admin panel v1 kapsamı — kuyruk ana sayfa, mağaza kartları, ciro-reklam alanları yok\|Admin v1: ana sayfa iş kuyruğu + son kayıt listeleri (grafikler veri birikince); mağaza kartları + 3 türlü rozet; ciro/reklam alanları yok]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
+| 2026-08-04 | [[2026-08-04 Admin ürün müdahalesi — yayından kaldırma, kalıcı silme yalnız yasaklı içerik\|Admin ürün müdahalesi: yayından kaldırma; kalıcı silme yalnız yasaklı içerik, kayıtlı]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
+| 2026-08-04 | [[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları\|Yeniden onay yalnız vitrin alanlarında (foto/başlık/açıklama); stok-fiyat düşmez]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
+| 2026-08-04 | [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı\|Adminde kişi bazlı kullanıcı kartı: tüm bilgiler + kullanım istatistikleri + RoomPlan çıktısı (KVKK aydınlatma şartıyla)]] | [[2026 08 04 Thinking Session — Admin Paneli]] |
+| 2026-08-04 | [[2026-08-04 Admin hesap yönetimi — panelden yetkili ekleme\|Admin hesapları: başlangıçta 2 yetkili; panelden yetkili ekleme]] | [[2026 08 04 Thinking Session — Admin Paneli]] |

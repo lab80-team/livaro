@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-08-02
+updated: 2026-08-04
 ---
 
 # Open Questions
@@ -72,7 +72,13 @@ updated: 2026-08-02
   - **iOS Xcode'da bir kez derlenip test edilmedi**: KVKK sızıntı düzeltmesi `ios/Livaro/Models/Brand.swift`'te `ownerId` alanını opsiyonel yaptı (backend artık döndürmüyor); derleme ve cihaz doğrulaması yapılmadı.
   - Kalan artık riskler (Codex "merge-engeli değil" dedi, ama kayıtlı): çökme anına denk gelen milisaniyelik eşzamanlılık pencereleri; admin için "sadece köprüyü tekrar dene" gibi dar bir kurtarma aksiyonunun olmaması (şu an tek yol tam retry).
 - Fiyat güncelliği: Excel/API ile yüklenen fiyatlar nasıl güncel tutulacak; satın alma anında fiyat değişmişse/ürün tükenmişse tasarım ne olur?
-- Bkz. [[Marketplace Model]], [[Seller Experience]]
+- **Admin paneli v1 session'ından kalan açıklar (2026-08-04)** → [[2026 08 04 Thinking Session — Admin Paneli]]:
+  - **İşlem günlüğü** (kim neyi onayladı/reddetti + red nedeni kaydı) — iki PM'in ortak önerisi; kurucuya ayrıca onaylatılmadı — **To Be Decided**.
+  - **Sessiz olay defteri** (4 olay: ürün görüntüleme, tasarımda kullanım, sepete ekleme, tarama tamamlama; tek tablo, ekransız) şimdi mi kurulacak — PM'ler "pilottan önce, geçmiş veri sonradan satın alınamaz" diye uzlaştı; kurucuya ayrıca onaylatılmadı. Not: [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı|kullanıcı kartı kararı]]ndaki "kullanım istatistikleri" bu kaydı fiilen gerektiriyor — **To Be Decided**.
+  - **Foto-3D tutarlılığı**: yayındaki üründe foto değişikliği onaya düşecek ([[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları|karar]]) ama bugün foto değişse 3D yeniden tetiklenmiyor — onaylanan foto ile 3D uyuşmazlığı nasıl çözülecek (yeniden Tripo = kredi maliyeti)?
+  - **Admin v1'in inşa sırası**: pilot-öncesi öncelikler (Tripo eşleme doğrulaması, katalog doldurma) karşısındaki yeri — **To Be Decided**.
+  - Grafiklerin ekleneceği "veri birikti" eşiği tanımsız — **Unknown**. Ciro alanı ödeme kuruluşu seçimine (yukarıdaki ⭐ soru), reklam alanları "Sponsorlu" ürününe bağlı.
+- Bkz. [[Marketplace Model]], [[Seller Experience]], [[Admin Panel]]
 
 ## Oda Tarama / 3D
 - ~~LiDAR zorunluluğu bilinçli mi?~~ **ÇÖZÜLDÜ (2026-07-24)**: geçici kısıt; MVP LiDAR-only, LiDAR'sız çözüm ileride → [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]. Açık kalan: LiDAR'sız cihaz sahibi ilk açılışta ne yaşar (mesaj/bekleme listesi?); elle ölçü girişi (PM önerisi) denenmeli mi?
@@ -84,6 +90,7 @@ updated: 2026-08-02
 
 ## Veri / Gizlilik
 - ⭐ KVKK: ev içi tarama + fotoğraflar yurt dışı işleyicilere (OpenAI, Modal, Replicate) gidiyor — açık rıza, aydınlatma metni, saklama süresi planı var mı? Dış teste çıkmadan asgari rıza + saklama politikası şart.
+- ⭐ **KVKK — admin'de kişi bazlı kullanıcı kartı (2026-08-04)**: kurucu kararıyla adminde kullanıcı başına kart (tüm bilgiler + kullanım istatistikleri + RoomPlan çıktısı) gösterilecek → [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı]]. İki PM de kişi-oda eşlemesini KVKK gerekçesiyle riskli buldu (itiraz kayıtlı). Aydınlatma metnine bu kullanım eklenmeden görünüm açılmamalı — metin kim/ne zaman hazırlayacak, **To Be Decided** (üstteki avukat metni sorusuyla bağlantılı).
 - ~~⭐ **AI aramada oda taraması sahiplik kontrolü YOK** (2026-07-31 main merge turunda bulundu)~~ — **ÇÖZÜLDÜ (2026-08-02)**: tarama artık yalnız sahibine açılıyor (bilgi sızdırmayan 404); sahiplik geçmeden hiçbir veri OpenAI'a gitmiyor → [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]].
 
 ## Mühendislik

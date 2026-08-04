@@ -16,3 +16,4 @@ updated:
 |---|---|---|---|
 | 2026-07-24 | [[2026 07 24 Thinking Session — Uçtan Uca Ürün Vizyonu\|Thinking Session — Uçtan Uca Ürün Vizyonu]] | Selim, Yusuf | 5 karar + gelir/ödeme/lojistik planı; PM incelemesi: [[2026-07-24 PM Gözden Geçirme — Thinking Session]] |
 | 2026-07-28 | [[2026 07 28 Thinking Session — Mağaza Web Paneli User Journey\|Thinking Session — Mağaza Web Paneli User Journey]] | Selim | 3 karar (kayıt+onay, ürün yükleme+3D, iletişim); PM tartışması: [[2026-07-28 PM Tartışması — Mağaza Paneli Journey]] |
+| 2026-08-04 | [[2026 08 04 Thinking Session — Admin Paneli\|Thinking Session — Admin Paneli]] | Selim | 5 karar (v1 kapsamı, yayından kaldırma, vitrin onayı, kullanıcı kartı, hesap yönetimi); PM tartışması: [[2026-08-04 PM Tartışması — Admin Paneli]] |
