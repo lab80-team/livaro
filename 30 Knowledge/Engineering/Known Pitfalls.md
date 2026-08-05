@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-31
+updated: 2026-08-05
 related: []
 ---
 
@@ -18,6 +18,8 @@ related: []
 - Render bozuksa önce **veriyi** kontrol et: eski taramalarda `transform`/`dimensions` eksik → yeniden tarama gerekir; render koduna dokunma. Bkz. [[2026-07-09 3D render saf Transform matrix kullanır]].
 
 ## Backend / altyapı
+- **Panel–DTO doğrulama kayması**: aynı sınır iki katmanda ayrı yazılınca ayrıştı — panel halıda 0,1 cm kalınlığa izin verirken DTO'daki koşulsuz `@Min(1)` gerçek bir halıyı (0,8 cm hav) canlıda hiç kaydettirmiyordu (5 Ağu, canlıda doğrulanıp düzeltildi). Kural: sınır tek sabitten türetilir (`FLAT_MIN_HEIGHT_CM` = `MIN_THICKNESS_MM`); kategoriye duyarlı kısım serviste, çünkü update gövdesinde kategori olmayabilir → [[2026-08-05 Halı Kalınlık Doğrulaması Düzeltmesi]].
+- **PartialType/IsOptional açık `null`'u doğrulamadan geçirir** ve `{ ...dto }` DB'ye gerçekten NULL yazar; `??` ile null'u "gönderilmedi" saymak yanlış dalları açar (ölçülerek doğrulandı). Ayrıca panel her kaydetmede TÜM alanları gönderdiğinden "değişmemiş" alan aslında okuma anının bayat kopyasıdır — koşulsuz geri yazılırsa araya giren eşzamanlı güncellemeyi sessizce eski değere döndürür. Çözüm deseni: okunan değerle aynı gelen bağlayıcı alanları yazımdan çıkar + CAS koşuluna doğrulamanın dayandığı okunan alanları ekle (Codex 2 turda buldu) → [[2026-08-05 Halı Kalınlık Doğrulaması Düzeltmesi]].
 - **Ham R2 URL'leri telefonda 401 verir** (bucket public değil): "Header start missing" hatası, kutu kalan mobilyalar hep bundandı. Kural: iOS'a giden her R2 URL'si `presignGet` ile.
 - **Upstash Redis kotası** (500K istek) dolunca backend auth istekleri çöker → dev'de `REDIS_URL="redis://localhost:6379"`.
 - **nest --watch**: proje köküne geçici `.ts` dosyası oluşturmak watch'ı tetikler (HTTP 000). DB/R2 kontrol script'leri için `.cjs` / inline `node -e` kullan.

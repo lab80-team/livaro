@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-31
+updated: 2026-08-05
 related: []
 ---
 
@@ -18,6 +18,7 @@ related: []
   - Eski `brand-panel/`'e bu turda dokunulmadı (yalnız referans); emekliye ayrılma kararı henüz verilmedi.
 - **Kategori bazlı 3D üretim stratejisi (2026-07-29 akşamı)** → [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]:
   - **Halı: Tripo KULLANILMIYOR** — Tripo'suz düz yüzey + yüksek çözünürlüklü doku. Kanıt: aynı halı hem Tripo hem düz yüzeyle üretilip karşılaştırıldı, düz yüzey hem daha net hem 0 kredi (Tripo ~50-70 kredi).
+  - **Halıda kalınlık artık 0,1 cm'den itibaren kaydediliyor (2026-08-05 düzeltmesi):** panel 0,1 cm'e izin verirken backend koşulsuz ≥ 1 cm dayatıyordu — gerçek bir halı (0,8 cm hav) canlıda hiç kaydedilemiyordu. Sınır artık kategoriye duyarlı: halı ≥ 0,1 cm (= 1 mm, düz ürün geometrisinin MIN_THICKNESS_MM kuralı), mobilya/perde ≥ 1 cm. Üç turlu Codex incelemesiyle main'e alındı → [[2026-08-05 Halı Kalınlık Doğrulaması Düzeltmesi]].
   - **Mobilya: Tripo `multiview_to_model` devam**, model sürümü v3.1'e çekildi. Gerçek kredi ölçümü yapıldı: kullanılabilir kalitede model (4-5K üçgen, 4K doku) **60 kredi**'ye mal oluyor (30 kredilik "standart" ayar 1,4 milyon üçgen + 38,7 MB üretiyor, kullanılamaz) → [[Kategori bazlı 3D üretim denemeleri — halı Tripo vs düz yüzey, kanepe kredi-kalite ölçümü]].
   - **Perde: tedarik yolu henüz seçilmedi** — sonraya bırakıldı (aşağıda, Bilinmeyenler).
   - **Mobilyada ön/arka/sol/sağ → Tripo front/left/back/right eşlemesi hâlâ gerçek 4 açılı bir ürünle doğrulanmadı** — pilottan önce yapılmalı → [[Open Questions]].
