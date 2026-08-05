@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Open Questions
@@ -78,6 +78,13 @@ updated: 2026-08-04
   - **Foto-3D tutarlılığı**: yayındaki üründe foto değişikliği onaya düşecek ([[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları|karar]]) ama bugün foto değişse 3D yeniden tetiklenmiyor — onaylanan foto ile 3D uyuşmazlığı nasıl çözülecek (yeniden Tripo = kredi maliyeti)?
   - **Admin v1'in inşa sırası**: pilot-öncesi öncelikler (Tripo eşleme doğrulaması, katalog doldurma) karşısındaki yeri — **To Be Decided**.
   - Grafiklerin ekleneceği "veri birikti" eşiği tanımsız — **Unknown**. Ciro alanı ödeme kuruluşu seçimine (yukarıdaki ⭐ soru), reklam alanları "Sponsorlu" ürününe bağlı.
+- **3D bekleme deneyimi ve stok göstergesi turundan kalan açıklar (2026-08-05)** → [[2026 08 05 Thinking Session — Mağaza Paneli 3D İlerleme ve Stok Göstergesi]]:
+  - **Yüzde 100'e varıp iş bitmediğinde ne gösterilecek?** Tripo'nun 0-100'ü yalnız model üretimi adımı; sonrasında indirme, gerçek ölçüye büyütme, USDZ'ye çevirme ve depoya yükleme var. Yüzdeyi 0-90'a sıkıştırmak mı, sona "son hazırlıklar" adımı koymak mı — **To Be Decided**.
+  - **Halı gibi Tripo'suz ürünlerde yüzde yerine ne yazılacak?** İki PM "yüzde yok, sadece '3D modeliniz hazırlanıyor' + bitince kendiliğinden yenilensin" diye anlaştı, ama bu **kurucuya sorulmadı** — teyit gerekli.
+  - **30 dakikadır üretimde kalan ürünün "takıldı" sayılması kuralı kutucuğa nasıl yansıyacak?** Bugün mağaza bu kuralın devreye girdiğini göremiyor — **To Be Decided**.
+  - **"20 gerçek üretim sonra ortalamaya geç" eşiği kategoriye göre ayrı mı sayılacak?** Mobilya Tripo'dan geçiyor, halı geçmiyor; tek ortalama yanıltabilir — **To Be Decided**.
+  - **Sistem hatasında hak iadesi için üst sınır gerekli mi?** Sürekli zaman aşımına düşen bir ürün sonsuz döngüye girip kredi yakabilir — **To Be Decided** → [[2026-08-05 Sistem hatasında 3D deneme hakkı iade edilir]].
+  - **Bitişte e-posta bildirimi ne zaman gelecek?** Panel kapalıyken hâlâ hiçbir bildirim yok; e-posta altyapısı gerçek mail atmıyor (yalnız kayda yazıyor) ve 3D bitişi için tanımlı mail zaten yok. Gerçek sağlayıcı seçimine bağlı (yukarıdaki açık madde).
 - Bkz. [[Marketplace Model]], [[Seller Experience]], [[Admin Panel]]
 
 ## Oda Tarama / 3D
