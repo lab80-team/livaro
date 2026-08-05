@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Current State
@@ -25,6 +25,8 @@ updated: 2026-08-04
 - **Gerçek Tripo multi-view denemesi yapıldı (2026-07-29 akşamı, kurucu onayıyla, kredi harcandı)**: bir Hereke halısıyla `TRIPO3D_FAKE=0` koşuldu — `multiview_to_model` isteği kabul edildi, model üretilip R2'ye yazıldı ve panelde döndürülerek incelendi (çıkan model orijinal halının kendisi). Yani **boru hattı gerçek Tripo'da uçtan uca çalışıyor**. Ancak ön/arka/sol/sağ eşlemesinin doğruluğu (model aynalanıyor mu) bu denemede **ölçülemedi** — halının fotoğrafları gerçek 4 açı değil; eşleme testi bir mobilyanın gerçek 4 açısıyla yapılmalı → [[Open Questions]]. (Not: halı artık zaten Tripo kullanmıyor — bu deneme, boru hattının gerçek Tripo'da uçtan uca çalıştığını kanıtlamak için değerli kaldı; sol/sağ eşleme sorusu mobilya için hâlâ açık.)
 - Teyit turu (24 Tem) tüm bekleyen teyitleri kapattı; emanet lisanslı ödeme kuruluşuyla, iptal/iade yasaya uygun tasarlanacak (detay açık) → [[Open Questions]].
 - Katalog: yalnızca 3 usdz'li test ürünü (gerçek katalog pilot markalardan dolacak; henüz hiçbir satıcıyla görüşülmedi).
+
+- **Mağaza panelinde 3D bekleme deneyimi ve stok göstergesi kararlaştı (2026-08-05 thinking session, 2 PM'li tartışmayla) — henüz inşa edilmedi**: fotoğraf yüklendikten sonra yüzdeli ilerleme + süre yazısı; **panelin her sayfasında kapatılabilir kutucuk** (kapatılınca üst çubukta iz, üretim arka planda sürer); çoklu üründe bekleyenlere "sırada bekliyor"; bitişte yeşil "hazır — inceleyin"; hatada hak durumuna göre iki ayrı mesaj. **Süre hiç ölçülmediği için** önce "genelde birkaç dakika sürer" yazılacak, ölçüm başlayacak, 20 üretim sonra gerçek ortalamaya geçilecek. **Sistem hatasında (5 dk zaman aşımı, çökme) deneme hakkı iade edilecek** ve aynı fotoğraflarla tekrar denenebilecek — bugün hatası olmayan satıcı hem hakkını yakıyor hem yeniden fotoğraf çekmek zorunda. 3D model ve Onayla/Reddet ürün düzenleme sayfasına taşınacak (ayrı "3D'yi İncele" sayfası kalkacak). Stok göstergesi: halı/perdede sayı kutucuğu + sıfırda otomatik gizleme, mobilyada "Satışta / Satışta değil" anahtarı (mobilyada stok bilinçli olarak hiç sorulmuyor; bugün stok adedi hiçbir yayın filtresine girmiyor) → [[2026 08 05 Thinking Session — Mağaza Paneli 3D İlerleme ve Stok Göstergesi]], [[Seller Experience]]. Açık: %100'de donan ekran, halıda yüzde olmaması (kurucu teyidi yok), 30 dk "takıldı" kuralının gösterimi → [[Open Questions]].
 
 ## Güncel Teknik Durum
 - Yığın: SwiftUI iOS + NestJS/Prisma/Supabase + Cloudflare R2 + Modal (Blender, T4) + OpenAI GPT-4o + Replicate flux-schnell + Tripo3D. Detay: [[System Architecture]].
@@ -67,6 +69,7 @@ updated: 2026-08-04
 - Geçmişte: R2 bucket CORS eksikliği (29 Tem bulgusu — 3D model tarayıcıda yüklenmiyordu; kurucu Cloudflare panelinden CORS politikasını ekledi, aynı gün canlı doğrulandı: model indi ve döndürüldü); Modal kredi tükenmesi — çözüldü; Replicate kredisi — yüklendi.
 
 ## Son Kararlar
+- [[2026-08-05 3D ilerleme göstergesi — her sayfada kapatılabilir kutucuk]] (+ aynı session'dan 4 karar daha: süre yazısı, deneme hakkı iadesi, stok göstergesi, 3D onayının yeri → [[Decision Index]])
 - [[2026-08-04 Admin panel v1 kapsamı — kuyruk ana sayfa, mağaza kartları, ciro-reklam alanları yok]] (+ aynı session'dan 5 karar daha: yayından kaldırma, vitrin onayı, kullanıcı kartı, hesap yönetimi, işlem günlüğü + olay defteri → [[Decision Index]])
 - [[2026-07-31 Kullanılmayan 3d-pipeline HTTP uçları tamamen kaldırıldı]]
 - [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]

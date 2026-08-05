@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-31
+updated: 2026-08-05
 related: []
 ---
 
@@ -55,6 +55,13 @@ related: []
 - Kayıt endpoint'i bir dönem `role:"ADMIN"` ile yetki yükseltmeye açıktı — 20 Haz denetiminde kapatıldı; benzer değişikliklerde rol whitelist'ini unutma.
 - macOS'ta `/usr/bin/python3` Xcode python3'üne symlink — pxr/usd-core gibi paketler için hangi python'a kurulduğuna dikkat.
 - `nest start --watch` `nest-cli.json` assets kopyalamayı çalıştırmaz (+`deleteOutDir:true` her başlatmada siler) — `.py` yardımcı script'leri dist'te kaybolabilir.
+
+## Mağaza paneli / 3D bekleme (5 Ağu tasarım turunda kodda ölçüldü)
+> Hepsi kodda doğrulandı, hiçbiri henüz düzeltilmedi → [[2026 08 05 Thinking Session — Mağaza Paneli 3D İlerleme ve Stok Göstergesi]].
+- **Süre ölçümü hiç yok ve geriye dönük çıkarılamaz**: 3D kaydı her denemede öncekinin üstüne yazılıyor, yani "kaç dakika sürüyor" sorusunun cevabı geçmiş veriden türetilemez. Ders: bir işin süresini ileride göstermek isteyeceksen, ölçümü **iş çalışırken** başlat — sonradan telafisi yok.
+- **Deneme hakkı sistem hatasında da yanıyor**: hak gönderim anında düşüyor, aynı fotoğraf setiyle tekrar gönderim `lastImageSetHash` ile engelli, başarısızlıkta iade yok. Zaman aşımı (5 dk tavan) veya çökme olursa hatası olmayan satıcı iki kez cezalandırılıyor. Ders: "deneme hakkı" sayacı kullanıcının hatasıyla sistemin hatasını ayırt etmeli.
+- **Dış servisin yüzdesi işin tamamı değil**: Tripo'nun 0-100'ü yalnız model üretimi adımını anlatıyor; sonrasında indirme, gerçek cm ölçüsüne büyütme, USDZ'ye çevirme ve depoya yükleme var. Ham yüzdeyi olduğu gibi göstermek "%100'de donan ekran" üretir.
+- **Stok adedi hiçbir yayın filtresine girmiyor**: ürünü müşteriden gizleyen tek koşul elle basılan `outOfStock` işareti (filtre en az beş yerde tanımlı: ürün, marka, kumaş, AI tasarım servisleri + Supabase ayna fonksiyonu). "Stok: 0" yazan ürün satışta kalıyor. Ders: aynı iş kuralı beş dosyaya kopyalanmışsa, birini güncelleyip diğerlerini unutmak sessiz bir tutarsızlık üretir.
 
 ## NestJS / TypeScript (29 Tem mağaza paneli build)
 - **`ParseFilePipe` + `FileFieldsInterceptor` uyumsuz**: `ParseFilePipe`, `FileFieldsInterceptor`'ın çoklu-alan (obje) şeklini anlamıyor ve İÇERİKTEN BAĞIMSIZ olarak HER yüklemeyi sessizce reddediyor. Etiketli çoklu-foto yüklemede (ör. ön/arka/sol/sağ slotları) `ParseFilePipe` kullanmayın — özel bir validation pipe yazın (bu turda `ValidateLabeledPhotosPipe` ile çözüldü, canlıda yakalandı).

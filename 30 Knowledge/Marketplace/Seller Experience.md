@@ -1,13 +1,22 @@
 ---
 type: knowledge
 status: living
-updated: 2026-07-31
+updated: 2026-08-05
 related: []
 ---
 
 # Seller Experience
 
 ## Şu An Bilinenler
+- **3D bekleme deneyimi ve stok göstergesi tasarlandı (2026-08-05 thinking session)** → [[2026 08 05 Thinking Session — Mağaza Paneli 3D İlerleme ve Stok Göstergesi]]. **Henüz kod yazılmadı — kararlar aşamasında.**
+  - **Bugünkü deneyim kırık (ölçüldü):** fotoğraf yüklenince tarayıcının `alert()` kutusu çıkıyor ("3D üretim başladı. Kalan hak: 1"), ürün listesine yönlendiriliyor. İlerleme yok, süre yok, liste kendiliğinden yenilenmiyor, **bitiş bildirimi hiç yok**. Ürünün "mağaza onayı bekliyor"da takılı kalmasının başlıca sebebi bu.
+  - **İlerleme yüzdesi elde var ama kullanılmıyor:** Tripo3D iş durumu sorulduğunda 0-100 arası bir sayı gönderiyor; hiçbir yere kaydedilmiyor, panele gitmiyor.
+  - **Süre hiç ölçülmemiş ve geriye dönük çıkarılamaz** (3D kaydı her denemede üzerine yazılıyor). Tek somut sayı bir **tavan**: arka plan işçisi Tripo'yu en fazla 5 dakika bekliyor (60 sorgu × 5 saniye), aşarsa zaman aşımı. Karar: önce "genelde birkaç dakika sürer", ölçüm başlar, 20 üretim sonra gerçek ortalama → [[2026-08-05 3D süre yazısı — önce tahmin, 20 üretim sonra gerçek ortalama]].
+  - **İşler sırayla yapılıyor** (kuyrukta eşzamanlılık ayarı yok) — çok ürün gönderen mağazanın sonuncusu diğerlerinin arkasında bekler; bekleyene süre sözü verilmeyecek.
+  - **İlerleme kutucuğu** panelin her sayfasında, kapatılabilir, kapatılınca üst çubukta iz; bitince yeşil "hazır — inceleyin"; hatada iki ayrı mesaj → [[2026-08-05 3D ilerleme göstergesi — her sayfada kapatılabilir kutucuk]].
+  - **Deneme hakkı adaletsizliği bulundu ve düzeltilecek:** hak gönderim anında düşüyor, aynı fotoğraflarla tekrar deneme koda gömülü şekilde yasak ve başarısızlıkta iade yok — yani sistem kendi hatasıyla (zaman aşımı, çökme) patladığında hatası olmayan mağaza hem hakkını yakıyor hem yeniden fotoğraf çekmek zorunda kalıyor. Karar: sistem hatasında hak iade edilir, aynı fotoğraflarla tekrar denenebilir → [[2026-08-05 Sistem hatasında 3D deneme hakkı iade edilir]] (2026-07-28'deki 2-hak kuralını inceltir).
+  - **Stok gerçeği:** mobilyada stok **hiç sorulmuyor** (`stocked: false`, bilinçli — sipariş üzerine üretim), stoklu kategoriler halı ve perde. Ürünü müşteriden gizleyen tek şey elle basılan "stokta yok" işareti; **stok adedi hiçbir yayın filtresine girmiyor**, yani bugün "Stok: 0" yazan ürün satışta kalıyor. Karar: stoklu kategoride sayı kutucuğu + sıfırda otomatik gizleme, mobilyada "Satışta / Satışta değil" anahtarı → [[2026-08-05 Stok göstergesi — stoklu kategoride sayı, mobilyada satışta anahtarı]].
+  - **3D model ürün düzenleme sayfasına taşınıyor**, Onayla/Reddet dahil; ayrı "3D'yi İncele" sayfası kalkıyor → [[2026-08-05 3D model ve onay ürün düzenleme sayfasına taşınır]].
 - **Mağaza web sitesi + yönetim (admin) sitesi main'e birleştirildi ve push edildi (2026-07-31, `44a4497`)** → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]. Merge öncesi zorunlu Codex inceleme kapısı 7 turda 22 açık buldu (KVKK sızıntıları, eski `/3d-pipeline` ucundan 3D zorunluluğu/admin onayı atlatma, kredi çift yakma riskleri) — hepsi regresyon testiyle kapatıldı, 399 test yeşil. **Gerçek satıcı henüz kullanmadı — Validated değil.**
 - **Mağaza web sitesi + yönetim (admin) sitesi build edildi, yerelde uçtan uca çalışıyor (2026-07-29)** → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]:
   - İki ayrı site: `web/` (mağaza/satıcı — herkese açık tanıtım/kayıt/giriş/panel) ve `admin/` (yalnız kurucular — başvurular/ürün onayı/takılanlar). Bu ayrım kurucu kararı (2026-07-28 sohbeti, kod reposu spec dokümanı). Admin'in bu turu **kasıtlı olarak asgari**; kapsamlı yönetim paneli (metrikler, kullanıcı yönetimi, içerik denetimi) ayrı bir **gelecek thinking session'da** tasarlanacak.

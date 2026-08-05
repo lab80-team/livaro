@@ -1,7 +1,7 @@
 ---
 type: tasks
 status: living
-updated: 2026-08-02
+updated: 2026-08-05
 ---
 
 # Task Board
@@ -14,6 +14,12 @@ updated: 2026-08-02
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+- [ ] **3D üretim sürelerini ölçmeye başla** (her denemenin başlama/bitme saati; bugün 3D satırı her denemede üzerine yazılıyor, denemeler ayrı saklanmalı) — 20 üretim birikince ekran "ortalama X dakika"ya döner — area:: engineering · source:: [[2026-08-05 3D süre yazısı — önce tahmin, 20 üretim sonra gerçek ortalama]]
+- [ ] **Tripo'nun ilerleme yüzdesini kaydet ve panele taşı** — yalnız üretimdekileri dönen hafif bir uç (10-15 sn aralık, sekme arka plandayken dur); mağaza sahiplik kontrolü birebir tekrarlanmalı, iç alanlar (iş numarası, sahiplik işareti, ham hata metni) dönmemeli — area:: engineering · source:: [[2026-08-05 3D ilerleme göstergesi — her sayfada kapatılabilir kutucuk]]
+- [ ] **İlerleme kutucuğunu panelin her sayfasına ekle** — yüzde + "3D modeliniz oluşturuluyor" + süre yazısı; kapatılabilir, kapatılınca üst çubukta iz; çoklu üründe başlıkta sayı + satırlar (bekleyende "sırada bekliyor"); bitişte yeşil "hazır — inceleyin", hatada iki ayrı mesaj — area:: product/engineering · source:: [[2026-08-05 3D ilerleme göstergesi — her sayfada kapatılabilir kutucuk]]
+- [ ] **Sistem hatasında 3D deneme hakkını iade et** ve aynı fotoğraflarla tekrar denemeye izin ver (mağaza reddi hariç) — area:: engineering · source:: [[2026-08-05 Sistem hatasında 3D deneme hakkı iade edilir]]
+- [ ] **Stok göstergesini değiştir** — stoklu kategoride (halı/perde) sayı kutucuğu + sıfırda otomatik gizleme; mobilyada "Satışta / Satışta değil" anahtarı. Yayın filtresine stok koşulu **beş yerde birden** eklenmeli (ürün, marka, kumaş, AI tasarım servisleri + Supabase ayna fonksiyonu) ve yalnız stoklu kategorilere uygulanmalı — area:: engineering · source:: [[2026-08-05 Stok göstergesi — stoklu kategoride sayı, mobilyada satışta anahtarı]]
+- [ ] **3D modeli ve Onayla/Reddet'i ürün düzenleme sayfasına taşı**, ayrı "3D'yi İncele" sayfasını kaldır (yanlış tıklama koruması gerekli — reddetmek geri alınamaz) — area:: product/engineering · source:: [[2026-08-05 3D model ve onay ürün düzenleme sayfasına taşınır]]
 - [ ] Mobilyada Tripo ön/arka/sol/sağ eşlemesini gerçek 4 açılı bir ürünle doğrula (kredi harcar) — **pilottan önce** — area:: engineering · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
 - [ ] iOS'u Xcode'da derle ve test et (KVKK sızıntı düzeltmesi `Brand.swift`'te `ownerId` alanını opsiyonel yaptı, henüz doğrulanmadı) — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
 - [ ] Perde tedarik yolunu seç (freelancer $500-1500/3-5 hafta vs hazır asset kütüphanesi; "kumaş değiştirilebilir UV" desteği doğrulanmalı) — area:: product/business · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
