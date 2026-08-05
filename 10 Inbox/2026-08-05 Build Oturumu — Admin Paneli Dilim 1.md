@@ -73,7 +73,29 @@ Ayrıca **üç kez bir düzeltmenin kendisi eksik ya da hatalı kaldı** ve bir 
 1. **Veritabanı**: o oturumun migration'ı paylaşılan geliştirme veritabanına uygulandığı için bu dal drift gördü → kurucu kararıyla o dal bu dala birleştirildi.
 2. **Merge**: o iş sonradan Codex incelemesinden geçip **main'e girdi** — ama bu daldaki halinden farklı, düzeltilmiş bir sürümle. Main'i bu dala birleştirmek 12 dosyada 29 çakışma bloğu gerektirdi. Kural: bu dalın dokunmadığı dosyalarda main'in incelenmiş hali alındı, ikisinin de dokunduğu yerlerde iki taraf da korundu.
 
-## 7. main'e neden birleştirilmedi
+## 7. main'e birleştirildi (2026-08-06) — ve Codex kapısı hakkında bir bulgu
+
+**Birleştirildi**: `0a09fa1`. Merge sonrası main'de dört kapı da temiz (604 test, 44 takım).
+
+Birleştirme öncesi main iki kez daha ilerledi (paralel oturumun halı 3D doku işi + bir migration düzeltmesi); ikisi de bu dala alınıp çakışmalar çözüldü. Son turda Codex, otomatik birleşmenin sessiz bir boşluk bıraktığını buldu: main'in eklediği kategori fotoğraf kuralı (`assertPhotosUsableForCategory`) bu dalın yeni "onaya gönderme" yoluna taşınmamıştı — iki taraf da kendi içinde doğruydu, boşluk tam kesişimdeydi. Düzeltildi ve testi yazıldı.
+
+### ⚠️ Codex kapısı şu anda hiçbir merge'ü durdurmuyor
+
+Kanca, muafiyet kontrolünü (`codexgate.skip`) **oturumun bulunduğu klasöre** göre yapıyor:
+
+```bash
+if [ "$(git -C "$DIR" config --get codexgate.skip)" = "true" ]; then exit 0; fi
+```
+
+`$DIR` = oturumun klasörü. Vault (ve tüm worktree'leri) doküman reposu olduğu için muaf işaretli — ve **oturumların hepsi vault'ta**. Sonuç: vault'ta açılmış bir oturumdan kod reposuna yapılan `git push` da kapıyı hiç çalıştırmadan geçiyor.
+
+Ayrıca kayıt kancası da `git -C "$CWD" rev-parse HEAD` yaptığı için incelemeyi **vault commit'ine** kaydediyor, kod commit'ine değil (ölçüldü).
+
+Düzeltmesi: muafiyet ve kayıt, oturumun klasörüne değil **push edilen repoya** bağlanmalı. Görev olarak kaydedildi → [[Task Board]].
+
+**Not**: bu dilimde kapının atlatılmasına gerek kalmadı — inceleme yedi tur koşuldu ve son turlar temiz geldi; merge kurucu kararıyla yapıldı.
+
+## 8. (eski) main'e neden birleştirilmemişti
 
 Kod hazır ve **beş tur Codex incelemesinden** geçti:
 
