@@ -31,7 +31,7 @@ updated: 2026-08-05
 - [ ] Katalog: gerçek ürünleri ekle + Tripo3D pipeline'ından toplu geçir (şu an 3 test ürünü) — area:: product/engineering · source:: `PROJECT_STATUS.md`
 
 ## In Progress
-- [ ] **2026-08-05 kararlarının 6 görevi KODLANDI, main'e merge bekliyor** (`feature/store-panel-3d-progress` branch'i, 6 commit; 431 test yeşil; canlı demo yerelde yapıldı 2026-08-05): süre ölçümü + yüzde kaydı, hafif ilerleme ucu + her sayfada kapatılabilir kutucuk, sistem hatasında hak iadesi (aynı fotoğrafla tekrar), stok göstergesi + 5 yayın filtresine stok koşulu, 3D model + onayın düzenleme sayfasına taşınması. Kalan: Codex inceleme kapısı → merge; Supabase aynasının deploy'u ayrı karar — area:: engineering · source:: [[2026 08 05 Thinking Session — Mağaza Paneli 3D İlerleme ve Stok Göstergesi]]
+_(boş)_
 
 ## Blocked
 _(boş)_
@@ -40,6 +40,7 @@ _(boş)_
 _(boş)_
 
 ## Done
+- [x] **2026-08-05 kararlarının 6 görevi kodlandı ve main'e merge edildi** (`7d5ba06`, push edildi): süre ölçümü (`three_d_attempts` tablosu) + Tripo yüzdesinin kaydı, hafif `GET /seller/products/3d-progress` ucu + panelin her sayfasında kapatılabilir ilerleme kutucuğu, sistem hatasında hak iadesi (aynı fotoğraflarla tekrar), stoklu kategoride stok 0 = katalogda otomatik gizli (5 sorgu yeri + ayna tutarlılık testi), 3D model + Onayla/Reddet'in düzenleme sayfasına taşınması, ürün listesinde kalem/çöp ikonları + yerinde stok kutusu + satıştan çekme onayı. **İki tur Codex incelemesi: 2 P1 + 2 P2 bulgu kapatıldı** (kayıp hak iadesinin kurtarmada tamamlanması, oturum değişiminde veri sızıntısı, liste yenileme yarışı, stok filtresinde `OR` ezilmesi), son turda "merge engeli yok". 468 test yeşil; yerelde canlı doğrulandı — source:: [[2026 08 05 Thinking Session — Mağaza Paneli 3D İlerleme ve Stok Göstergesi]]
 - [x] AI aramada oda taraması sahiplik kontrolü eklendi (2026-08-02): yabancı/olmayan `roomScanId` → bilgi sızdırmayan 404, sahiplik geçmeden OpenAI çağrısı yok; main'e merge + push (`0477596`), 6 tur Codex incelemesi — source:: [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]]
 - [x] Blender render mükerrer tetikleme koruması atomik yapıldı (2026-08-02): `renderClaimedAt` CAS kilidi + fence + 3 dk spawn zaman aşımı + belirsiz-start koruması; migration uygulandı — source:: [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]]
 - [x] `drop_splat_and_ai_task` migration'ını uygula — bayatlamış görev: `prisma migrate status` (2026-08-02) 13 migration'ın tamamının uygulandığını, şemanın senkron olduğunu doğruladı (ne zaman uygulandığı kayıtlı değil) — source:: [[2026-08-02 Güvenlik Düzeltmeleri — Oda Taraması Sahipliği ve Render Kilidi]]
