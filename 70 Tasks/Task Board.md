@@ -14,6 +14,8 @@ updated: 2026-08-05
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+- [ ] **Halı 3D'sini gerçek cihazda AR'da doğrula** — siyah bordür kusuru ölçümde ve sentetik testlerde düzeldi ama telefonda gözle görülmedi; kusur AR'da fark edilmişti, doğrulaması da orada olmalı. Boşluk bırakarak yeniden çekilmiş bir halı fotoğrafıyla uçtan uca tur — area:: engineering · source:: [[2026-08-06 Halı Doku Delikleri, Saçak Modeli ve Migration Kurtarması]]
+- [ ] Gerçek satıcı fotoğraflarıyla ilk toplu yüklemeden sonra halı fotoğrafı kabul/red oranına bak — çok red geliyorsa %2 eşiği ya da panel rehberi gözden geçirilir — area:: product/engineering · source:: [[2026-08-06 Düz üründe fotoğraf boşluğu zorunlu — birebir kırpım istisna]]
 - [ ] Mobilyada Tripo ön/arka/sol/sağ eşlemesini gerçek 4 açılı bir ürünle doğrula (kredi harcar) — **pilottan önce** — area:: engineering · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
 - [ ] iOS'u Xcode'da derle ve test et (KVKK sızıntı düzeltmesi `Brand.swift`'te `ownerId` alanını opsiyonel yaptı, henüz doğrulanmadı) — area:: engineering · source:: [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]
 - [ ] Perde tedarik yolunu seç (freelancer $500-1500/3-5 hafta vs hazır asset kütüphanesi; "kumaş değiştirilebilir UV" desteği doğrulanmalı) — area:: product/business · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]
