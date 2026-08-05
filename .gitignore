@@ -7,3 +7,6 @@ Thumbs.db
 .obsidian/workspace-mobile.json
 .obsidian/cache
 .trash/
+
+# Claude Code — makineye özel çalıştırma ayarları (her oturum kendi yolunu yazar)
+.claude/launch.json
