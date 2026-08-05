@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Open Questions
@@ -75,9 +75,16 @@ updated: 2026-08-04
 - **Admin paneli v1 session'ından kalan açıklar (2026-08-04)** → [[2026 08 04 Thinking Session — Admin Paneli]]:
   - ~~**İşlem günlüğü** — kurucuya ayrıca onaylatılmadı~~ — **ÇÖZÜLDÜ (2026-08-04, ikinci tur)**: kabul → [[2026-08-04 İşlem günlüğü ve sessiz olay defteri kabul edildi]].
   - ~~**Sessiz olay defteri** şimdi mi kurulacak~~ — **ÇÖZÜLDÜ (2026-08-04, ikinci tur)**: kabul, en dar kapsamla (4 olay, tek tablo, ekransız; pilottan önce açık) → aynı karar notu.
-  - **Foto-3D tutarlılığı**: yayındaki üründe foto değişikliği onaya düşecek ([[2026-08-04 Ürün düzenlemede yeniden onay — yalnız vitrin alanları|karar]]) ama bugün foto değişse 3D yeniden tetiklenmiyor — onaylanan foto ile 3D uyuşmazlığı nasıl çözülecek (yeniden Tripo = kredi maliyeti)?
-  - **Admin v1'in inşa sırası**: pilot-öncesi öncelikler (Tripo eşleme doğrulaması, katalog doldurma) karşısındaki yeri — **To Be Decided**.
+  - ~~**Foto-3D tutarlılığı**: 3D yeniden tetiklenecek mi?~~ — **ÇÖZÜLDÜ (2026-08-05)**: 4 Ağustos'ta "admin onay ekranında seçsin" denmişti; kod doğrulaması bu seçeneğin **veri kaybına** yol açtığını gösterdi (yayındaki model üretim başlar başlamaz siliniyor, dosyaların üzerine yazılıyor, üretim patlarsa ürünün yayına dönüş yolu yok) → seçenek çıkarıldı, foto onaylandığında **3D aynı kalıyor** → [[2026-08-05 3D yenileme dilim 1'den çıkarıldı — veri kaybı riski]].
+    **Yeni açık soru**: foto-3D uyuşmazlığı ne zaman kapatılacak? Güvenli 3D yenileme ayrı bir dilim olarak sıraya girdi; gereken beş şart karar notunda yazılı. Pilotta müşteriye yanlış model gösterme riski ölçülmedi.
+  - **Admin v1'in inşa sırası**: dilim 1'in sırası çözüldü (veri temeli önce, 2026-08-05) ama **kalan dilimlerin (2-3-4) pilot-öncesi öncelikler karşısındaki yeri hâlâ To Be Decided**.
   - Grafiklerin ekleneceği "veri birikti" eşiği tanımsız — **Unknown**. Ciro alanı ödeme kuruluşu seçimine (yukarıdaki ⭐ soru), reklam alanları "Sponsorlu" ürününe bağlı.
+- **Admin dilim 1 inşasından kalan açıklar (2026-08-05)** → [[2026-08-05 Build Oturumu — Admin Paneli Dilim 1]]:
+  - **Dilim 1 main'e birleştirilmedi.** Kod hazır, iki tur Codex incelemesinden temiz geçti; ama Codex kapısı incelemeyi *oturumun bulunduğu klasörün* HEAD'ine göre kaydediyor ve bu oturum vault klasöründen yürütüldü — kayıt kod reposundaki commit'e düşmedi, kapı `git push`'u blokluyor. **Yapılacak**: kod reposunda (`~/Desktop/livaro`) bir oturumdan Codex incelemesi bir kez daha koşturulmalı.
+  - **Görev 9-10 (edge function yayınlama) yapılmadı**, kurucu onayına bağlı ve iki adım: (a) edge function'ın **mevcut hali** yayınlanmalı — 24 Temmuz'dan beri güncellenmemiş, 6 değişiklik bekliyor (katalog filtresi, KVKK alanları, güvenlik düzeltmeleri); (b) sonra ürün görüntüleme olayı eklenip ikinci kez yayınlanmalı, [[2026-08-05 Ürün görüntüleme olayı saatte bir kez sayılır|saatte bir kez sayma]] şartıyla.
+  - **Ürün görüntüleme kişi bazlı olamıyor**: iOS ürün detayını kimlik göndermeden çekiyor ve o uçta kimlik doğrulama yok. "Kaç kez bakıldı" kaydedilir, "kim baktı" kaydedilmez. Kişi bazlı istenirse opsiyonel kimlik + iOS değişikliği + yeni TestFlight sürümü gerekir — bu, [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı|kullanıcı kartı kararını]] doğrudan etkiliyor. **To Be Decided.**
+  - **"Tasarımda kullanım" olayının anlamı dar**: iOS, AI sihirbazında **her arama çalıştığında** sonucu kaydediyor. Yani olay "AI önerisinde çıktı" demek, "kullanıcı bu ürünü seçti" değil; kullanıcı üç kez arama yaparsa aynı ürün üç kez sayılır. Pilot markaya rakam verilirken bu bilinmeli — daha dar bir "gerçekten seçildi" olayı gerekir mi, **açık**.
+  - Ertelenen küçük teknik notlar (dosya boyutu, `listPendingEdits`'te sayfalama yok, test fikstürü kırılganlığı) kod reposundaki `.superpowers/sdd/progress.md` defterinde kayıtlı.
 - Bkz. [[Marketplace Model]], [[Seller Experience]], [[Admin Panel]]
 
 ## Oda Tarama / 3D
