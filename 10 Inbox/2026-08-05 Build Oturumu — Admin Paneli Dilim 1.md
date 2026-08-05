@@ -32,7 +32,7 @@ related: ["[[2026 08 04 Thinking Session — Admin Paneli]]", "[[Admin Panel]]",
 
 **Yeniden onay akışının çalışma şekli:** mağaza yayındaki ürünün başlık/açıklama/fotoğrafını değiştirince değişiklik `products` tablosuna değil `product_pending_edits`'e yazılır. **Ürün PUBLISHED kalır ve müşteri onaylı eski halini görmeye devam eder.** Fiyat ve stok onaya düşmez, doğrudan uygulanır. Admin eski|yeni yan yana görür; onaylarsa alanlar ürüne kopyalanır, reddederse kayıt `REJECTED` + nedeniyle kalır (silinmez — silinseydi red nedeni hiçbir yerde kalmazdı).
 
-**Ölçüler:** 22 commit (dilim 1'in kendisi) + main birleştirmesi + Codex düzeltmesi. 39 dosya. **556 test, 44 takım**; dört kapı da temiz (sunucu derlemesi, testler, mağaza paneli tip kontrolü, admin arayüzü derlemesi).
+**Ölçüler:** 22 commit (dilim 1'in kendisi) + main birleştirmesi + 3 Codex düzeltme turu. 39 dosya. **572 test, 44 takım**; dört kapı da temiz (sunucu derlemesi, testler, mağaza paneli tip kontrolü, admin arayüzü derlemesi).
 
 ## 3. Bu oturumda alınan kurucu kararları
 
@@ -44,9 +44,9 @@ related: ["[[2026 08 04 Thinking Session — Admin Paneli]]", "[[Admin Panel]]",
 6. **Ürün görüntüleme olayı saatte bir kez sayılır** — aynı ziyaretçi + aynı ürün + aynı saat = tek kayıt → [[2026-08-05 Ürün görüntüleme olayı saatte bir kez sayılır]].
 7. **Paylaşılan geliştirme veritabanı çakışmasında** paralel oturumun dalı bu dala birleştirildi (§6).
 
-## 4. İncelemelerin bulduğu on gerçek hata — hepsi planın boşluğu
+## 4. İncelemelerin bulduğu on dört gerçek hata — hepsi planın boşluğu
 
-Her görev kendi inceleme turundan, sonra tüm dal geniş bir incelemeden, sonra iki tur Codex'ten geçti. Bulunanların hiçbiri "uygulama hatası" değildi; **hepsi planın kendi boşluklarıydı.** En ciddi altısı:
+Her görev kendi inceleme turundan, sonra tüm dal geniş bir incelemeden, sonra **beş tur Codex'ten** geçti (§7). Bulunanların hiçbiri "uygulama hatası" değildi; **hepsi planın kendi boşluklarıydı.** En ciddi altısı:
 
 - **Onay + eşzamanlı fotoğraf gönderimi yayındaki ürünün fotoğraflarını kalıcı siliyordu.** Onay, bekleyen fotoğrafları ürüne taşıyıp bekleyen satırı siliyor; o satırla depo anahtarları da gidiyor. Mağaza tam o anda yeni fotoğraf gönderirse temizlik artık *yayındaki* dosyaları siliyordu — geri dönüş yok, üstelik hata yutulduğu için iz bile kalmıyordu. Bu pencereyi görev 6 açtı; görev 6'nın incelemesi kapattı.
 - **Adminin red notu siliniyordu.** Mağaza yalnız vazgeçtiğinde bile bekleyen kayıt `PENDING`'e dönüyor, not temizleniyor ve reddedilmiş fotoğraflar hiç değişmeden kuyruğa geri düşüyordu — "red nedeni kaybolmasın" kararının delindiği yer.
@@ -55,13 +55,16 @@ Her görev kendi inceleme turundan, sonra tüm dal geniş bir incelemeden, sonra
 - **RLS bekçi testi yanlış yeşil veriyordu** — silinip yeniden yaratılan bir tabloda eski çağdan kalma `ENABLE` satırını yeterli sayıyordu; korumasız bir tablo sessizce doğabilirdi. (İki ayrı turda, iki ayrı yönüyle bulundu.)
 - **Mağaza vazgeçtiğini sansa bile eski önerisi onaya gidiyordu** — form ona bekleyen önerisini hiç göstermiyordu.
 
-Ayrıca iki kez **bir düzeltmenin kendisi yeni bir hata doğurdu** ve bir sonraki inceleme turunda yakalandı.
+Codex turlarının bulduğu dördü §7'de.
+
+Ayrıca **üç kez bir düzeltmenin kendisi eksik ya da hatalı kaldı** ve bir sonraki inceleme turunda yakalandı (iki tanesi yeni hata doğurdu, biri bir yolu atladı).
 
 ## 5. Mühendislik dersleri
 
 - **`npm test` tip kontrolü YAPMIYOR.** `tsconfig.json`'da `isolatedModules: true` olduğu için ts-jest transpile-only çalışıyor. Ölçüldü: bir test dosyasına `const x: number = "string"` eklendi, suite yeşil geçti. **Tek tip kapısı `npm run build`.** "Testler geçti" ile "tipler doğru" bu repoda farklı garantiler → [[Known Pitfalls]].
 - **Worktree'ler arasında izole geliştirme veritabanı yok.** Tüm dallar aynı canlı Supabase'e migrate ediyor; paralel bir oturum migration uyguladığında diğer dal drift görüyor ve Prisma'nın önerdiği tek çözüm `migrate reset` (tüm veri kaybı) oluyor. Makinede Postgres de Docker da kurulu olmadığı için yerel izolasyon da mümkün değil.
 - **Görev-bazlı inceleme, görevler arası dikişleri görmüyor.** En ciddi iki bulgu (fotoğraf silme yarışı, günlüğün izlenemezliği) ancak tüm dalın bütünsel incelemesinde çıktı — 31 Temmuz merge turunda öğrenilen dersin tekrarı.
+- **"Önceki tur temizdi" bir sonraki turu gereksiz kılmıyor.** Codex 2. tur bulgu bulmamıştı; 3. tur farklı sorular sorup üç gerçek sorun buldu, 4. tur da 3. turun düzeltmesindeki eksiği. Her tur başka bir açıdan bakıyor — temiz bir tur "artık bakmaya gerek yok" demek değil.
 
 ## 6. Paralel oturum çakışması
 
@@ -72,7 +75,22 @@ Ayrıca iki kez **bir düzeltmenin kendisi yeni bir hata doğurdu** ve bir sonra
 
 ## 7. main'e neden birleştirilmedi
 
-Kod hazır ve iki tur Codex incelemesinden temiz geçti (1. tur 5 bulgu → 4'ü düzeltildi, 1'ine gerekçeli itiraz kabul edildi; 2. tur **bulgu yok**).
+Kod hazır ve **beş tur Codex incelemesinden** geçti:
+
+| Tur | Sonuç |
+|---|---|
+| 1 | 5 bulgu → 4'ü düzeltildi, 1'ine gerekçeli itiraz kabul edildi |
+| 2 | bulgu yok (1. turun düzeltmeleri doğrulandı) |
+| 3 | **4 bulgu** — 3'ü gerçek, düzeltildi; 1'i kapsam dışı (canlı ürün görüntüleme kaydı = Görev 10) |
+| 4 | **1 bulgu** — 3. turun düzeltmesi eksikti, düzeltildi |
+| 5 | **bulgu yok** |
+
+3. tur "final commit gate'i şu haliyle geçmemeli" dedi ve haklıydı — 2. tur temiz geldiği hâlde 3. tur farklı sorular sorup üç gerçek sorun buldu:
+- **Karma kaydetmede kısmi başarı**: yayındaki üründe fiyat/stok önce yazılıyor, sonra bekleyen vitrin düzenlemesi patlarsa istek "başarısız" dönüyordu — ama fiyat **zaten değişmişti**. Satıcı "kaydedilmedi" sanıyordu. → iki yazım tek transaction'a alındı.
+- **Trim'den sonra geçersiz ad**: DTO uzunluğu HAM gövdede doğruluyor; `"  "` (iki boşluk) `@MinLength(2)`'yi geçip trim sonrası **boş ada** dönüşüyordu, admin onaylayınca ürün adsız kalıyordu. → trim sonrası yeniden doğrulama. (4. tur bu düzeltmenin **taslak yolunu atladığını** buldu; o da kapatıldı.)
+- **Saat dilimsiz zaman damgası**: sunucunun yerel saatine göre yorumlanıp gereksiz çakışma üretebiliyordu. → `Z` ya da açık offset zorunlu.
+
+**Ders**: "önceki tur temizdi" bir sonraki turu gereksiz kılmıyor — her tur farklı açıdan bakıyor. 572 test, dört kapı temiz.
 
 **Ama Codex kapısı incelemeyi, oturumun bulunduğu klasörün HEAD'ine göre kaydediyor.** Bu oturum vault klasöründen yürütüldüğü için kayıt kod reposundaki commit'e düşmedi — kapı `git push`'u bloklar. Kural gereği atlatılmadı.
 
