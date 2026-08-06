@@ -1,7 +1,7 @@
 ---
 type: tasks
 status: living
-updated: 2026-08-05
+updated: 2026-08-06
 ---
 
 # Task Board
@@ -14,6 +14,31 @@ updated: 2026-08-05
 - [ ] RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme imkânı değerlendir — area:: product · source:: [[2026-07-20 Oturum Import — Texture Pipeline ve Yakın Çekim]]
 
 ## Next
+
+### 2026-08-06 uygulama journey oturumundan (bkz. [[2026 08 06 Thinking Session — Uygulama User Journey]])
+- [ ] **Blender render süresini ölç** (tek render, gerçek odayla) — tüm bekleme tasarımı bu sayıya bağlı; bugün ekranda duran "~2-3 dakika" hiçbir ölçüme dayanmıyor — area:: engineering · source:: [[2026-08-06 Tasarım beklemesi arka planda sürer — üst şerit haber verir]]
+- [ ] Her tasarımın başlama/bitiş saatini kaydetmeye başla (ölçüm sonradan telafi edilemiyor; mağaza tarafında bu ders yaşandı) — area:: engineering · source:: [[2026-08-06 Tasarım beklemesi arka planda sürer — üst şerit haber verir]]
+- [ ] `RenderGalleryView`'daki ölçülmemiş "~2-3 dakika" yazısını kaldır — area:: engineering · source:: [[2026-08-06 Tasarım beklemesi arka planda sürer — üst şerit haber verir]]
+- [ ] Tasarım isteğini "başlat + durum sor" yapısına çevir — 60 saniyelik ağ sınırı bugün uzun tasarımı "Bağlantı hatası" diye düşürüyor (internet iyiyken) — area:: engineering · source:: [[2026-08-06 Tasarım beklemesi arka planda sürer — üst şerit haber verir]]
+- [ ] "Arka planda devam et" + sekme üstü şerit (sürerken gri, bitince yeşil) + Projelerim'de "Tasarlanıyor" etiketi — area:: engineering/product · source:: [[2026-08-06 Tasarım beklemesi arka planda sürer — üst şerit haber verir]]
+- [ ] Tasarım sonuç ekranını yeniden düzenle: Kat Planı|3D seçici → büyük döner Blender modeli → kısa not (sans-serif 13pt, 2 satır, "Detay" bağlantısı) → ürün kutucukları → alt sabit AR + Yeniden Tasarla; "Roomplan" sekmesi kalkar — area:: engineering/product · source:: [[2026-08-06 Tasarım sonuç ekranı — döner Blender modeli, fotogerçekçi render arkada]]
+- [ ] Yapay zekâdan ayrıca **tek cümlelik, en fazla 110 karakterlik özet** iste (uzun metni kırpmak cümleyi bozuyor) — area:: engineering · source:: [[2026-08-06 Tasarım sonuç ekranı — döner Blender modeli, fotogerçekçi render arkada]]
+- [ ] Ölçü doğrulama ekranını yap (mobilyasız görünüm + "taslak görünüm" notu + "Yeniden tara") ve tek buton "Kaydet ve Odayı Tasarla" — area:: engineering/product · source:: [[2026-08-06 Tarama akışı — ölçü doğrulama ekranı ve tek buton]]
+- [ ] Tarama ekranındaki geliştirici yazılarını (`floor:parquet wall:paint warm` vb.) dış kullanıcıdan gizle — area:: engineering · source:: [[2026-08-06 Tarama akışı — ölçü doğrulama ekranı ve tek buton]]
+- [ ] LiDAR'sız cihazlar için "Haber ver" ekranı + bekleme listesi kaydı (bugünkü "LiDAR Gerekli — Kapat" ekranının yerine) — area:: engineering/product · source:: [[2026-08-06 MVP LiDAR'sız telefonlara açılıyor — geçici olarak haber ver listesi]]
+- [ ] **Favoriler ve Sepet özelliğini sıfırdan yap** — ekran boş yer tutucu, veritabanında tablo bile yok (bu journey'nin en büyük gizli maliyeti); sepet ekranı MVP'de yapılır, arkasındaki sistem aşama aşama doldurulur — area:: engineering · source:: [[2026-08-06 Favorileme Keşfet üzerinden — Sepet ekranı MVP'de yapılır]]
+- [ ] Keşfet ürün kartlarına ve ürün detayına favori kalbi ekle (favorilemenin tek kaynağı burası) — area:: engineering/product · source:: [[2026-08-06 Favorileme Keşfet üzerinden — Sepet ekranı MVP'de yapılır]]
+- [ ] Sepete ekleme etkileşimi: kutucukta "+" → "✓ Sepette" (durum sepetin gerçek içeriğinden), "Tümünü Ekle" yalnız eksikleri ekler, Sepet ikonunda sayı rozeti — area:: engineering · source:: [[2026-08-06 Tasarım sonuç ekranı — döner Blender modeli, fotogerçekçi render arkada]]
+- [ ] "Yeniden tasarla" hak sayacını yaz — hak yalnız kullanıcı isteğinde yanar; sistem hatası ve "ürün bulunamadı" ayrı loglanır — area:: engineering · source:: [[2026-08-06 Yeniden tasarla hakkı yalnız kullanıcı isteğinde yanar]]
+- [ ] Render güzelleştirme katmanını (`_enhance_render`, flux img2img) kapat — area:: engineering · source:: [[2026-08-06 Render güzelleştirme katmanı kapatılır — saf Blender çıktısı]]
+- [ ] Keşfet ekranı: kategoriler + 2 sütun ürün ızgarası + yalnız "Sırala" — area:: engineering/product · source:: [[2026-08-06 Keşfet ve Profil ekran kapsamı]]
+- [ ] Profil ekranı: üst kart + 3 sayaç + tam liste; olmayan satırlar için ortak "Yakında" ekranı; KVKK/Gizlilik satırı — area:: engineering/product · source:: [[2026-08-06 Keşfet ve Profil ekran kapsamı]]
+- [ ] Favoriler ekranı: dikey ürün listesi, sekme çubuğu yok, boş durum metni — area:: engineering/product · source:: [[2026-08-06 Favorilerde Odalar sekmesi ileride — MVP'de sekme çubuğu yok]]
+- [ ] Pilot mağaza görüşmelerinde **varyantsız katalog davranışını ölç**: mağazalar aynı ürünü kaç ayrı renk/kumaşla satıyor, tek model kısıtı sorun oluyor mu — varyant kararı buna göre yeniden açılır — area:: product/business · source:: [[2026-08-06 Ürün varyantı MVP dışı — ileride eklenecek]]
+- [ ] Boş durum metinlerini yaz (Projelerim, Favoriler, Sepet) — bugün Projelerim boşken butonsuz çıkmaz sokak — area:: product · source:: [[2026 08 06 Thinking Session — Uygulama User Journey]]
+- [ ] Twilio hesabını deneme modundan çıkar (giriş ekranı ilk ekran olduğu için telefonla giriş gerçek kullanıcıda çalışmıyor) — area:: engineering/business · source:: [[2026-08-06 Giriş ekranı ilk ekran; misafir gezinme serbest kalır]]
+
+### Önceki turlardan
 - [ ] **Halı 3D'sini gerçek cihazda AR'da doğrula** — siyah bordür kusuru ölçümde ve sentetik testlerde düzeldi ama telefonda gözle görülmedi; kusur AR'da fark edilmişti, doğrulaması da orada olmalı. Boşluk bırakarak yeniden çekilmiş bir halı fotoğrafıyla uçtan uca tur — area:: engineering · source:: [[2026-08-06 Halı Doku Delikleri, Saçak Modeli ve Migration Kurtarması]]
 - [ ] Gerçek satıcı fotoğraflarıyla ilk toplu yüklemeden sonra halı fotoğrafı kabul/red oranına bak — çok red geliyorsa %2 eşiği ya da panel rehberi gözden geçirilir — area:: product/engineering · source:: [[2026-08-06 Düz üründe fotoğraf boşluğu zorunlu — birebir kırpım istisna]]
 - [ ] Mobilyada Tripo ön/arka/sol/sağ eşlemesini gerçek 4 açılı bir ürünle doğrula (kredi harcar) — **pilottan önce** — area:: engineering · source:: [[2026-07-29 Kategori bazlı 3D üretim stratejisi — halı düz yüzey, mobilya Tripo devam, perde sonraya]]

@@ -8,6 +8,8 @@ related: []
 
 # iOS uygulaması yalnızca müşteri (CUSTOMER) tarafı; satıcılar brand-panel'de
 
+> ⚠️ **GÜNCELLENDİ (2026-08-06)**: "Açılışta login zorunlu değil" kısmı değişti — ilk ekran artık **giriş ekranı**, misafir çıkışı en altta küçük yazıyla. Misafir gezinme serbestliği duruyor → [[2026-08-06 Giriş ekranı ilk ekran; misafir gezinme serbest kalır]].
+
 ## Bağlam
 Faz 5 (iOS uygulaması) kapsamı belirlenirken rollerin (CUSTOMER/SELLER/ADMIN) hangi yüzeyde yaşayacağı netleştirilmeliydi.
 

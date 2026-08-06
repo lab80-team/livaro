@@ -25,6 +25,19 @@ updated: 2026-08-06
 - ~~Bütçe aşımı rozeti~~ — **KABUL**: aşan ürünlere "bütçenin %X üstünde" rozeti (aynı karar notu).
 - Hâlâ açık (öneri statüsünde): render sürerken değişiklik yapılırsa görsel sürüm/etiket kuralı; hizmet bedelinin iade koşulları + tahsilat yolu; tek sayfalık iade akışı; bot/kötüye kullanım koruması; GPT-4o "iyi yerleşim" ölçütü + ucuz ön deneme (test detayları — gün sayısı, tarama sayısı, prompt kullanımı — **To Be Decided**).
 
+## Uygulama journey oturumundan kalan açıklar (2026-08-06)
+→ [[2026 08 06 Thinking Session — Uygulama User Journey]]
+- ~~Varyant için 3D harcama tavanı var mı?~~ **ŞİMDİLİK GEÇERSİZ (2026-08-06, aynı gün)**: varyant MVP'den çıkarıldı → [[2026-08-06 Ürün varyantı MVP dışı — ileride eklenecek]]. Varyant geldiğinde yeniden açılacak sorular: her varyanta ayrı 3D mi yoksa tek model + renk değişimi mi; Tripo aylık harcama tavanı; mağaza panelindeki ürün formunun yeni hâli. (Tripo harcama tavanı sorusu varyanttan bağımsız olarak da açık — aşağıya bakınız.)
+- **Varyantsız katalogda mağazalar ne yapacak?** Gerçek mobilya mağazaları aynı ürünü çoğunlukla çok renkli/çok kumaşlı satıyor; tek model kısıtı onları aynı koltuğu birkaç ayrı ürün olarak yüklemeye zorlayabilir. Pilot görüşmelerinde ölçülecek — **Needs Validation**.
+- **Misafirken eklenen favori ve sepet öğesi giriş yapınca hesaba taşınacak mı?** — **To Be Decided** → [[2026-08-06 Favorileme Keşfet üzerinden — Sepet ekranı MVP'de yapılır]].
+- **Ürün çıkarma yeni sonuç ekranında nerede?** MVP kararı ([[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]]) ürün çıkarmayı içeriyor ama 6 Ağu'daki yeni düzende yeri tanımlanmadı. Çıkarınca görüntü anında mı değişiyor, yeniden mi render ediliyor — **To Be Decided**.
+- **Ürün nokta işaretleri (hotspot) verisi yok.** Referans görselinde 3D görüntünün üstünde ürünleri işaretleyen beyaz noktalar var; bugün hangi ürünün görüntünün neresine düştüğü hesaplanmıyor. Blender'ın her ürünün 2 boyutlu konumunu da yazması gerekiyor — küçük ama var olmayan bir iş.
+- **"Tasarımı Satın Al" çok markalı sepette neyi taahhüt ediyor?** Teslimat tarihi tercihi, özel üretimde avans, montaj sorumluluğu hepsi hâlâ **To Be Decided**; 10 markalı bir tasarımda tek toplam ve tek tık neyi vaat ediyor?
+- **LiDAR'sız çözüm gelince ölçü doğruluğu düşerse kullanıcıya söylenecek mi?** İki sınıf deneyim (kesin ölçü / yaklaşık ölçü) doğarsa bu şeffaf mı olacak — **To Be Decided**.
+- **"Odalar" favorisi geldiğinde Projelerim'den farkı ne olacak?** (Kendi odam / beğendiğim başkasının tasarımı) → [[2026-08-06 Favorilerde Odalar sekmesi ileride — MVP'de sekme çubuğu yok]].
+- **Saf Blender çıktısı "çok gerçekçi" çıtasını karşılıyor mu?** Güzelleştirme katmanı kapatılıyor ([[2026-08-06 Render güzelleştirme katmanı kapatılır — saf Blender çıktısı]]); ilk gerçek odada gözle değerlendirilmeli.
+- **Keşfet'te sıralama ölçütü ne olacak?** (Fiyat / yenilik / puan — puan sistemi henüz yok.) — **To Be Decided**.
+
 ## Ürün (Product)
 - ~~İlk ürün ne olmalı?~~ **ÇÖZÜLDÜ** (2026-07-21 + 2026-07-24): görselleştirme + sepet; checkout ödeme teknolojisi seçilince → [[2026-07-24 Sepet MVP'de, checkout ödeme teknolojisi seçilince]].
 - ~~MVP tasarım kapsamı?~~ **ÇÖZÜLDÜ (2026-07-24)**: dolu oda boşaltılır, sıfırdan tasarım; ürün çıkarma var; AR tüm oda; yeniden tasarla 2 hak → [[2026-07-24 MVP tasarım kapsamı — oda boşaltılır, sıfırdan tasarım]].
@@ -93,7 +106,7 @@ updated: 2026-08-06
 - Bkz. [[Marketplace Model]], [[Seller Experience]], [[Admin Panel]]
 
 ## Oda Tarama / 3D
-- ~~LiDAR zorunluluğu bilinçli mi?~~ **ÇÖZÜLDÜ (2026-07-24)**: geçici kısıt; MVP LiDAR-only, LiDAR'sız çözüm ileride → [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]. Açık kalan: LiDAR'sız cihaz sahibi ilk açılışta ne yaşar (mesaj/bekleme listesi?); elle ölçü girişi (PM önerisi) denenmeli mi?
+- ~~LiDAR zorunluluğu bilinçli mi?~~ **ÇÖZÜLDÜ (2026-07-24)**: geçici kısıt → [[2026-07-24 MVP yalnızca LiDAR'lı iPhone]]. **GÜNCELLENDİ (2026-08-06)**: kısıt kaldırıldı, LiDAR'sız telefonlar hedefte; teknoloji seçilene kadar "Haber ver" listesi → [[2026-08-06 MVP LiDAR'sız telefonlara açılıyor — geçici olarak haber ver listesi]]. ~~LiDAR'sız cihaz sahibi ilk açılışta ne yaşar?~~ **ÇÖZÜLDÜ** (aynı karar). Açık kalan: **elle ölçü girişi pilot sonrası denenecek mi** — masada, karar verilmedi.
 - ⭐ GPT-4o yerleşim kalitesi: **kurucu kararı (teyit turu): test MVP altyapısı/3D model tamamlandıktan sonra**; sonuca göre yol (kural tabanlı dahil). Açık: geçer/kalır ölçütü şimdiden yazılmalı mı; tam testten önce ucuz ön deneme yapılmalı mı? (PM önerileri.)
 - ARKit mesh (ısınma nedeniyle kapalı) tarama-sonrası işlemeyle geri açılabilir mi?
 - RoomPlan yanlış algıları (TV=pencere) için kullanıcıya düzeltme aracı gerekir mi?
@@ -109,9 +122,9 @@ updated: 2026-08-06
 - ⭐ ~~Buluta taşınma gerekli mi?~~ **KARARLAŞTI (2026-07-24)**: backend buluta taşınacak → [[2026-07-24 PM önerileri kararları — bulut taşınma, kalite çıtası, bütçe rozeti]]. Açık kalan: hangi bulut/nasıl, TestFlight zamanlaması → [[Deployment Strategy]].
 - Tripo3D sonuçları cache'lenmeli (retry'lar kredi yakıyor; 24 Tem overhaul'u "stage-aware resume" tasarımı önerdi — rapor `PROJECT_STATUS.md`/import notunda); toplu yüklemeden önce 20 ürünlük kalite+maliyet denemesi yapılacak mı?
 - ~~Texture regresyonlarına karşı otomatik doğrulama?~~ **Kısmen çözüldü (2026-07-24)**: kontrat karakterizasyon testleriyle donduruldu → [[E2E Testing Strategy]]; görsel çıktı (R2 içerik) doğrulaması hâlâ manuel.
-- 2-3 dk'lık async render başarısız olduğunda kullanıcı ne görüyor? (Hata UX'i tanımsız.)
+- ~~2-3 dk'lık async render başarısız olduğunda kullanıcı ne görüyor?~~ **ÇÖZÜLDÜ (2026-08-06)**: üç ayrı hâl tanımlandı (sistem hatası / uygun ürün bulunamadı / kullanıcı isteği) + **kısmi başarı** hâli (tasarım çıktı, görüntü çıkmadı → tasarım gösterilir, "Görüntüyü tekrar dene") → [[2026-08-06 Yeniden tasarla hakkı yalnız kullanıcı isteğinde yanar]]. Ayrıca render süresi **hâlâ hiç ölçülmedi** — ölçüm görevi açıldı ([[Task Board]]).
 - ~~Eski gpt-image-1 render yolunun akıbeti; `coverageGateEnabled` bayrağı~~ — **ÇÖZÜLDÜ**: ikisi de 21+24 Tem temizlikleriyle kod tabanından çıktı (geri dönüş: `pre-cleanup-2026-07-21` tag'i).
-- **Karar-kod boşlukları (24 Tem overhaul tespiti) hangi sırayla kapatılacak?** Sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı + rozet, render bildirimi → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]].
+- **Karar-kod boşlukları (24 Tem overhaul tespiti) hangi sırayla kapatılacak?** Sepet pasif listesi, yeniden-tasarla 2-hak sayacı, wizard onay adımı, %20 bütçe tavanı + rozet, render bildirimi → [[2026-07-24 Oturum Import — Mimari Overhaul Fleet]]. **Güncelleme (2026-08-06):** bu boşlukların kuralları artık yazıldı ([[2026 08 06 Thinking Session — Uygulama User Journey]]) ve görevleri [[Task Board]]'a girdi; **render bildirimi MVP'den çıktı** (bildirim altyapısı hiç yok, söz verilmeyecek). Sıra hâlâ belirlenmedi.
 - Edge function'ın bulut sonrası kaderi: Nest buluta çıkınca APIConfig RELEASE URL'i Nest'e dönecek — ayna emekli mi olur, katalog cache'i mi kalır?
 - brand-panel'in güncel bakım durumu (Temmuz'da hiç dokunulmadı) — çalışıyor mu? ~~2026-07-28 journey kararları mevcut panelin üstüne mi inşa edilir, yeniden mi yazılır~~ — **ÇÖZÜLDÜ (2026-07-29 build)**: yeniden yazıldı, tamamen ayrı bir site (`web/`) olarak kuruldu; brand-panel'e dokunulmadı (yalnız referans). **Güncelleme (2026-07-31):** `web/`+`admin/` main'e birleştirildi ve push edildi, ama brand-panel'in emekliye ayrılması kararı hâlâ verilmedi (merge aşamasına bırakılmıştı, merge geçti, karar hâlâ açık) → [[2026-07-31 Kategori 3D Stratejisi, Tripo Kredi Ölçümü, iOS Doku Düzeltmesi ve Main Merge]]. Açık kalan: Excel/API toplu yükleme hâlâ yapılmadı, hangi panelin üstüne inşa edileceği hâlâ belirsiz.
 - Bkz. [[System Architecture]], [[Known Pitfalls]]
@@ -120,7 +133,7 @@ updated: 2026-08-06
 - İlk otomasyon nereye: texture üretim zinciri mi, tarama→kayıt API'si mi? Bkz. [[E2E Testing Strategy]]
 
 ## Müşteri Deneyimi
-- Bilinçli tasarlanmış onboarding yok — ilk açılışta kullanıcı ne görmeli? (Welcome page vizyonu var, tasarlanmadı → [[User Onboarding]].)
+- ~~Bilinçli tasarlanmış onboarding yok — ilk açılışta kullanıcı ne görmeli?~~ **ÇÖZÜLDÜ (2026-08-06)**: ilk ekran giriş sayfası + misafir çıkışı; welcome page vizyonu rafta → [[2026-08-06 Giriş ekranı ilk ekran; misafir gezinme serbest kalır]], [[User Onboarding]].
 - Değerlendirme/puan sistemi (ürün + mağaza + AI özet) hangi eşikte devreye girecek? ("Belli kitle sonrası" — eşik tanımsız.)
 
 ## Ekip / Finansman

@@ -8,6 +8,8 @@ related: ["[[Room Scanning Overview]]"]
 
 # MVP yalnızca LiDAR'lı iPhone
 
+> ⚠️ **GÜNCELLENDİ (2026-08-06)**: Kurucu bu kısıtı kaldırdı — LiDAR'sız telefonlar artık ürün hedefinin içinde. Teknoloji hâlâ seçilmediği için MVP fiilen LiDAR'lı iPhone'la çıkıyor; LiDAR'sız kullanıcı "Haber ver" listesine yazılıyor → [[2026-08-06 MVP LiDAR'sız telefonlara açılıyor — geçici olarak haber ver listesi]].
+
 ## Bağlam
 [[Open Questions]]'da uzun süredir açık olan soru: LiDAR'lı iPhone zorunluluğu bilinçli bir seçim mi, geçici kısıt mı? LiDAR'sız cihazlar (çoğu Android, eski iPhone'lar) için ne yapılacak?
 
