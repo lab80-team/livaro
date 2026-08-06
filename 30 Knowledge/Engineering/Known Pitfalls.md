@@ -1,7 +1,7 @@
 ---
 type: knowledge
 status: living
-updated: 2026-08-05
+updated: 2026-08-06
 related: []
 ---
 
@@ -40,6 +40,7 @@ related: []
 - ARKit/RoomPlan pozları 3DGS eğitimi için **yetersiz** (COLMAP teşhisiyle kanıtlandı) — splat'a dönülürse bunu unutma. Bkz. [[Gaussian Splatting self-hosted gsplat]].
 - Tarama sırasında ağır ek işlem (video kaydı, mesh, analiz) ısınma/crash yaratır — ağır işler tarama **bittikten sonra**.
 
+- **Geliştirme kısayolu (mock bayrağı) yalnız PAHALI yolu kısa devre etmeli, hepsini değil.** `TRIPO3D_FAKE=1` kontrolü kategori seçiminden ÖNCE çalıştığı için halı da sabit bir demo GLB'sine düşüyordu: kurucu halı yükledi, panelde 16 Haziran'dan kalma "Pipeline Test Sofa" göründü. Oysa bayrağın tek amacı Tripo **kredisi** yakmamaktı ve düz yüzey yolu dış servise hiç uğramıyor. Hata sessiz: model `COMPLETED` yazılıyor, hiçbir hata/uyarı yok, yalnız gözle bakınca anlaşılıyor. **Ders**: bir mock/fake bayrağı eklerken "neyi kısa devre ediyorum" sorusunu kategori/dal bazında sor; bayrak, maliyeti olmayan yolları da kapatıyorsa yanlış yerdedir. İkinci ders: bir çıktı "alakasız" görünüyorsa önce **gerçekten üretilip üretilmediğini** kanıtla (DB'deki URL'yi mock sabitiyle karşılaştır) — üretim kodunda hata aramadan önce. Bkz. [[2026-08-06 Sahte 3D Modu Halı Yolunu Maskeledi]].
 - **Migration SQL'i ELLE YAZILMAZ**: Prisma model adı ile tablo adı farklı olabilir (`model ThreeDModel` + `@@map("three_d_models")`). Elle yazılan bir migration model adını kullandı, canlıda `relation "ThreeDModel" does not exist` ile patladı ve Prisma başarısız migration'ı kaydettiği için **sonraki TÜM migration'lar bloke oldu**. Kurtarma: `migrate resolve --rolled-back` + düzeltilmiş `migrate deploy`. Bu hatayı ne testler ne tip kontrolü yakalar — `.sql` dosyasına hiçbiri bakmıyor. Doğrusu `prisma migrate dev`: SQL'i şemadan türetir. Bkz. [[2026-08-06 Halı Doku Delikleri, Saçak Modeli ve Migration Kurtarması]].
 
 ## Güvenlik / API (24 Tem overhaul dersleri)

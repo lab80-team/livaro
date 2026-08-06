@@ -1,7 +1,7 @@
 ---
 type: system
 status: living
-updated: 2026-08-05
+updated: 2026-08-06
 ---
 
 # Open Questions
@@ -54,6 +54,7 @@ updated: 2026-08-05
   - Herkese açık ürün sorularında **denetim kuralı**: hakaret/spam/yanlış bilgiye kim, hangi sıklıkla bakacak? (Telefon/IBAN/link filtresi kararlaştı; içerik denetimi açık.)
   - **KVKK aydınlatma + satıcı sözleşmesi metinlerini** kim/nasıl hazırlayacak (avukat?) — kayıtta iki onay kutusu kararlaştı. **Güncelleme (2026-07-29 build):** `/kvkk` ve `/satici-sozlesmesi` yer tutucu sayfaları artık var ve kayıt formundan linkleniyor, ama içerik hâlâ "TASLAK — hukuki metin değildir, avukat onayı beklenmektedir" şeridiyle işaretli — gerçek hukuki metin hâlâ yok.
   - **Kategori listesi + kategoriye özel soru setleri** hazır değil; ayrı bir thinking session planlandı, ekip önceden hazırlanacak (görev: [[Task Board]]). Ürün formu ve Excel şablonu buna bağımlı. **Güncelleme (2026-07-29 build):** geçici liste (mobilya/halı/perde) artık ürün formunun canlı kategori kaynağı; Excel toplu yükleme hâlâ yapılmadı, bu listeye bağımlılığı devam ediyor.
+- **Sistem hatasıyla BOZUK üretilmiş bir 3D modeli nasıl kurtaracağız?** (6 Ağu'da canlı yaşandı → [[2026-08-06 Sahte 3D Modu Halı Yolunu Maskeledi]].) [[2026-08-05 Sistem hatasında 3D deneme hakkı iade edilir]] kararı üretimin **başarısız** olduğu hâli kapsıyor; ama üretim "başarılı" görünüp **yanlış model** yazıldığında hiçbir yol çalışmıyor: admin `retry3D` yalnız STUCK ürünleri kabul ediyor, satıcı `submitTo3D` ise aynı fotoğraf setini reddediyor (`lastImageSetHash`). Bozuk ürünü kurtarmak için veritabanına elle müdahale gerekti. Açık: admine "her durumda 3D'yi yeniden ürettir" yetkisi mi verilecek, yoksa satıcıya aynı fotoğrafla yeniden deneme hakkı mı açılacak — **To Be Decided**.
 - **Mağaza web + yönetim sitesi build'inden kalan açıklar (2026-07-29)** → [[2026-07-29 Build Oturumu — Mağaza Web ve Yönetim Sitesi]]:
   - ~~**R2 bucket'ta CORS politikası yok** → 3D model tarayıcıda yüklenmiyor~~ — **ÇÖZÜLDÜ (2026-07-29 akşamı)**: kurucu Cloudflare panelinden bucket'a CORS politikasını ekledi. Doğrulandı: presigned GLB tarayıcıdan 200 OK ile indi (11,8 MB), `<model-viewer>` modeli render etti ve sürükleyince döndü. Kodda değişiklik gerekmedi; kabul turu böylece 8/8 tamamlandı.
   - **Gerçek multi-view Tripo denemesi KOŞULDU (2026-07-29 akşamı, kurucu onayıyla, kredi harcandı) — kısmen çözüldü:**
