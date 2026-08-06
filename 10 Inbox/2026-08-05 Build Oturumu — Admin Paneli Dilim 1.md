@@ -125,7 +125,20 @@ Kod hazır ve **beş tur Codex incelemesinden** geçti:
 - **Ürün görüntüleme kişi bazlı olamıyor** — iOS ürün detayını kimlik göndermeden çekiyor. "Kaç kez bakıldı" kaydedilir, "kim baktı" kaydedilmez. Kişi bazlı istenirse iOS değişikliği + yeni sürüm gerekir; bu, [[2026-08-04 Kullanıcı kartı adminde — kişi bazlı kullanım verisi ve RoomPlan çıktısı|kullanıcı kartı kararını]] etkiler.
 - **"Tasarımda kullanım" olayının anlamı**: iOS, AI sihirbazında her arama çalıştığında sonucu kaydediyor. Yani bu olay **"AI önerisinde çıktı"** demek, "kullanıcı bu ürünü seçti" değil. Rakam okunurken bilinmeli.
 - **Sepet olayı (`CART_ADD`) yok** — sepet henüz yok; tablo tek ve tip bir kolon olduğu için sepet yapılınca değer eklemek tek migration.
-- Ertelenen küçük teknik notlar (dosya boyutu, sayfalama, test fikstürü kırılganlığı) kod reposundaki `.superpowers/sdd/progress.md` defterinde kayıtlı.
+### Bilinçli ertelenen teknik notlar (dilim 2'ye)
+
+> Bunlar inceleme turlarında bulunup "merge'ü bekletmez" diye ertelenenler. Kod reposundaki
+> `.superpowers/sdd/progress.md` defteri **git'e girmiyor** (gitignore) ve geçici bir worktree'de
+> duruyor — o yüzden kalıcı olması gereken kısım buraya kopyalandı.
+
+- `admin.service.ts`'te transaction + CAS + günlük kalıbı **4 kez** tekrarlıyor. Payload'lar farklı olduğu için şimdi soyutlamak erken olurdu; **beşinci uç eklenirse** ortak yardımcıya çıkarılmalı.
+- `seller-products.service.ts` **729 satır**. Bekleyen-düzenleme kavramı (öner / iptal et / boşalınca sil) kendi başına tutarlı bir bütün — bölünecekse doğal dikiş yeri orası.
+- `listPendingEdits`'te **sayfalama yok** ve `product_pending_edits.status` üzerinde indeks yok. Dilim 2'deki kuyruk ana sayfası aynı sorguya dokunacak, orada ele alınmalı.
+- Fotoğraf yüklendikten sonra bekleyen kaydın yazımı patlarsa dosyalar depoda **öksüz kalıyor** (repo bu tavizi başka yerde de bilinçli veriyor).
+- `seller-products.controller.ts`'te Swagger gövde şeması 12 satır **birebir kopyalanmış** — ortak sabite çıkarılabilir.
+- Test tarafında: `$transaction` mock'u geri almayı (rollback) taklit etmiyor; bekleyen-düzenleme fikstürünün `findUnique.mock.results` sezgiseli sıraya bağımlı (aynı akışa ikinci bir `findUnique` eklenirse sessizce yanlış dala girer); `recordDesignUse`'a `null` geçilen açık bir test yok.
+- Mağaza panelinde uzun bir açıklama "şu an yayında / önerilen" kartını şişiriyor (kırpma yok).
+- Ürün adı değişince **`slug` güncellenmiyor** (mevcut davranışla tutarlı; slug bugün yalnız katalog yanıtında görünüyor, arama anahtarı değil).
 
 ## İşlendiği notlar
 
